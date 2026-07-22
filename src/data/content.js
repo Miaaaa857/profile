@@ -18,7 +18,7 @@ export const content = {
     faqEyebrow: 'GOOD TO KNOW',
     faqTitle: ['合作之前，', '你可能想问。'],
     footerEyebrow: 'HAVE A PROJECT IN MIND?',
-    footerTitle: ['Let’s work', 'together.'],
+    footerTitle: ['让想法，', '一起发生。'],
     footerCta: '预约沟通',
     footerLocation: '现居广州 · 开放远程合作',
     messageLabel: '有想法？留下一句话',

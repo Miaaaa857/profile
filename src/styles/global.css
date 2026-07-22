@@ -140,21 +140,22 @@ i { font-style: normal; }
 .all-projects strong { font-size: 13px; }
 .all-projects i { justify-self: end; font-style: normal; }
 
-.faq { display: grid; grid-template-columns: 40% 60%; padding-bottom: var(--section); }
-.faq-title .eyebrow { margin-bottom: 50px; }
-.faq-list { border-top: 1px solid var(--line); }
-.faq-item { border-bottom: 1px solid var(--line); }
-.faq-item button { width: 100%; min-height: 105px; display: grid; grid-template-columns: 50px 1fr 30px; align-items: center; border: 0; background: none; text-align: left; cursor: pointer; }
-.faq-item button span { color: var(--muted); font-size: 10px; }
-.faq-item button strong { font-size: 17px; font-weight: 500; }
-.faq-item button i { font-size: 24px; font-style: normal; }
+.faq { display: grid; grid-template-columns: 1fr 1.25fr; align-items: start; gap: clamp(36px, 5vw, 90px); padding-top: clamp(120px, 10vw, 160px); padding-bottom: clamp(80px, 7vw, 120px); }
+.faq-title .eyebrow { margin-bottom: 28px; }
+.faq-title h2 { max-width: 650px; font-size: clamp(54px, 4.2vw, 72px); line-height: 1.08; }
+.faq-list { display: grid; gap: 12px; }
+.faq-item { overflow: hidden; border-radius: 44px; background: var(--surface); transition: border-radius .6s var(--ease), background .6s var(--ease); }
+.faq-item.is-open { border-radius: 30px; background: #f6f6f4; }
+.faq-item button { width: 100%; min-height: 84px; padding: 0 28px; display: grid; grid-template-columns: 1fr 32px; align-items: center; gap: 16px; border: 0; background: none; text-align: left; cursor: pointer; }
+.faq-item button strong { font-size: clamp(17px, 1.25vw, 22px); line-height: 1.5; font-weight: 500; }
+.faq-item button i { justify-self: end; font-size: 23px; font-style: normal; font-weight: 400; }
 .faq-answer { display: grid; grid-template-rows: 0fr; transition: grid-template-rows .6s var(--ease); }
-.faq-answer p { overflow: hidden; max-width: 580px; margin-left: 50px; color: var(--muted); line-height: 1.8; }
+.faq-answer p { overflow: hidden; max-width: 650px; margin: 0 76px 0 28px; color: var(--muted); font-size: 14px; line-height: 1.75; }
 .faq-item.is-open .faq-answer { grid-template-rows: 1fr; }
-.faq-item.is-open .faq-answer p { padding-bottom: 38px; }
+.faq-item.is-open .faq-answer p { padding-bottom: 28px; }
 
 .footer { background: transparent; color: var(--ink); }
-.footer-cta-shell { padding: var(--section) 0 120px; }
+.footer-cta-shell { padding: clamp(70px, 6vw, 100px) 0 clamp(72px, 6vw, 100px); }
 .footer-cta { position: relative; display: grid; grid-template-columns: 1fr auto; align-items: end; }
 .footer-cta .eyebrow { grid-column: 1 / -1; margin-bottom: 28px; }
 .footer-cta h2 { font-size: clamp(72px, 8.4vw, 140px); line-height: .92; letter-spacing: -.07em; font-weight: 500; }
@@ -217,8 +218,8 @@ i { font-style: normal; }
   .skill-details { grid-template-columns: 1fr 250px; gap: 30px; }
   .skill-details p { grid-column: 1; }
   .skill-details img { grid-column: 2; }
-  .faq { grid-template-columns: 1fr; gap: 80px; }
-  .footer-cta-shell { padding: 110px 0 80px; }
+  .faq { grid-template-columns: 1fr; gap: 58px; }
+  .footer-cta-shell { padding: 76px 0; }
   .footer-cta { grid-template-columns: 1fr; gap: 44px; }
   .round-button { justify-self: start; margin-bottom: 0; }
   .footer-grid { grid-template-columns: 1fr 1fr; }
@@ -258,9 +259,13 @@ i { font-style: normal; }
   .project-card:nth-child(even) { margin-top: 0; }
   .projects-heading > p { max-width: 90%; }
   .all-projects { margin-top: 90px; }
-  .faq-item button { grid-template-columns: 35px 1fr 25px; }
-  .faq-answer p { margin-left: 35px; }
-  .footer-cta-shell { padding: 90px 0 72px; }
+  .faq { padding-block: 88px 64px; }
+  .faq-list { gap: 9px; }
+  .faq-item { border-radius: 32px; }
+  .faq-item button { min-height: 68px; padding-inline: 21px; grid-template-columns: 1fr 24px; }
+  .faq-item button strong { font-size: 15px; }
+  .faq-answer p { margin: 0 44px 0 21px; font-size: 12px; }
+  .footer-cta-shell { padding: 64px 0; }
   .footer-cta { gap: 34px; }
   .footer-cta h2 { font-size: 17vw; line-height: .95; }
   .round-button { margin-top: 0; }
