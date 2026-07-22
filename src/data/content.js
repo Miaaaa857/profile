@@ -95,10 +95,10 @@ export const content = {
     { number: '04', title: '3D 元素 / 品牌 IP', tool: 'BLENDER', description: '制作金属、玻璃与发光材质的 3D 界面元素，并将品牌性格转化为简洁、可识别的 IP 角色。', image: '/media/portfolio/page-46.jpg' },
   ],
   projects: [
-    { slug: 'fatelinked', index: '01', name: 'FateLinked', title: 'AIGC 智能体交互平台', category: 'PRODUCT DESIGN · AIGC', year: '2024', metric: '60+ 功能页面 · 7 日留存 38%', summary: '围绕“人设—声音—形象”三维自定义流程，构建可传递情感价值的智能体体验与可复用组件系统。', image: '/media/portfolio/project-fatelinked.jpg', detailImage: '/media/portfolio/page-06.jpg', tone: 'violet' },
-    { slug: 'pulsebeat', index: '02', name: 'PulseBeat', title: '电子烟新零售平台', category: 'UX/UI · RETAIL', year: '2023', metric: '分销商入驻率 +22%', summary: '面向东南亚市场，将多级分销、佣金结算与合规购买流程转化为清晰、可理解的体验。', image: '/media/portfolio/project-pulsebeat.jpg', detailImage: '/media/portfolio/page-18.jpg', tone: 'red' },
-    { slug: 'qinrive', index: '03', name: 'QINRIVE', title: '全球 KOL 企业站', category: 'WEB · BRAND', year: '2023', metric: '决策效率 +35% · 获客成本 -32%', summary: '聚合全球 KOL 旅行计划与偏好数据，帮助营销机构更高效地制定精准合作策略。', image: '/media/portfolio/project-qinrive.jpg', detailImage: '/media/portfolio/page-39.jpg', tone: 'blue' },
-    { slug: 'jiucheng', index: '04', name: '九成大厨', title: 'B 端采购小程序', category: 'MINI PROGRAM · B2B', year: '2022', metric: '首月转化率 23%', summary: '聚焦预制菜行业采购效率与议价难题，为全国厂商搭建更顺畅的一站式批量采购体验。', image: '/media/portfolio/project-jiucheng.jpg', detailImage: '/media/portfolio/page-43.jpg', tone: 'green' },
+    { slug: 'fatelinked', index: '01', name: 'FateLinked', title: 'AIGC 智能体交互平台', category: 'PRODUCT DESIGN · AIGC', year: '2024', metric: '60+ 功能页面 · 7 日留存 38%', summary: '围绕“人设—声音—形象”三维自定义流程，构建可传递情感价值的智能体体验与可复用组件系统。', image: '/media/portfolio/page-06.jpg', detailImage: '/media/portfolio/page-06.jpg', tone: 'violet' },
+    { slug: 'pulsebeat', index: '02', name: 'PulseBeat', title: '电子烟新零售平台', category: 'UX/UI · RETAIL', year: '2023', metric: '分销商入驻率 +22%', summary: '面向东南亚市场，将多级分销、佣金结算与合规购买流程转化为清晰、可理解的体验。', image: '/media/portfolio/page-18.jpg', detailImage: '/media/portfolio/page-18.jpg', tone: 'red' },
+    { slug: 'qinrive', index: '03', name: 'QINRIVE', title: '全球 KOL 企业站', category: 'WEB · BRAND', year: '2023', metric: '决策效率 +35% · 获客成本 -32%', summary: '聚合全球 KOL 旅行计划与偏好数据，帮助营销机构更高效地制定精准合作策略。', image: '/media/portfolio/page-39.jpg', detailImage: '/media/portfolio/page-39.jpg', tone: 'blue' },
+    { slug: 'jiucheng', index: '04', name: '九成大厨', title: 'B 端采购小程序', category: 'MINI PROGRAM · B2B', year: '2022', metric: '首月转化率 23%', summary: '聚焦预制菜行业采购效率与议价难题，为全国厂商搭建更顺畅的一站式批量采购体验。', image: '/media/portfolio/page-43.jpg', detailImage: '/media/portfolio/page-43.jpg', tone: 'green' },
   ],
   faq: [
     { q: '一次完整合作通常如何开始？', a: '从 30 分钟需求沟通开始。我会确认业务目标、用户、范围与时间节点，再提供清晰的工作拆解与排期。' },
