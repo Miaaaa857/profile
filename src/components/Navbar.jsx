@@ -1,0 +1,21 @@
+import { useEffect, useState } from 'react'
+
+export default function Navbar({ data }) {
+  const [scrolled, setScrolled] = useState(false)
+  const [open, setOpen] = useState(false)
+  useEffect(() => {
+    const onScroll = () => setScrolled(window.scrollY > 40)
+    onScroll(); window.addEventListener('scroll', onScroll, { passive: true })
+    return () => window.removeEventListener('scroll', onScroll)
+  }, [])
+  return (
+    <header className={`navbar ${scrolled ? 'navbar--scrolled' : ''}`}>
+      <a className="wordmark" href="#home" aria-label={data.site.backHome}>{data.site.logo}<span>®</span></a>
+      <nav className={open ? 'nav-links is-open' : 'nav-links'} aria-label={data.site.navLabel}>
+        {data.navigation.map((item) => <a key={item.label} href={item.href} onClick={() => setOpen(false)}>{item.label}</a>)}
+      </nav>
+      <a className="button button--dark nav-cta" href={`mailto:${data.designer.email}`}>{data.site.navCta} <span>↗</span></a>
+      <button className="menu-toggle" onClick={() => setOpen(!open)} aria-label={data.site.menuToggle} aria-expanded={open}>{open ? data.site.menuClose : data.site.menuOpen}</button>
+    </header>
+  )
+}
