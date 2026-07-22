@@ -122,9 +122,7 @@ i { font-style: normal; }
 
 .project-grid { display: grid; grid-template-columns: 1fr 1fr; column-gap: clamp(28px, 6vw, 110px); row-gap: 130px; align-items: start; }
 .project-card:nth-child(even) { margin-top: 160px; }
-.project-visual { position: relative; overflow: hidden; border-radius: var(--radius-media-md); background: var(--surface); }
-.project-card--1 .project-visual, .project-card--4 .project-visual { aspect-ratio: 1.05; }
-.project-card--2 .project-visual, .project-card--3 .project-visual { aspect-ratio: .82; }
+.project-visual { position: relative; overflow: hidden; aspect-ratio: 6 / 7; border-radius: var(--radius-media-md); background: var(--surface); }
 .project-visual img { width: 100%; height: 100%; object-fit: cover; transition: transform .8s var(--ease); }
 .project-card:hover .project-visual img { transform: scale(1.035); }
 .project-open { position: absolute; right: 22px; top: 22px; width: 54px; height: 54px; display: grid; place-items: center; border-radius: 50%; background: var(--white); font-size: 18px; transform: scale(0); transition: transform .6s var(--ease); }
@@ -253,7 +251,6 @@ i { font-style: normal; }
   .skill-details img { grid-column: 1; grid-row: 2; width: 170px; height: 100px; justify-self: start; }
   .project-grid { grid-template-columns: 1fr; row-gap: 75px; }
   .project-card:nth-child(even) { margin-top: 0; }
-  .project-card--2 .project-visual, .project-card--3 .project-visual { aspect-ratio: 1; }
   .projects-heading > p { max-width: 90%; }
   .all-projects { margin-top: 90px; }
   .faq-item button { grid-template-columns: 35px 1fr 25px; }
