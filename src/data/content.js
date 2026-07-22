@@ -40,6 +40,7 @@ export const content = {
     menuClose: '关闭',
     clientsAria: '服务品牌',
     statsAria: '设计数据',
+    statsEyebrow: 'NUMBERS',
     projectCoverSuffix: '项目封面',
     detailCoverSuffix: '项目占位封面',
   },

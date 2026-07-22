@@ -96,12 +96,14 @@ i { font-style: normal; }
 .gallery-card figcaption { margin-top: 12px; font-size: 9px; letter-spacing: .14em; }
 @keyframes gallery { to { transform: translateX(calc(-50% - 12px)); } }
 
-.stats { padding-top: var(--section); display: grid; grid-template-columns: repeat(4, 1fr); border-bottom: 1px solid var(--line); }
-.stat { padding: 0 30px 45px; border-left: 1px solid var(--line); }
-.stat:first-child { padding-left: 0; border-left: 0; }
-.stat strong { display: block; font-size: clamp(70px, 7vw, 120px); line-height: 1; letter-spacing: -.08em; font-weight: 500; font-variant-numeric: tabular-nums; }
-.stat p { margin-top: 24px; font-size: 15px; font-weight: 600; }
-.stat span { display: block; margin-top: 8px; color: var(--muted); font-size: 11px; }
+.stats-section { padding: clamp(100px, 9vw, 150px) 0 clamp(90px, 8vw, 135px); }
+.stats-eyebrow { display: flex; align-items: center; gap: 8px; }
+.stats-eyebrow::before { content: ''; width: 8px; height: 8px; flex: 0 0 auto; background: var(--accent); }
+.stats { margin-top: 34px; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: clamp(32px, 4vw, 68px); }
+.stat { min-width: 0; }
+.stat strong { display: block; padding-bottom: 26px; border-bottom: 1px dashed rgba(17, 17, 15, .14); font-size: clamp(64px, 5vw, 92px); line-height: 1.06; letter-spacing: -.065em; font-weight: 500; font-variant-numeric: tabular-nums; }
+.stat p { margin-top: 22px; font-size: clamp(16px, 1.15vw, 20px); line-height: 1.5; font-weight: 600; }
+.stat span { display: block; max-width: 280px; margin-top: 7px; color: var(--muted); font-size: 13px; line-height: 1.55; }
 
 .section-heading, .projects-heading { display: grid; grid-template-columns: 28% 47% 25%; align-items: end; margin-bottom: 100px; }
 .section-heading h2, .projects-heading h2, .faq-title h2 { font-size: clamp(54px, 5vw, 86px); line-height: 1.02; letter-spacing: -.06em; font-weight: 500; }
@@ -209,8 +211,7 @@ i { font-style: normal; }
   .about-copy, .section-heading, .projects-heading { grid-template-columns: 1fr; gap: 50px; }
   .about-meta { width: 100%; }
   .stats { grid-template-columns: 1fr 1fr; }
-  .stat:nth-child(3) { border-left: 0; }
-  .stat { padding-top: 40px; }
+  .stats { row-gap: 54px; }
   .skill-row > button { grid-template-columns: 70px 1fr 30px; }
   .skill-tool { display: none; }
   .skill-details { grid-template-columns: 1fr 250px; gap: 30px; }
@@ -241,9 +242,11 @@ i { font-style: normal; }
   .about-meta { align-items: flex-start; flex-direction: column; }
   .gallery-card { width: 80vw; }
   .stats { grid-template-columns: 1fr 1fr; }
-  .stat { padding: 30px 12px; }
-  .stat strong { font-size: 17vw; }
-  .stat span { min-height: 28px; }
+  .stats-section { padding-block: 82px; }
+  .stats { margin-top: 28px; gap: 38px 18px; }
+  .stat strong { padding-bottom: 18px; font-size: 16vw; }
+  .stat p { margin-top: 16px; font-size: 14px; }
+  .stat span { min-height: 38px; font-size: 11px; }
   .skill-row > button { height: 100px; grid-template-columns: 50px 1fr 24px; padding-inline: 20px; }
   .skill-row.is-active > button { height: 120px; }
   .skill-row h3 { font-size: 24px; }

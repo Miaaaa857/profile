@@ -18,7 +18,7 @@ export default function Home() {
       <Hero data={content.hero} copy={content.site} />
       <LogoMarquee brands={content.brands} label={content.site.clientsLabel} ariaLabel={content.site.clientsAria} />
       <About data={content.about} copy={content.site} />
-      <Stats items={content.stats} ariaLabel={content.site.statsAria} />
+      <Stats items={content.stats} ariaLabel={content.site.statsAria} eyebrow={content.site.statsEyebrow} />
       <Skills items={content.skills} copy={content.site} />
       <Projects items={content.projects} copy={content.site} />
       <FAQ items={content.faq} copy={content.site} />

@@ -16,6 +16,15 @@ function Stat({ item }) {
   return <div className="stat" ref={ref}><strong>{value}{item.suffix}</strong><p>{item.label}</p><span>{item.note}</span></div>
 }
 
-export default function Stats({ items, ariaLabel }) {
-  return <section className="stats container" aria-label={ariaLabel}>{items.map((item) => <Stat item={item} key={item.label} />)}</section>
+export default function Stats({ items, ariaLabel, eyebrow = 'NUMBERS' }) {
+  return (
+    <section className="stats-section" aria-label={ariaLabel}>
+      <div className="container">
+        <div className="eyebrow stats-eyebrow">{eyebrow}</div>
+        <div className="stats">
+          {items.map((item) => <Stat item={item} key={item.label} />)}
+        </div>
+      </div>
+    </section>
+  )
 }
