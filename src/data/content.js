@@ -69,7 +69,7 @@ export const content = {
   brands: ['TENCENT 腾讯', 'SEASUN 西山居', 'OPPEIN 欧派', 'ONEPLUS 一加'],
   about: {
     eyebrow: 'WHO I AM',
-    statement: '我相信好的设计不是制造更多噪音，而是在复杂问题里，找到那条最清晰、最有人情味的路径。',
+    statement: '让复杂变清晰，让体验更有人情味。',
     description: '3 年+ UI 与视觉设计经验，参与从概念定义、组件系统到上线验收的完整流程。曾服务腾讯、西山居、欧派与一加等品牌。',
   gallery: [
     { src: '/media/portfolio/page-17.jpg', alt: 'FateLinked 全流程界面展示', label: 'FATELINKED · APP EXPERIENCE' },
