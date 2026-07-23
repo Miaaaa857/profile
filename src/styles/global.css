@@ -107,7 +107,7 @@ i { font-style: normal; }
 .scroll-cue { display: none; }
 
 .logo-strip { min-height: 180px; display: grid; grid-template-columns: 260px 1fr; align-items: center; border-block: 1px solid var(--line); overflow: hidden; }
-.logo-strip__label { max-width: 220px; padding-left: var(--page-pad); font-size: 12px; line-height: 1.5; letter-spacing: .04em; }
+.logo-strip__label { max-width: 240px; padding-left: var(--page-pad); font-size: clamp(14px, 1vw, 16px); font-weight: 500; line-height: 1.45; letter-spacing: .02em; }
 .marquee { overflow: hidden; }
 .marquee__track { display: flex; width: max-content; animation: marquee 24s linear infinite; }
 .marquee__track:hover { animation-play-state: paused; }
