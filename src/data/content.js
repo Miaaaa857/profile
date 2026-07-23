@@ -77,7 +77,7 @@ export const content = {
     titleZh: '为成长型品牌，设计真正有影响力的数字体验。',
     description: '从复杂产品到鲜明品牌，我用清晰的交互逻辑与克制的视觉语言，让每一次点击都更有价值。',
     tags: ['+ 产品策略', '+ 界面设计', '+ 动效表达'],
-    media: { type: 'video', src: '', poster: '/media/portfolio/hero-portfolio-wide.jpg' },
+    media: { type: 'video', src: '', poster: '/media/portfolio/hero-portrait.png' },
   },
   brands: [
     { name: 'Korloff', src: korloffLogo },
