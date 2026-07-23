@@ -6,10 +6,13 @@ import tencentLogo from '../assets/logos/tencent.png'
 import seasunLogo from '../assets/logos/seasun.png'
 import xinhuaLogo from '../assets/logos/xinhua.png'
 import oneplusLogo from '../assets/logos/oneplus.png'
+import siteLogo from '../assets/logos/site-logo.png'
 
 export const content = {
   site: {
     logo: 'MIA',
+    logoImage: siteLogo,
+    logoAlt: '张明霞 UI/UX 设计标志',
     navCta: '预约沟通',
     heroPrimary: '查看项目',
     heroSecondary: '联系我',

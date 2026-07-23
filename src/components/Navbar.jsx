@@ -10,7 +10,7 @@ export default function Navbar({ data }) {
   }, [])
   return (
     <header className={`navbar ${scrolled ? 'navbar--scrolled' : ''}`}>
-      <a className="wordmark" href="#home" aria-label={data.site.backHome}>{data.site.logo}<span>®</span></a>
+      <a className="wordmark" href="#home" aria-label={data.site.backHome}><img src={data.site.logoImage} alt={data.site.logoAlt} /></a>
       <nav className={open ? 'nav-links is-open' : 'nav-links'} aria-label={data.site.navLabel}>
         {data.navigation.map((item) => <a key={item.label} href={item.href} onClick={() => setOpen(false)}>{item.label}</a>)}
       </nav>
