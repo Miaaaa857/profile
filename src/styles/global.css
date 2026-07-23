@@ -144,11 +144,13 @@ i { font-style: normal; }
 .faq-title .eyebrow { margin-bottom: 28px; }
 .faq-title h2 { max-width: 650px; font-size: clamp(54px, 4.2vw, 72px); line-height: 1.08; }
 .faq-list { display: grid; gap: 12px; }
-.faq-item { overflow: hidden; border-radius: 44px; background: var(--surface); transition: border-radius .6s var(--ease), background .6s var(--ease); }
-.faq-item.is-open { border-radius: 30px; background: #f6f6f4; }
+.faq-item { overflow: hidden; border-radius: 44px; background: var(--surface); transition: border-radius .6s var(--ease), background .6s var(--ease), box-shadow .6s var(--ease); }
+.faq-item.is-open { border-radius: 30px; background: #fff4ef; box-shadow: inset 0 0 0 1.5px var(--accent), 0 12px 32px rgba(255, 77, 36, .08); }
 .faq-item button { width: 100%; min-height: 84px; padding: 0 28px; display: grid; grid-template-columns: 1fr 32px; align-items: center; gap: 16px; border: 0; background: none; text-align: left; cursor: pointer; }
+.faq-item button:focus-visible { outline: 2px solid var(--accent); outline-offset: -3px; border-radius: inherit; }
 .faq-item button strong { font-size: clamp(17px, 1.25vw, 22px); line-height: 1.5; font-weight: 500; }
-.faq-item button i { justify-self: end; font-size: 23px; font-style: normal; font-weight: 400; }
+.faq-item button i { justify-self: end; font-size: 23px; font-style: normal; font-weight: 400; transition: color .5s var(--ease), transform .5s var(--ease); }
+.faq-item.is-open button i { color: var(--accent); transform: scale(1.16); }
 .faq-answer { display: grid; grid-template-rows: 0fr; transition: grid-template-rows .6s var(--ease); }
 .faq-answer p { overflow: hidden; max-width: 650px; margin: 0 76px 0 28px; color: var(--muted); font-size: 14px; line-height: 1.75; }
 .faq-item.is-open .faq-answer { grid-template-rows: 1fr; }
