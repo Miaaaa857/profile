@@ -3,7 +3,13 @@ import { Link } from 'react-router-dom'
 export default function Projects({ items, copy }) {
   return (
     <section className="section projects container" id="projects">
-      <div className="projects-heading" data-reveal><div><p className="eyebrow">{copy.projectsEyebrow}</p><span className="section-index">( 03 )</span></div><h2>{copy.projectsTitle[0]}<br /><i className="display-emphasis">{copy.projectsTitle[1]}</i></h2><p>{copy.projectsIntro}</p></div>
+      <div className="projects-heading" data-reveal>
+        <div className="module-heading__main">
+          <div className="module-heading__label"><p className="eyebrow">{copy.projectsEyebrow}</p><span className="section-index">( 03 )</span></div>
+          <h2>{copy.projectsTitle[0]}<br /><i className="display-emphasis">{copy.projectsTitle[1]}</i></h2>
+        </div>
+        <p>{copy.projectsIntro}</p>
+      </div>
       <div className="project-grid">
         {items.map((item, i) => (
           <Link className={`project-card project-card--${i + 1}`} to={`/projects/${item.slug}`} key={item.slug} data-reveal>

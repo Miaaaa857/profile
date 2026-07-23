@@ -106,13 +106,16 @@ i { font-style: normal; }
 .stat p { margin-top: 22px; font-size: clamp(16px, 1.15vw, 20px); line-height: 1.5; font-weight: 600; }
 .stat span { display: block; max-width: 280px; margin-top: 7px; color: var(--muted); font-size: 13px; line-height: 1.55; }
 
-.section-heading, .projects-heading { display: grid; grid-template-columns: 28% 47% 25%; align-items: end; margin-bottom: 100px; }
-.section-heading h2, .projects-heading h2, .faq-title h2 { font-size: clamp(54px, 5vw, 86px); line-height: 1.02; letter-spacing: -.06em; font-weight: 500; }
+.section-heading, .projects-heading { display: grid; grid-template-columns: minmax(0, 1.7fr) minmax(280px, .55fr); align-items: end; column-gap: clamp(80px, 10vw, 180px); margin-bottom: clamp(72px, 7vw, 110px); padding-bottom: clamp(42px, 4vw, 62px); border-bottom: 1px solid var(--line); }
+.module-heading__main { min-width: 0; }
+.module-heading__label { margin-bottom: clamp(28px, 2.5vw, 40px); display: flex; align-items: center; gap: 18px; }
+.module-heading__label .section-index { margin-top: 0; }
+.section-heading h2, .projects-heading h2, .faq-title h2 { font-size: clamp(48px, 4.2vw, 72px); line-height: 1.03; letter-spacing: -.055em; font-weight: 500; }
 .section-heading h2 i, .projects-heading h2 i, .faq-title h2 i { font-weight: 500; }
-.section-heading > p, .projects-heading > p { max-width: 340px; color: var(--muted); font-size: 14px; line-height: 1.8; }
+.section-heading > p, .projects-heading > p { width: min(100%, 380px); justify-self: end; color: var(--muted); font-size: 14px; line-height: 1.8; }
 .skills { background: var(--ink); color: var(--white); }
 .skills .section-heading > p, .skills .section-index { color: rgba(255, 255, 255, .55); }
-.skills-list { border-top: 1px solid rgba(255, 255, 255, .2); }
+.skills .section-heading { border-bottom-color: rgba(255, 255, 255, .3); }
 .skill-row { border-bottom: 1px solid rgba(255, 255, 255, .2); overflow: hidden; transition: background .6s var(--ease), box-shadow .6s var(--ease); }
 .skill-row:hover, .skill-row.is-active { background: transparent; box-shadow: inset 0 1px 0 #de322d, inset 0 -1px 0 #de322d; }
 .skill-row > button { width: 100%; height: 126px; padding: 0 var(--page-pad); display: grid; grid-template-columns: 15% 1fr 180px 30px; align-items: center; border: 0; background: none; text-align: left; cursor: pointer; transition: height .7s var(--ease); }
@@ -213,6 +216,7 @@ i { font-style: normal; }
   .logo-strip { grid-template-columns: 120px 1fr; }
   .brand { min-width: 250px; }
   .about-copy, .section-heading, .projects-heading { grid-template-columns: 1fr; gap: 50px; }
+  .section-heading > p, .projects-heading > p { justify-self: start; }
   .about-meta { width: 100%; }
   .stats { grid-template-columns: 1fr 1fr; }
   .stats { row-gap: 54px; }

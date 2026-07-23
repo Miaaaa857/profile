@@ -4,7 +4,13 @@ export default function Skills({ items, copy }) {
   const [active, setActive] = useState(0)
   return (
     <section className="section skills" id="skills">
-      <div className="container section-heading" data-reveal><div><p className="eyebrow">{copy.skillsEyebrow}</p><span className="section-index">( 02 )</span></div><h2>{copy.skillsTitle[0]}<br /><i className="display-emphasis">{copy.skillsTitle[1]}</i></h2><p>{copy.skillsIntro}</p></div>
+      <div className="container section-heading" data-reveal>
+        <div className="module-heading__main">
+          <div className="module-heading__label"><p className="eyebrow">{copy.skillsEyebrow}</p><span className="section-index">( 02 )</span></div>
+          <h2>{copy.skillsTitle[0]}<br /><i className="display-emphasis">{copy.skillsTitle[1]}</i></h2>
+        </div>
+        <p>{copy.skillsIntro}</p>
+      </div>
       <div className="skills-list">
         {items.map((item, i) => (
           <article className={`skill-row ${active === i ? 'is-active' : ''}`} key={item.number} onMouseEnter={() => setActive(i)}>
