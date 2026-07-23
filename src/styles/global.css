@@ -87,7 +87,7 @@ i { font-style: normal; }
 
 .about-copy { display: grid; grid-template-columns: minmax(0, 1.7fr) minmax(280px, .55fr); align-items: end; column-gap: clamp(80px, 10vw, 180px); padding-bottom: clamp(42px, 4vw, 62px); border-bottom: 1px solid var(--line); }
 .about-heading { min-width: 0; }
-.statement { max-width: 980px; font-size: clamp(48px, 4.4vw, 76px); line-height: 1.08; letter-spacing: -.055em; font-weight: 500; }
+.statement { max-width: 980px; white-space: pre-line; font-size: clamp(48px, 4.4vw, 76px); line-height: 1.08; letter-spacing: -.055em; font-weight: 500; }
 .about-meta { width: min(100%, 380px); margin: 0; justify-self: end; display: grid; align-content: end; gap: 28px; }
 .about-meta p { max-width: 460px; color: #55534e; line-height: 1.8; }
 .gallery-marquee { margin-top: 130px; overflow: hidden; }
