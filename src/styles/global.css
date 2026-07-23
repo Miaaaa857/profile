@@ -149,8 +149,9 @@ i { font-style: normal; }
 .skills .section-heading h2 { max-width: 850px; font-size: clamp(48px, 4vw, 68px); line-height: 1.05; letter-spacing: -.05em; }
 .skills .section-heading > p, .skills .section-index { color: rgba(255, 255, 255, .55); }
 .skills .section-heading { border-bottom-color: rgba(255, 255, 255, .3); }
-.skills-list { width: min(100%, var(--max)); margin-inline: auto; padding-inline: var(--gutter); border-top: 1px solid rgba(255, 255, 255, .18); }
+.skills-list { width: min(100%, var(--max)); margin-inline: auto; padding-inline: var(--gutter); }
 .skill-row { border-bottom: 1px solid rgba(255, 255, 255, .18); overflow: hidden; transition: background .6s var(--ease), box-shadow .6s var(--ease); }
+.skill-row:first-child { border-top: 1px solid rgba(255, 255, 255, .18); }
 .skill-row:hover, .skill-row.is-active { background: transparent; box-shadow: inset 0 1px 0 #de322d, inset 0 -1px 0 #de322d; }
 .skill-row > button { width: 100%; height: 108px; padding: 0; display: grid; grid-template-columns: 15% 1fr 180px 30px; align-items: center; border: 0; background: none; text-align: left; cursor: pointer; transition: height .7s var(--ease); }
 .skill-row.is-active > button { height: 120px; }
