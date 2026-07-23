@@ -63,8 +63,8 @@ export const content = {
   },
   navigation: [
     { label: '首页', href: '#home' },
-    { label: '项目', href: '#projects' },
     { label: '关于', href: '#about' },
+    { label: '项目', href: '#projects' },
     { label: '联系', href: '#contact' },
   ],
   hero: {
