@@ -3,10 +3,16 @@ export default function About({ data, copy }) {
   return (
     <section className="section about" id="about">
       <div className="container about-copy">
-        <div data-reveal><p className="eyebrow">{data.eyebrow}</p><span className="section-index">( 01 )</span></div>
-        <div>
+        <div className="about-heading">
+          <div className="module-heading__label" data-reveal>
+            <p className="eyebrow">{data.eyebrow}</p>
+            <span className="section-index">( 01 )</span>
+          </div>
           <h2 className="statement" data-reveal>{data.statement}</h2>
-          <div className="about-meta" data-reveal><p>{data.description}</p><a className="text-link" href="#skills">{copy.aboutLink} <span>↘</span></a></div>
+        </div>
+        <div className="about-meta" data-reveal>
+          <p>{data.description}</p>
+          <a className="text-link" href="#skills">{copy.aboutLink} <span>↗</span></a>
         </div>
       </div>
       <div className="gallery-marquee">

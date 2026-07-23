@@ -85,9 +85,10 @@ i { font-style: normal; }
 .brand:hover { color: var(--accent); filter: none; }
 @keyframes marquee { to { transform: translateX(-50%); } }
 
-.about-copy { display: grid; grid-template-columns: 28% 72%; }
-.statement { max-width: 1150px; font-size: clamp(44px, 5.35vw, 91px); line-height: 1.12; letter-spacing: -.055em; font-weight: 500; }
-.about-meta { width: min(660px, 70%); margin-top: 65px; margin-left: auto; display: flex; align-items: flex-end; justify-content: space-between; gap: 40px; }
+.about-copy { display: grid; grid-template-columns: minmax(0, 1.7fr) minmax(280px, .55fr); align-items: end; column-gap: clamp(80px, 10vw, 180px); padding-bottom: clamp(42px, 4vw, 62px); border-bottom: 1px solid var(--line); }
+.about-heading { min-width: 0; }
+.statement { max-width: 980px; font-size: clamp(48px, 4.4vw, 76px); line-height: 1.08; letter-spacing: -.055em; font-weight: 500; }
+.about-meta { width: min(100%, 380px); margin: 0; justify-self: end; display: grid; align-content: end; gap: 28px; }
 .about-meta p { max-width: 460px; color: #55534e; line-height: 1.8; }
 .gallery-marquee { margin-top: 130px; overflow: hidden; }
 .gallery-track { display: flex; align-items: center; gap: 24px; width: max-content; animation: gallery 29s linear infinite; }
@@ -216,6 +217,7 @@ i { font-style: normal; }
   .logo-strip { grid-template-columns: 120px 1fr; }
   .brand { min-width: 250px; }
   .about-copy, .section-heading, .projects-heading { grid-template-columns: 1fr; gap: 50px; }
+  .about-meta { justify-self: start; }
   .section-heading > p, .projects-heading > p { justify-self: start; }
   .about-meta { width: 100%; }
   .stats { grid-template-columns: 1fr 1fr; }
