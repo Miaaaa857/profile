@@ -29,6 +29,7 @@ export const content = {
     footerEyebrow: 'HAVE A PROJECT IN MIND?',
     footerTitle: ['让想法，', '一起发生。'],
     footerCta: '预约沟通',
+    footerWordmark: 'UI/UX DESIGN',
     footerLocation: '现居广州 · 开放远程合作',
     messageLabel: '有想法？留下一句话',
     messagePlaceholder: '你的邮箱或项目关键词',
