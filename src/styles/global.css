@@ -175,9 +175,9 @@ i { font-style: normal; }
 .project-info h3 { margin-top: 25px; font-size: clamp(33px, 3vw, 52px); letter-spacing: -.05em; font-weight: 500; transition: transform .6s var(--ease); }
 .project-card:hover .project-info h3 { transform: translateY(-4px); }
 .project-info p { margin-top: 8px; color: var(--muted); }
-.all-projects { margin-top: 150px; padding: 35px 0; display: grid; grid-template-columns: 1fr auto 50px; align-items: center; border-block: 1px solid var(--ink); font-size: clamp(26px, 3vw, 50px); }
+.all-projects { margin-top: 150px; padding: 35px 0; display: flex; align-items: center; justify-content: center; gap: clamp(14px, 1.6vw, 28px); border-block: 1px solid var(--ink); font-size: clamp(26px, 3vw, 50px); text-align: center; }
 .all-projects strong { font-size: 13px; }
-.all-projects i { justify-self: end; font-style: normal; }
+.all-projects i { margin-left: clamp(2px, .5vw, 8px); font-style: normal; }
 
 .faq { display: grid; grid-template-columns: 1fr 1.25fr; align-items: start; gap: clamp(36px, 5vw, 90px); padding-top: clamp(120px, 10vw, 160px); padding-bottom: clamp(80px, 7vw, 120px); }
 .faq-title .eyebrow { margin-bottom: 28px; }
