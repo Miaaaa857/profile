@@ -1,3 +1,12 @@
+import korloffLogo from '../assets/logos/korloff.png'
+import strikoreLogo from '../assets/logos/strikore.png'
+import dixiangLogo from '../assets/logos/dixiang.png'
+import oppeinLogo from '../assets/logos/oppein.png'
+import tencentLogo from '../assets/logos/tencent.png'
+import seasunLogo from '../assets/logos/seasun.png'
+import xinhuaLogo from '../assets/logos/xinhua.png'
+import oneplusLogo from '../assets/logos/oneplus.png'
+
 export const content = {
   site: {
     logo: 'MIA',
@@ -6,7 +15,7 @@ export const content = {
     heroSecondary: '联系我',
     showreel: 'SHOWREEL / 2025',
     scroll: 'SCROLL TO EXPLORE',
-    clientsLabel: 'SELECTED CLIENTS',
+    clientsLabel: '服务了众多知名品牌',
     aboutLink: '了解更多',
     skillsEyebrow: 'CAPABILITIES',
     skillsTitle: ['把想法变成', '有用的体验。'],
@@ -66,7 +75,16 @@ export const content = {
     tags: ['+ 产品策略', '+ 界面设计', '+ 动效表达'],
     media: { type: 'video', src: '', poster: '/media/portfolio/hero-portfolio-wide.jpg' },
   },
-  brands: ['TENCENT 腾讯', 'SEASUN 西山居', 'OPPEIN 欧派', 'ONEPLUS 一加'],
+  brands: [
+    { name: 'Korloff', src: korloffLogo },
+    { name: 'Strikore', src: strikoreLogo },
+    { name: '地象几何', src: dixiangLogo },
+    { name: '欧派', src: oppeinLogo },
+    { name: '腾讯', src: tencentLogo },
+    { name: '西山居', src: seasunLogo },
+    { name: '新华', src: xinhuaLogo },
+    { name: '一加', src: oneplusLogo },
+  ],
   about: {
     eyebrow: 'WHO I AM',
     statement: '让复杂变清晰，\n让体验更有人情味。',
