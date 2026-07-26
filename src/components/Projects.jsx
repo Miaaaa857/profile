@@ -6,7 +6,7 @@ export default function Projects({ items, copy }) {
     <section className="section projects container" id="projects">
       <div className="projects-heading" data-reveal>
         <div className="module-heading__main">
-          <div className="module-heading__label"><p className="eyebrow">{copy.projectsEyebrow}</p><span className="section-index">( 03 )</span></div>
+          <div className="module-heading__label"><p className="eyebrow">{copy.projectsEyebrow}</p></div>
           <h2>{copy.projectsTitle[0]}<br /><i className="display-emphasis">{copy.projectsTitle[1]}</i></h2>
         </div>
         <p>{copy.projectsIntro}</p>

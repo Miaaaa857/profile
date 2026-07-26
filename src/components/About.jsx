@@ -6,7 +6,6 @@ export default function About({ data, copy }) {
         <div className="about-heading">
           <div className="module-heading__label" data-reveal>
             <p className="eyebrow">{data.eyebrow}</p>
-            <span className="section-index">( 01 )</span>
           </div>
           <h2 className="statement" data-reveal>{data.statement}</h2>
         </div>
