@@ -98,7 +98,7 @@ i { font-style: normal; }
 .nav-cta { justify-self: end; min-height: 44px; padding-inline: 20px; gap: 30px; }
 .menu-toggle { display: none; border: 0; background: none; cursor: pointer; }
 
-.hero { position: relative; min-height: calc(100svh - 32px); margin: 16px; overflow: hidden; display: flex; align-items: stretch; padding: 160px 0 60px; border-radius: var(--radius-media-lg); color: var(--white); }
+.hero { position: relative; min-height: calc(100svh - 32px); margin: 16px; overflow: hidden; display: flex; align-items: stretch; padding: clamp(205px, 20vh, 250px) 0 60px; border-radius: var(--radius-media-lg); color: var(--white); }
 .hero-content { position: relative; z-index: 2; display: flex; flex-direction: column; }
 .hero-eyebrow { margin-bottom: 24px; }
 .hero-title { max-width: 1120px; font-size: clamp(68px, 7.2vw, 120px); line-height: .98; letter-spacing: -.06em; font-weight: 500; }
