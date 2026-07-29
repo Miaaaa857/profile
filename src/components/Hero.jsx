@@ -28,7 +28,7 @@ export default function Hero({ data, copy }) {
             <p>{data.description}</p>
             <div className="button-row">
               <a className="button button--accent" href="#projects">{copy.heroPrimary} <span>↓</span></a>
-              <a className="button button--light" href="#contact">{copy.heroSecondary} <span>↗</span></a>
+              <a className="button button--light" href={copy.resumeHref} download="Mia-UI-Designer-Resume.pdf">{copy.heroSecondary} <span>↓</span></a>
             </div>
           </div>
         </div>
