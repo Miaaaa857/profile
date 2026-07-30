@@ -153,10 +153,10 @@ export const content = {
     { prefix: '+', value: 22, suffix: '%', label: '电商平台分销商入驻率', note: 'B 端增长，不止 C 端体验' },
   ],
   skills: [
-    { number: '01', title: '界面设计 / 交互原型', tool: 'FIGMA', description: '拆解复杂流程，建立信息层级，以响应式框架、Token 与变体组件构建可持续迭代的产品体验。', image: '/media/portfolio/page-27.jpg' },
-    { number: '02', title: '视觉优化 / 概念稿', tool: 'PHOTOSHOP', description: '从情绪板到高保真视觉，输出登陆页、拟物图标、勋章与营销场景概念，让品牌表达更鲜明。', image: '/media/portfolio/page-33.jpg' },
-    { number: '03', title: '动效设计 / Lottie', tool: 'AFTER EFFECTS', description: '为按钮、卡片与页面转场建立统一的运动语言，交付轻量、可复用的 Lottie 动效文件。', image: '/media/portfolio/page-14.jpg' },
-    { number: '04', title: '3D 元素 / 品牌 IP', tool: 'BLENDER', description: '制作金属、玻璃与发光材质的 3D 界面元素，并将品牌性格转化为简洁、可识别的 IP 角色。', image: '/media/portfolio/page-46.jpg' },
+    { number: '01', title: '需求研究 / 竞品拆解', tool: 'FIGMA', description: '拆解复杂流程，建立信息层级，以响应式框架、Token 与变体组件构建可持续迭代的产品体验。', image: '/media/portfolio/page-27.jpg' },
+    { number: '02', title: '数据分析 / A/B 测试', tool: 'PHOTOSHOP', description: '从情绪板到高保真视觉，输出登陆页、拟物图标、勋章与营销场景概念，让品牌表达更鲜明。', image: '/media/portfolio/page-33.jpg' },
+    { number: '03', title: '提示设计 / LLM 应用', tool: 'AFTER EFFECTS', description: '为按钮、卡片与页面转场建立统一的运动语言，交付轻量、可复用的 Lottie 动效文件。', image: '/media/portfolio/page-14.jpg' },
+    { number: '04', title: '交互原型 / 亲手实现', tool: 'BLENDER', description: '制作金属、玻璃与发光材质的 3D 界面元素，并将品牌性格转化为简洁、可识别的 IP 角色。', image: '/media/portfolio/page-46.jpg' },
   ],
   projects: [
     { slug: 'fatelinked', index: '01', name: 'FateLinked', title: 'AIGC 智能体交互平台', category: 'PRODUCT DESIGN · AIGC', year: '2024', metric: '60+ 功能页面 · 7 日留存 38%', summary: '围绕“人设—声音—形象”三维自定义流程，构建可传递情感价值的智能体体验与可复用组件系统。', image: '/media/portfolio/page-06.jpg', detailImage: '/media/portfolio/page-06.jpg', tone: 'violet' },
