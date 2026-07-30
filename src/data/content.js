@@ -111,13 +111,14 @@ export const content = {
       suffix: '，并且可以持续验证的产品体验。',
     },
     portrait: '/media/portfolio/mia-portrait-gray-v2.png',
+    portraitVideo: '/media/portfolio/mia-portrait-video.mp4',
     tags: ['AI', '产品', '增长', '体验'],
     name: 'Mia',
     role: 'AI 产品经理 / 体验设计师',
     cards: [
       {
         index: '顶层',
-        title: 'AI 产品能力（AI Product）',
+        title: 'AI 产品能力',
         items: [
           'Prompt 设计与迭代，持续调优模型输出质量',
           '理解 LLM 能力边界，判断什么该交给模型、什么不该',
@@ -127,7 +128,7 @@ export const content = {
       },
       {
         index: '中层',
-        title: '产品能力（Product Thinking）',
+        title: '产品能力',
         items: [
           '需求分析，定性定量结合挖真实痛点',
           '数据驱动：埋点、漏斗分析、A/B 测试',
@@ -137,7 +138,7 @@ export const content = {
       },
       {
         index: '底层',
-        title: '设计与实现（Design & Build）',
+        title: '设计与实现',
         items: [
           '4 年一线设计经验，服务过腾讯、OPPO 等产品',
           '精通设计工具，快速产出高保真原型',
@@ -148,10 +149,8 @@ export const content = {
     ],
   },
   stats: [
-    { value: 3, suffix: '+', label: '年设计经验', note: '从视觉表达走向产品全链路' },
-    { value: 60, suffix: '+', label: '功能页面交付', note: '覆盖复杂产品与组件系统' },
-    { value: 4, suffix: '', label: '核心项目', note: '每一个都回应真实商业目标' },
-    { value: 38, suffix: '%', label: '最高 7 日留存', note: '设计结果，以数据被看见' },
+    { value: 38, suffix: '%', label: 'AI 社交产品 7 日留存', note: '围绕核心行为重构首日流程' },
+    { prefix: '+', value: 22, suffix: '%', label: '电商平台分销商入驻率', note: 'B 端增长，不止 C 端体验' },
   ],
   skills: [
     { number: '01', title: '界面设计 / 交互原型', tool: 'FIGMA', description: '拆解复杂流程，建立信息层级，以响应式框架、Token 与变体组件构建可持续迭代的产品体验。', image: '/media/portfolio/page-27.jpg' },

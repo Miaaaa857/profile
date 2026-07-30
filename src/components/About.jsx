@@ -1,6 +1,20 @@
 export default function About({ data, stats }) {
   const persona = data
-  const statGroups = [stats.slice(0, 2), stats.slice(2, 4)]
+  const handlePortraitMove = (event) => {
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return
+
+    const portrait = event.currentTarget
+    const bounds = portrait.getBoundingClientRect()
+    const offsetX = ((event.clientX - bounds.left) / bounds.width - 0.5) * 14
+    const offsetY = ((event.clientY - bounds.top) / bounds.height - 0.5) * 10
+
+    portrait.style.setProperty('--portrait-x', `${offsetX}px`)
+    portrait.style.setProperty('--portrait-y', `${offsetY}px`)
+  }
+  const resetPortrait = (event) => {
+    event.currentTarget.style.setProperty('--portrait-x', '0px')
+    event.currentTarget.style.setProperty('--portrait-y', '0px')
+  }
 
   return (
     <section className="section about persona" id="about">
@@ -18,17 +32,35 @@ export default function About({ data, stats }) {
         </header>
 
         <div className="persona-layout">
-          <figure className="persona-portrait" data-reveal>
-            <img src={persona.portrait} alt={`${persona.name} 人物画像`} />
+          <figure
+            className="persona-portrait"
+            data-reveal
+            onPointerMove={handlePortraitMove}
+            onPointerLeave={resetPortrait}
+          >
+            <div className="persona-portrait-media">
+              <video
+                src={persona.portraitVideo}
+                poster={persona.portrait}
+                aria-label={`${persona.name} 人物动态画像`}
+                autoPlay
+                muted
+                loop
+                playsInline
+                preload="auto"
+              />
+            </div>
             <div className="persona-overlay">
-              {statGroups.map((group, groupIndex) => (
-                <div className="persona-stat-panel" key={groupIndex}>
-                  {group.map((stat) => (
-                    <div className="persona-mini-stat" key={stat.label}>
-                      <strong>{stat.value}{stat.suffix}</strong>
-                      <span>{stat.label}</span>
-                    </div>
-                  ))}
+              {stats.map((stat) => (
+                <div className="persona-stat-panel" key={stat.label}>
+                  <strong>
+                    {stat.prefix}{stat.value}
+                    <span className="persona-stat-suffix">{stat.suffix}</span>
+                  </strong>
+                  <p>{stat.label}</p>
+                  <span className="persona-stat-tag">
+                    {stat.note}
+                  </span>
                 </div>
               ))}
             </div>

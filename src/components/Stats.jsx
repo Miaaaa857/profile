@@ -13,7 +13,7 @@ function Stat({ item }) {
     if (ref.current) observer.observe(ref.current)
     return () => observer.disconnect()
   }, [item.value])
-  return <div className="stat" ref={ref}><strong>{value}{item.suffix}</strong><p>{item.label}</p><span>{item.note}</span></div>
+  return <div className="stat" ref={ref}><strong>{item.prefix}{value}{item.suffix}</strong><p>{item.label}</p><span>{item.note}</span></div>
 }
 
 export default function Stats({ items, ariaLabel, eyebrow = 'NUMBERS' }) {
