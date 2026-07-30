@@ -103,6 +103,50 @@ export const content = {
     { src: '/media/portfolio/page-46.jpg', alt: '品牌 IP 与三维场景设计展示', label: 'BRAND IP · 3D VISUAL' },
   ],
   },
+  aboutPersona: {
+    eyebrow: '个人画像',
+    intro: {
+      prefix: '我关注如何把复杂的模型能力，转化为',
+      highlight: '用户能理解、愿意使用',
+      suffix: '，并且可以持续验证的产品体验。',
+    },
+    portrait: '/media/portfolio/mia-portrait-gray-v2.png',
+    tags: ['AI', '产品', '增长', '体验'],
+    name: 'Mia',
+    role: 'AI 产品经理 / 体验设计师',
+    cards: [
+      {
+        index: '顶层',
+        title: 'AI 产品能力（AI Product）',
+        items: [
+          'Prompt 设计与迭代，持续调优模型输出质量',
+          '理解 LLM 能力边界，判断什么该交给模型、什么不该',
+          '设计人机协作流程，让用户愿意用、用得顺',
+          'AI 产品拆解与场景挖掘',
+        ],
+      },
+      {
+        index: '中层',
+        title: '产品能力（Product Thinking）',
+        items: [
+          '需求分析，定性定量结合挖真实痛点',
+          '数据驱动：埋点、漏斗分析、A/B 测试',
+          '竞品分析与市场判断',
+          '用产品决策提升核心指标（留存 / 转化 / GMV）',
+        ],
+      },
+      {
+        index: '底层',
+        title: '设计与实现（Design & Build）',
+        items: [
+          '4 年一线设计经验，服务过腾讯、OPPO 等产品',
+          '精通设计工具，快速产出高保真原型',
+          '会写前端，能亲手把想法做成可跑的 demo',
+          '懂交互与体验，知道用户在哪一步流失',
+        ],
+      },
+    ],
+  },
   stats: [
     { value: 3, suffix: '+', label: '年设计经验', note: '从视觉表达走向产品全链路' },
     { value: 60, suffix: '+', label: '功能页面交付', note: '覆盖复杂产品与组件系统' },

@@ -4,7 +4,6 @@ import Navbar from '../components/Navbar'
 import Hero from '../components/Hero'
 import LogoMarquee from '../components/LogoMarquee'
 import About from '../components/About'
-import Stats from '../components/Stats'
 import Skills from '../components/Skills'
 import Projects from '../components/Projects'
 import FAQ from '../components/FAQ'
@@ -16,9 +15,8 @@ export default function Home() {
     <main>
       <Navbar data={content} />
       <Hero data={content.hero} copy={content.site} />
+      <About data={content.aboutPersona} stats={content.stats} />
       <LogoMarquee brands={content.brands} label={content.site.clientsLabel} ariaLabel={content.site.clientsAria} />
-      <About data={content.about} copy={content.site} />
-      <Stats items={content.stats} ariaLabel={content.site.statsAria} eyebrow={content.site.statsEyebrow} />
       <Skills items={content.skills} copy={content.site} />
       <Projects items={content.projects} copy={content.site} />
       <FAQ items={content.faq} copy={content.site} />
