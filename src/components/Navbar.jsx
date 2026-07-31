@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 
-export default function Navbar({ data }) {
+export default function Navbar({ data, onContact }) {
   const [scrolled, setScrolled] = useState(false)
   const [open, setOpen] = useState(false)
   useEffect(() => {
@@ -21,7 +21,7 @@ export default function Navbar({ data }) {
           </a>
         ))}
       </nav>
-      <a className="button button--dark nav-cta" href={`mailto:${data.designer.email}`}>{data.site.navCta} <span>↗</span></a>
+      <button className="button button--dark nav-cta" type="button" onClick={onContact}>{data.site.navCta} <span>↗</span></button>
       <button className="menu-toggle" onClick={() => setOpen(!open)} aria-label={data.site.menuToggle} aria-expanded={open}>{open ? data.site.menuClose : data.site.menuOpen}</button>
     </header>
   )
