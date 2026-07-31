@@ -104,53 +104,18 @@ export const content = {
   ],
   },
   aboutPersona: {
-    eyebrow: '个人画像',
-    intro: {
-      prefix: '我关注如何把复杂的模型能力，转化为',
-      highlight: '用户能理解、愿意使用',
-      suffix: '，并且可以持续验证的产品体验。',
-    },
+    eyebrow: '关于我',
+    headline: ['想清楚，', '再动手'],
     portrait: '/media/portfolio/mia-portrait-gray-v2.png',
     portraitVideo: '/media/portfolio/mia-portrait-video.mp4',
-    tags: ['AI', '产品', '增长', '体验'],
-    name: 'Mia',
+    name: '张明霞',
     role: 'AI 产品经理 / 体验设计师',
-    cards: [
-      {
-        index: '顶层',
-        title: 'AI 产品能力',
-        items: [
-          'Prompt 设计与迭代，持续调优模型输出质量',
-          '理解 LLM 能力边界，判断什么该交给模型、什么不该',
-          '设计人机协作流程，让用户愿意用、用得顺',
-          'AI 产品拆解与场景挖掘',
-        ],
-      },
-      {
-        index: '中层',
-        title: '产品能力',
-        items: [
-          '需求分析，定性定量结合挖真实痛点',
-          '数据驱动：埋点、漏斗分析、A/B 测试',
-          '竞品分析与市场判断',
-          '用产品决策提升核心指标（留存 / 转化 / GMV）',
-        ],
-      },
-      {
-        index: '底层',
-        title: '设计与实现',
-        items: [
-          '4 年一线设计经验，服务过腾讯、OPPO 等产品',
-          '精通设计工具，快速产出高保真原型',
-          '会写前端，能亲手把想法做成可跑的 demo',
-          '懂交互与体验，知道用户在哪一步流失',
-        ],
-      },
-    ],
+    bio: '设计出身的 AI 产品经理，4 年一线体验设计经验，服务过腾讯、OPPO、一加等产品。现在专注把 LLM 能力变成用户真正会用的产品——我关心的不是模型多强，而是用户信不信、用不用、留不留。',
+    buttonLabel: '了解更多',
   },
   stats: [
-    { value: 38, suffix: '%', label: 'AI 社交产品 7 日留存', note: '围绕核心行为重构首日流程' },
-    { prefix: '+', value: 22, suffix: '%', label: '电商平台分销商入驻率', note: 'B 端增长，不止 C 端体验' },
+    { value: 38, suffix: '%', label: 'AI 产品 7 日留存' },
+    { value: 4, suffix: '', label: '从 0 到 1 主导项目' },
   ],
   skills: [
     { number: '01', title: '需求研究 / 竞品拆解', tool: 'FIGMA', description: '拆解复杂流程，建立信息层级，以响应式框架、Token 与变体组件构建可持续迭代的产品体验。', image: '/media/portfolio/page-27.jpg' },
