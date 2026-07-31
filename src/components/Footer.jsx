@@ -2,7 +2,7 @@ export default function Footer({ data, onContact }) {
   return (
     <footer className="footer" id="contact">
       <section className="footer-cta-shell">
-        <div className="container footer-cta" data-reveal><p className="eyebrow">{data.site.footerEyebrow}</p><h2>{data.site.footerTitle[0]}<br /><span className="display-emphasis">{data.site.footerTitle[1]}</span></h2><button className="round-button" type="button" onClick={onContact}><span>{data.site.footerCta}</span><i>↗</i></button></div>
+        <div className="container footer-cta" data-reveal><p className="eyebrow">{data.site.footerEyebrow}</p><h2>{data.site.footerTitle[0]}<br /><span className="display-emphasis">{data.site.footerTitle[1]}</span></h2><button className="round-button" type="button" onClick={onContact}><span>{data.site.footerCta}</span><i>→</i></button></div>
       </section>
       <div className="footer-panel">
         <div className="container footer-grid">

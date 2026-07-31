@@ -21,7 +21,7 @@ export default function Navbar({ data, onContact }) {
           </a>
         ))}
       </nav>
-      <button className="button button--dark nav-cta" type="button" onClick={onContact}>{data.site.navCta} <span>↗</span></button>
+      <button className="button button--dark nav-cta" type="button" onClick={onContact}><span className="button__label">{data.site.navCta}</span><span className="button__arrow">→</span></button>
       <button className="menu-toggle" onClick={() => setOpen(!open)} aria-label={data.site.menuToggle} aria-expanded={open}>{open ? data.site.menuClose : data.site.menuOpen}</button>
     </header>
   )

@@ -1,3 +1,60 @@
+import { useEffect, useRef, useState } from 'react'
+
+function RollingNumber({ value, prefix = '', suffix = '' }) {
+  const target = Number(value) || 0
+  const elementRef = useRef(null)
+  const frameRef = useRef(null)
+  const [displayValue, setDisplayValue] = useState(0)
+
+  useEffect(() => {
+    const element = elementRef.current
+    if (!element) return undefined
+
+    const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches
+    if (reduceMotion) {
+      setDisplayValue(target)
+      return undefined
+    }
+
+    const animate = () => {
+      cancelAnimationFrame(frameRef.current)
+      const startedAt = performance.now()
+      const duration = target <= 9 ? 850 : 1250
+
+      const tick = (now) => {
+        const progress = Math.min((now - startedAt) / duration, 1)
+        const eased = 1 - Math.pow(1 - progress, 4)
+        setDisplayValue(Math.round(target * eased))
+        if (progress < 1) frameRef.current = requestAnimationFrame(tick)
+      }
+
+      frameRef.current = requestAnimationFrame(tick)
+    }
+
+    const observer = new IntersectionObserver(([entry]) => {
+      if (entry.isIntersecting) animate()
+      else {
+        cancelAnimationFrame(frameRef.current)
+        setDisplayValue(0)
+      }
+    }, { threshold: 0.45 })
+
+    observer.observe(element)
+    return () => {
+      observer.disconnect()
+      cancelAnimationFrame(frameRef.current)
+    }
+  }, [target])
+
+  return (
+    <strong ref={elementRef} aria-label={`${prefix}${target}${suffix}`}>
+      {prefix}
+      {displayValue}
+      {suffix && <span>{suffix}</span>}
+    </strong>
+  )
+}
+
 export default function About({ data, stats }) {
   const handlePortraitMove = (event) => {
     if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return
@@ -44,10 +101,7 @@ export default function About({ data, stats }) {
             <div className="persona-metrics" aria-label="个人项目数据">
               {stats.map((stat) => (
                 <div className="persona-metric" key={stat.label}>
-                  <strong>
-                    {stat.value}
-                    {stat.suffix && <span>{stat.suffix}</span>}
-                  </strong>
+                  <RollingNumber value={stat.value} prefix={stat.prefix} suffix={stat.suffix} />
                   <p>{stat.label}</p>
                 </div>
               ))}

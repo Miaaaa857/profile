@@ -1,19 +1,27 @@
-import { useEffect, useRef } from 'react'
+import Ferrofluid from './Ferrofluid/Ferrofluid'
+
+const ferrofluidColors = ['#ff4b2b', '#ff7a3c', '#ffffff']
 
 export default function Hero({ data, copy }) {
-  const mediaRef = useRef(null)
-  useEffect(() => {
-    const onScroll = () => {
-      const video = mediaRef.current?.querySelector('video')
-      if (video) video.style.transform = `translate3d(0, ${Math.min(window.scrollY * .08, 54)}px, 0) scale(1.04)`
-    }
-    window.addEventListener('scroll', onScroll, { passive: true })
-    return () => window.removeEventListener('scroll', onScroll)
-  }, [])
   return (
     <section className="hero" id="home">
-      <div className="hero-media" ref={mediaRef} aria-hidden="true">
-        <video muted autoPlay loop playsInline poster={data.media.poster}>{data.media.src && <source src={data.media.src} />}</video>
+      <div className="hero-media" aria-hidden="true">
+        <Ferrofluid
+          colors={ferrofluidColors}
+          backgroundColor="#0d0d0c"
+          speed={0.3}
+          scale={1}
+          turbulence={1}
+          fluidity={0.1}
+          rimWidth={0.2}
+          sharpness={3}
+          shimmer={1}
+          glow={1.4}
+          flowDirection="down"
+          mouseInteraction
+          mouseStrength={1}
+          mouseRadius={0.3}
+        />
         <div className="hero-media__mesh" />
         <span className="hero-media__note">{copy.showreel}</span>
       </div>
@@ -27,8 +35,8 @@ export default function Hero({ data, copy }) {
           <div className="hero-intro">
             <p>{data.description}</p>
             <div className="button-row">
-              <a className="button button--accent" href="#projects">{copy.heroPrimary} <span>↓</span></a>
-              <a className="button button--light" href={copy.resumeHref} download="Mia-UI-Designer-Resume.pdf">{copy.heroSecondary} <span>↓</span></a>
+              <a className="button button--accent" href="#projects"><span className="button__label">{copy.heroPrimary}</span><span className="button__arrow">→</span></a>
+              <a className="button button--light" href={copy.resumeHref} download="Mia-UI-Designer-Resume.pdf"><span className="button__label">{copy.heroSecondary}</span><span className="button__arrow">→</span></a>
             </div>
           </div>
         </div>

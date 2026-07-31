@@ -115,6 +115,7 @@ export const content = {
   },
   stats: [
     { value: 38, suffix: '%', label: 'AI 产品 7 日留存' },
+    { value: 22, prefix: '+', suffix: '%', label: '电商分销商入驻率' },
     { value: 4, suffix: '', label: '从 0 到 1 主导项目' },
   ],
   skills: [

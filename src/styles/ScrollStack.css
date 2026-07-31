@@ -32,7 +32,7 @@
 
 .scroll-stack-end {
   width: 100%;
-  height: clamp(280px, 42vh, 520px);
+  height: clamp(140px, 21vh, 260px);
 }
 
 @media (max-width: 640px) {
@@ -41,7 +41,7 @@
   }
 
   .scroll-stack-end {
-    height: 220px;
+    height: 110px;
   }
 }
 
