@@ -70,9 +70,9 @@ export default function AelixaAbout() {
               <p>Helping ambitious brands scale<br />through data and design.<br />Ready to grow? <a href="mailto:hello@aelixa.io">hello@aelixa.io</a></p>
             </div>
 
-            <figure className="aa-hero__portrait" data-reveal>
-              <img src="/media/portfolio/mia-portrait-gray-v2.png" alt="Aelixa founder portrait" />
-              <figcaption>Based in Zurich, Switzerland<br />Serving brands globally.</figcaption>
+            <figure className="aa-hero__portrait">
+              <img src="/media/portfolio/mia-portrait-gray-v2.png" alt="Aelixa founder portrait" data-reveal />
+              <figcaption data-reveal>Based in Zurich, Switzerland<br />Serving brands globally.</figcaption>
             </figure>
 
             <div className="aa-hero__statement" data-reveal>
