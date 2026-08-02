@@ -1,8 +1,8 @@
 const metrics = [
-  { value: '5+', label: 'Partner Brands', note: 'We’ve partnered with ambitious teams across product, technology, and culture.' },
-  { value: '120+', label: 'Brands worked with', note: 'Trusted by startups, scale-ups, and established global teams.' },
-  { value: '3.8×', label: 'Average ROAS', note: 'A consistent return created through clear thinking and focused execution.' },
-  { value: '98%', label: 'Client retention rate', note: 'Long-term partnerships built on trust, clarity, and measurable progress.' },
+  { value: '5', suffix: '+', label: 'Partner Brands', note: 'We’ve partnered with ambitious teams across product, technology, and culture.' },
+  { value: '120', suffix: '+', label: 'Brands worked with', note: 'Trusted by startups, scale-ups, and established global teams.' },
+  { value: '3.8', suffix: '×', label: 'Average ROAS', note: 'A consistent return created through clear thinking and focused execution.' },
+  { value: '98', suffix: '%', label: 'Client retention rate', note: 'Long-term partnerships built on trust, clarity, and measurable progress.' },
 ]
 
 const approachCards = [
@@ -87,7 +87,7 @@ export default function AelixaAbout() {
           <div className="aa-metrics">
             {metrics.map((metric) => (
               <article className="aa-metric" key={metric.label} data-reveal>
-                <strong>{metric.value}</strong>
+                <strong><span>{metric.value}</span><em>{metric.suffix}</em></strong>
                 <h2>{metric.label}</h2>
                 <p>{metric.note}</p>
               </article>
