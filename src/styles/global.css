@@ -337,7 +337,7 @@ i { font-style: normal; }
 .aa-hero__statement { transition-delay: .4s; }
 
 @media (min-width: 981px) {
-  .aa-hero__grid { transform: translateY(-39px); }
+  .aa-hero__grid { transform: translateY(0); }
   .aa-hero__title span:first-child { --reveal-x: 15px; --reveal-y: 34px; }
   .aa-hero__title span:last-child { --reveal-x: 12px; --reveal-y: 34px; }
   .aa-hero__portrait img { --reveal-x: 13px; }
