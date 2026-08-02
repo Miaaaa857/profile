@@ -369,16 +369,16 @@ i { font-style: normal; }
 .aa-approach-card { min-height: 0; padding: 16px; display: grid; grid-template-columns: 28px 1fr; grid-template-rows: auto auto; column-gap: 12px; align-items: center; border: 1px solid var(--line); border-radius: 8px; background: #f3f3f1; }
 .aa-approach-card:first-child { background: #242424; color: #fffdf8; }
 .aa-approach-card > span { grid-column: 1; grid-row: 1; width: 28px; height: 28px; display: grid; place-items: center; border: 1px solid currentColor; border-radius: 50%; color: var(--accent); font-size: 9px; }
-.aa-approach-card h3 { grid-column: 2; grid-row: 1; margin: 0; font-size: 20px; line-height: 1.35; font-weight: 500; }
-.aa-approach-card p { grid-column: 1 / -1; grid-row: 2; margin-top: 16px; color: #77746e; font-size: 14px; line-height: 1.6; }
+.aa-approach-card h3 { grid-column: 2; grid-row: 1; margin: 0; font-size: 18px; line-height: 1.35; font-weight: 500; }
+.aa-approach-card p { grid-column: 1 / -1; grid-row: 2; margin-top: 16px; color: #77746e; font-size: 16px; line-height: 1.6; }
 .aa-approach-card:first-child p { color: rgba(255, 255, 255, .68); }
 .aa-approach__visual { position: relative; min-height: 790px; margin: 0; overflow: hidden; border-radius: 24px; background: #d8d8d4; }
 .aa-approach__visual > img { width: 100%; height: 100%; object-fit: cover; object-position: 43% center; }
 .aa-approach__visual figcaption { position: absolute; left: 16px; right: 16px; bottom: 16px; max-width: 365px; padding: 18px; border-radius: 15px; background: rgba(248, 248, 245, .94); color: var(--ink); backdrop-filter: blur(12px); }
 .aa-approach-overlay-title { display: flex; align-items: center; gap: 8px; }
 .aa-approach-overlay-title span { width: 28px; height: 28px; display: grid; place-items: center; border: 1px solid var(--line); border-radius: 50%; color: var(--accent); font-size: 9px; }
-.aa-approach-overlay-title strong { font-size: 20px; line-height: 1.35; letter-spacing: 0; font-weight: 600; }
-.aa-approach__visual figcaption p { margin-top: 16px; color: #696761; font-size: 14px; line-height: 1.6; }
+.aa-approach-overlay-title strong { font-size: 18px; line-height: 1.35; letter-spacing: 0; font-weight: 600; }
+.aa-approach__visual figcaption p { margin-top: 16px; color: #696761; font-size: 16px; line-height: 1.6; }
 
 .aa-career { overflow: clip; }
 .aa-career__marquee { padding: 22px 0 25px; overflow: hidden; background: var(--accent); }
