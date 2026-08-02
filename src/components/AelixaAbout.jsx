@@ -89,17 +89,18 @@ export default function AelixaAbout() {
           </div>
 
           <div className="aa-results__story">
-            <div className="aa-section-title" data-reveal>
-              <p className="aa-kicker aa-kicker--light">PROVEN IMPACT</p>
-              <h2 id="aa-results-title">Measured By<br />Real Results</h2>
+            <div className="aa-results__lead" data-reveal>
+              <div className="aa-section-title">
+                <p className="aa-kicker aa-kicker--light">PROVEN IMPACT</p>
+                <h2 id="aa-results-title">Measured By<br />Real Results</h2>
+              </div>
+              <p>From scaling startups to optimizing established brands, these numbers reflect my commitment to excellence and growth.</p>
             </div>
             <div className="aa-results__copy" data-reveal>
-              <p>From scaling startups to optimizing established brands, these numbers reflect a commitment to excellence and growth.</p>
-              <p>I started this practice after years of watching brands invest in work that looked busy but moved nothing. The problem was rarely effort — it was clarity.</p>
+              <p>I started Meridian after years of watching brands invest in work that looked busy but moved nothing. The problem was rarely effort — it was clarity.</p>
+              <p>Before Meridian, I worked across paid media, SEO, and conversion strategy for startups and established teams. That experience taught me to understand the business first, then choose the channels.</p>
+              <p>Today I work directly with a small number of ambitious brands, bringing strategy and execution together. Not separate services. One direction.</p>
             </div>
-            <figure className="aa-results__portrait" data-reveal>
-              <img src="/media/portfolio/hero-portrait.png" alt="Portrait in studio" />
-            </figure>
           </div>
         </div>
       </section>
