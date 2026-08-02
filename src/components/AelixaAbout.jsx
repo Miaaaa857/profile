@@ -8,17 +8,17 @@ const metrics = [
 const capabilityGroups = [
   {
     title: 'AI 产品化',
-    level: '顶层',
+    level: 'AI Productization',
     items: ['判断 LLM 能力边界', 'Prompt 设计与迭代', '设计人机协作流程', '用产品遮短板、放长板'],
   },
   {
     title: '产品判断',
-    level: '中层',
+    level: 'Product Thinking',
     items: ['从流失倒推真问题', '会砍需求，不堆功能', '竞品拆解与场景挖掘', '数据验证：埋点、漏斗、A/B'],
   },
   {
     title: '设计与实现',
-    level: '底层',
+    level: 'Design & Build',
     items: ['精通主流设计工具', '会写前端，能做 demo', '4 年一线设计经验', '懂交互，知道用户在哪卡住'],
   },
 ]
