@@ -394,7 +394,7 @@ i { font-style: normal; }
 .aa-capability-pyramid__level--1 strong { font-size: clamp(24px, 1.9vw, 32px); white-space: nowrap; }
 .aa-capability-pyramid__level--1 span { font-size: clamp(13px, 1.05vw, 17px); white-space: nowrap; }
 .aa-capability-pyramid__level--2 { width: 100%; height: 140px; clip-path: polygon(29% 0, 71% 0, 85% 100%, 15% 100%); background: #ff7d3f; }
-.aa-capability-pyramid__level--3 { width: 100%; height: 160px; clip-path: polygon(14% 0, 86% 0, 100% 100%, 0 100%); border-radius: 0 0 24px 24px; background: var(--accent); }
+.aa-capability-pyramid__level--3 { width: 100%; height: 160px; clip-path: polygon(14% 0, 86% 0, 100% 100%, 0 100%); background: var(--accent); }
 .aa-capability-details { display: grid; gap: 28px; }
 .aa-capability-group { padding: 24px 28px 26px; border: 2px dashed var(--accent); border-radius: 20px; }
 .aa-capability-group h2 { font-size: clamp(25px, 2vw, 34px); line-height: 1.2; font-weight: 600; }
