@@ -88,7 +88,7 @@ export default function AelixaAbout() {
           <div className="aa-capability-details">
             {capabilityGroups.map((group) => (
               <article className="aa-capability-group" key={group.title} data-reveal>
-                <h2>{group.level} · {group.title}</h2>
+                <h2>{group.title}</h2>
                 <div>
                   {group.items.map((item) => <span key={item}>{item}</span>)}
                 </div>
