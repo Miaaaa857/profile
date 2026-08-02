@@ -69,34 +69,6 @@ export default function AelixaAbout() {
         </div>
       </section>
 
-      <section className="aa-results" aria-labelledby="aa-results-title">
-        <div className="container">
-          <div className="aa-metrics">
-            {metrics.map((metric) => (
-              <article className="aa-metric" key={metric.label} data-reveal>
-                <strong><span>{metric.value}</span><em>{metric.suffix}</em></strong>
-                <h2>{metric.label}</h2>
-                <p>{metric.note}</p>
-              </article>
-            ))}
-          </div>
-
-          <div className="aa-results__story">
-            <div className="aa-results__lead" data-reveal>
-              <div className="aa-section-title">
-                <p className="aa-kicker aa-kicker--light">PROVEN IMPACT</p>
-                <h2 id="aa-results-title">真实成绩，<br />不是漂亮话</h2>
-              </div>
-            </div>
-            <div className="aa-results__copy" data-reveal>
-              <p>我不是科班产品经理，也不是算法出身。我的路径是：设计→增长→AI产品。做了4年一线的UI和体验设计，服务于腾讯、OPPO、一加等产品——但我最好的作品不是某个界面，是把一个产品的7日留存实现了38%。</p>
-              <p>做生长设计那几年，我养成了看数据说话的习惯：改一个文案而不是变成，调整一个流程而不是漏斗。慢慢发现产品的问题很少是“好不好看”，而是“用户信不信、用不用、留不留”。这个判断把我推向了产品，也推向了AI。</p>
-              <p>现在我专注一件事：把LLM的能力，翻译成用户真正会用的产品。模型能实现的，和用户愿意用的，中间差着整个产品——我做的就是补这个差。</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
       <section className="aa-approach" aria-labelledby="aa-approach-title">
         <div className="container aa-approach__grid">
           <div className="aa-approach__content">
@@ -127,6 +99,35 @@ export default function AelixaAbout() {
           </figure>
         </div>
       </section>
+
+      <section className="aa-results" aria-labelledby="aa-results-title">
+        <div className="container">
+          <div className="aa-results__story">
+            <div className="aa-results__lead" data-reveal>
+              <div className="aa-section-title">
+                <p className="aa-kicker aa-kicker--light">PROVEN IMPACT</p>
+                <h2 id="aa-results-title">真实成绩，<br />不是漂亮话</h2>
+              </div>
+            </div>
+            <div className="aa-results__copy" data-reveal>
+              <p>我不是科班产品经理，也不是算法出身。我的路径是：设计→增长→AI产品。做了4年一线的UI和体验设计，服务于腾讯、OPPO、一加等产品——但我最好的作品不是某个界面，是把一个产品的7日留存实现了38%。</p>
+              <p>做生长设计那几年，我养成了看数据说话的习惯：改一个文案而不是变成，调整一个流程而不是漏斗。慢慢发现产品的问题很少是“好不好看”，而是“用户信不信、用不用、留不留”。这个判断把我推向了产品，也推向了AI。</p>
+              <p>现在我专注一件事：把LLM的能力，翻译成用户真正会用的产品。模型能实现的，和用户愿意用的，中间差着整个产品——我做的就是补这个差。</p>
+            </div>
+          </div>
+
+          <div className="aa-metrics">
+            {metrics.map((metric) => (
+              <article className="aa-metric" key={metric.label} data-reveal>
+                <strong><span>{metric.value}</span><em>{metric.suffix}</em></strong>
+                <h2>{metric.label}</h2>
+                <p>{metric.note}</p>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
+
 
       <section className="aa-career" aria-labelledby="aa-career-title">
         <div className="aa-career__marquee" aria-hidden="true">
