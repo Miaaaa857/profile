@@ -68,10 +68,10 @@ export const content = {
     years: '3+',
   },
   navigation: [
-    { label: '首页', href: '#home' },
-    { label: '关于', href: '#about' },
-    { label: '项目', href: '#projects' },
-    { label: '联系', href: '#contact' },
+    { label: '首页', href: '/' },
+    { label: '关于', href: '/about' },
+    { label: '项目', href: '/projects' },
+    { label: '联系', href: '/contact' },
   ],
   hero: {
     eyebrow: '设计出身的 AI 产品经理',

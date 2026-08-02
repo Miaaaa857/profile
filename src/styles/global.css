@@ -97,6 +97,7 @@ i { font-style: normal; }
 .nav-links { display: flex; gap: 42px; }
 .nav-links a { position: relative; font-size: 16px; font-weight: 500; line-height: 1.2; letter-spacing: .01em; transition: color .35s var(--ease); }
 .nav-links a:hover { color: var(--accent); }
+.nav-links a.is-active { color: var(--accent); }
 .nav-project-badge { position: absolute; top: -15px; right: -25px; min-width: 28px; height: 20px; padding: 0 7px; display: grid; place-items: center; border-radius: 999px; background: var(--accent); color: white; font-size: 9px; line-height: 1; font-weight: 700; letter-spacing: 0; }
 .nav-cta { justify-self: end; min-height: 44px; padding: 0 16px 0 54px; font-size: 16px; }
 .nav-cta .button__arrow { left: 4px; width: 34px; height: 34px; padding-left: 10px; }
@@ -119,6 +120,9 @@ i { font-style: normal; }
 .hero-media__mesh { position: absolute; inset: 0; pointer-events: none; background: linear-gradient(90deg, rgba(8,8,8,.58) 0%, rgba(8,8,8,.3) 52%, rgba(8,8,8,.16) 100%), linear-gradient(0deg, rgba(8,8,8,.48), transparent 50%); }
 .hero-media__note { position: absolute; right: 24px; bottom: 24px; color: rgba(255,255,255,.6); font-size: 9px; letter-spacing: .14em; }
 .scroll-cue { display: none; }
+.inner-page { min-height: 100vh; padding-top: 82px; }
+.inner-page .navbar:not(.navbar--scrolled) { color: var(--ink); }
+.contact-page { padding-top: 112px; }
 
 .logo-strip { min-height: 180px; display: grid; grid-template-columns: 260px 1fr; align-items: center; border-block: 1px solid var(--line); overflow: hidden; }
 .logo-strip__label { max-width: 240px; font-size: clamp(14px, 1vw, 16px); font-weight: 500; line-height: 1.45; letter-spacing: .02em; }

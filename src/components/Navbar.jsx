@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react'
+import { Link, NavLink } from 'react-router-dom'
 
 export default function Navbar({ data, onContact }) {
   const [scrolled, setScrolled] = useState(false)
@@ -10,15 +11,15 @@ export default function Navbar({ data, onContact }) {
   }, [])
   return (
     <header className={`navbar ${scrolled ? 'navbar--scrolled' : ''}`}>
-      <a className="wordmark" href="#home" aria-label={data.site.backHome}><img src={data.site.logoImage} alt={data.site.logoAlt} /></a>
+      <Link className="wordmark" to="/" aria-label={data.site.backHome}><img src={data.site.logoImage} alt={data.site.logoAlt} /></Link>
       <nav className={open ? 'nav-links is-open' : 'nav-links'} aria-label={data.site.navLabel}>
         {data.navigation.map((item) => (
-          <a key={item.label} href={item.href} onClick={() => setOpen(false)}>
+          <NavLink key={item.label} to={item.href} end={item.href === '/'} onClick={() => setOpen(false)} className={({ isActive }) => isActive ? 'is-active' : undefined}>
             {item.label}
-            {item.href === '#projects' && (
+            {item.href === '/projects' && (
               <sup className="nav-project-badge">{String(data.projects.length).padStart(2, '0')}</sup>
             )}
-          </a>
+          </NavLink>
         ))}
       </nav>
       <button className="button button--dark nav-cta" type="button" onClick={onContact}><span className="button__label">{data.site.navCta}</span><span className="button__arrow">→</span></button>
