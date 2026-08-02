@@ -1,9 +1,59 @@
+import { useEffect, useRef, useState } from 'react'
+
 const metrics = [
   { value: '38', suffix: '%', label: 'AI 产品留存', note: '围绕核心行为重构首日流程，把 AIGC 社交产品 FateLinked 的 7 日留存做到 38%。' },
   { value: '+22', suffix: '%', label: '电商增长', note: '从漏斗切入而非改首页，让电商平台 PulseBeat 的分销商入驻率提升 22%。' },
   { value: '10', suffix: '+', label: '合作品牌', note: '4 年一线设计，服务过腾讯、OPPO、一加、新华保险等 10 余个知名品牌。' },
   { value: '4', suffix: '', label: '主导项目', note: '从需求到落地，独立主导 4 个从 0 到 1 的产品项目。' },
 ]
+
+function CountUp({ value }) {
+  const nodeRef = useRef(null)
+  const prefix = value.startsWith('+') ? '+' : ''
+  const target = Number.parseInt(value.replace(/\D/g, ''), 10)
+  const [display, setDisplay] = useState(`${prefix}0`)
+
+  useEffect(() => {
+    const node = nodeRef.current
+    if (!node) return undefined
+
+    const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches
+    let animationFrame = 0
+
+    const play = () => {
+      if (reduceMotion) {
+        setDisplay(`${prefix}${target}`)
+        return
+      }
+
+      window.cancelAnimationFrame(animationFrame)
+      const startedAt = performance.now()
+      const duration = 1200
+
+      const tick = (now) => {
+        const progress = Math.min((now - startedAt) / duration, 1)
+        const eased = 1 - Math.pow(1 - progress, 3)
+        setDisplay(`${prefix}${Math.round(target * eased)}`)
+        if (progress < 1) animationFrame = window.requestAnimationFrame(tick)
+      }
+
+      animationFrame = window.requestAnimationFrame(tick)
+    }
+
+    const observer = new IntersectionObserver(([entry]) => {
+      if (entry.isIntersecting) play()
+      else if (!reduceMotion) setDisplay(`${prefix}0`)
+    }, { threshold: 0.45 })
+
+    observer.observe(node)
+    return () => {
+      observer.disconnect()
+      window.cancelAnimationFrame(animationFrame)
+    }
+  }, [prefix, target])
+
+  return <span ref={nodeRef}>{display}</span>
+}
 
 const capabilityGroups = [
   {
@@ -117,7 +167,7 @@ export default function AelixaAbout() {
           <div className="aa-metrics">
             {metrics.map((metric) => (
               <article className="aa-metric" key={metric.label} data-reveal>
-                <strong><span>{metric.value}</span><em>{metric.suffix}</em></strong>
+                <strong aria-label={`${metric.value}${metric.suffix}`}><CountUp value={metric.value} /><em>{metric.suffix}</em></strong>
                 <h2>{metric.label}</h2>
                 <p>{metric.note}</p>
               </article>
