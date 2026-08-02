@@ -5,16 +5,21 @@ const metrics = [
   { value: '4', suffix: '', label: '主导项目', note: '从需求到落地，独立主导 4 个从 0 到 1 的产品项目。' },
 ]
 
-const approachCards = [
+const capabilityGroups = [
   {
-    index: '01',
-    title: '从用户流失倒推',
-    text: '我看产品的第一视角是“用户在哪一步放弃”。这是设计背景给我的直觉——不是猜测，是看漏斗、看埋点，找到真正该动的那一步。',
+    title: '用户思维',
+    english: 'User Thinking',
+    items: ['定性定量结合，覆盖全场景痛点', '平衡理性数据与感性体验', '……', '平衡商业目标与体验深度', '遵循心智模型迭代设计，持续降低学习与操作成本'],
   },
   {
-    index: '02',
-    title: '模型能力与用户意愿之间',
-    text: 'AI产品的难点不是模型强不强，而是用户不信、用不着。我关注的是如何设计人机协作流程，让模型的能力真正被用起来。',
+    title: '产品思维',
+    english: 'Product Thinking',
+    items: ['一定的方法论沉淀，避免设计失误', '掌握用户研究，竞品分析方法', '……', '针对不用页面的OKR，寻找设计发力点', '用设计提升产品核心数据指标'],
+  },
+  {
+    title: '设计能力',
+    english: 'Design Ability',
+    items: ['基础设计软件的使用', '深挖UI设计，做好商业利益和用户体验的平衡', '擅长视觉设计，能够应对各种运营需求', '掌握一定的交互动效，辅助设计达到目标'],
   },
 ]
 
@@ -69,34 +74,27 @@ export default function AelixaAbout() {
         </div>
       </section>
 
-      <section className="aa-approach" aria-labelledby="aa-approach-title">
-        <div className="container aa-approach__grid">
-          <div className="aa-approach__content">
-            <div className="aa-section-title" data-reveal>
-              <p className="aa-kicker">我的方法</p>
-              <h2 id="aa-approach-title">设计出身，<br />数据驱动</h2>
-            </div>
-            <div className="aa-approach__cards">
-              {approachCards.map((card) => (
-                <article className="aa-approach-card" key={card.index} data-reveal>
-                  <span>{card.index}</span>
-                  <h3>{card.title}</h3>
-                  <p>{card.text}</p>
-                </article>
-              ))}
-            </div>
+      <section className="aa-approach" aria-label="三层能力模型">
+        <div className="container aa-capability-model">
+          <div className="aa-capability-pyramid" data-reveal>
+            {capabilityGroups.map((group, index) => (
+              <div className={`aa-capability-pyramid__level aa-capability-pyramid__level--${index + 1}`} key={group.title}>
+                <strong>{group.title}</strong>
+                <span>{group.english}</span>
+              </div>
+            ))}
           </div>
 
-          <figure className="aa-approach__visual" data-reveal>
-            <img src="/media/portfolio/page-39.jpg" alt="Strategy and product design work" />
-            <figcaption>
-              <div className="aa-approach-overlay-title">
-                <span>03</span>
-                <strong>能力验证</strong>
-              </div>
-              <p>我的想法倾向于先做出来再讨论。会写前端、能调整 API，一个能点开的演示比十页 PRD 更有说服力。</p>
-            </figcaption>
-          </figure>
+          <div className="aa-capability-details">
+            {capabilityGroups.map((group) => (
+              <article className="aa-capability-group" key={group.title} data-reveal>
+                <h2>{group.title}</h2>
+                <div>
+                  {group.items.map((item) => <span key={item}>{item}</span>)}
+                </div>
+              </article>
+            ))}
+          </div>
         </div>
       </section>
 

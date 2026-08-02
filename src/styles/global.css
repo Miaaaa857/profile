@@ -385,6 +385,20 @@ i { font-style: normal; }
 .aa-approach-overlay-title strong { font-size: 18px; line-height: 1.35; letter-spacing: 0; font-weight: 600; }
 .aa-approach__visual figcaption p { margin-top: 16px; color: #696761; font-size: 16px; line-height: 1.6; }
 
+.aa-capability-model { display: grid; grid-template-columns: minmax(420px, .82fr) minmax(0, 1.38fr); align-items: center; gap: clamp(64px, 7vw, 112px); }
+.aa-capability-pyramid { width: 100%; display: flex; flex-direction: column; align-items: center; gap: 14px; }
+.aa-capability-pyramid__level { display: flex; flex-direction: column; align-items: center; justify-content: center; color: #fff; text-align: center; }
+.aa-capability-pyramid__level strong { font-size: clamp(28px, 2.3vw, 42px); line-height: 1.15; font-weight: 600; }
+.aa-capability-pyramid__level span { margin-top: 8px; color: rgba(255, 255, 255, .72); font-size: clamp(15px, 1.25vw, 21px); }
+.aa-capability-pyramid__level--1 { width: 52%; height: 210px; padding-top: 58px; clip-path: polygon(50% 0, 100% 100%, 0 100%); background: #ff9b69; }
+.aa-capability-pyramid__level--2 { width: 76%; height: 160px; clip-path: polygon(16% 0, 84% 0, 100% 100%, 0 100%); background: #ff7d3f; }
+.aa-capability-pyramid__level--3 { width: 100%; height: 190px; clip-path: polygon(12% 0, 88% 0, 100% 100%, 0 100%); background: var(--accent); }
+.aa-capability-details { display: grid; gap: 28px; }
+.aa-capability-group { padding: 24px 28px 26px; border: 2px dashed var(--accent); border-radius: 20px; }
+.aa-capability-group h2 { font-size: clamp(25px, 2vw, 34px); line-height: 1.2; font-weight: 600; }
+.aa-capability-group > div { margin-top: 18px; display: flex; flex-wrap: wrap; gap: 14px 18px; }
+.aa-capability-group span { padding: 9px 22px; border-radius: 999px; background: #e1e2e0; color: #555650; font-size: clamp(14px, 1.12vw, 18px); line-height: 1.35; white-space: nowrap; }
+
 .aa-career { overflow: clip; }
 .aa-career__marquee { padding: 22px 0 25px; overflow: hidden; background: var(--accent); }
 .aa-career__marquee-track { width: max-content; display: flex; gap: 50px; animation: aa-career-marquee 23s linear infinite; }
@@ -460,6 +474,8 @@ i { font-style: normal; }
   .aa-approach__grid { grid-template-columns: 1fr; }
   .aa-approach__cards { margin-top: 60px; }
   .aa-approach__visual { min-height: 680px; }
+  .aa-capability-model { grid-template-columns: 1fr; gap: 64px; }
+  .aa-capability-pyramid { width: min(100%, 660px); margin-inline: auto; }
   .aa-career__body { padding-block: 100px; }
   .aa-career-card { grid-template-columns: minmax(120px, .25fr) 1fr; column-gap: 32px; }
   .aa-career-card__detail { grid-column: 2; }
@@ -563,6 +579,14 @@ i { font-style: normal; }
   .aa-approach__cards { grid-template-columns: 1fr; }
   .aa-approach-card { min-height: 0; }
   .aa-approach__visual { min-height: 560px; border-radius: 16px; }
+  .aa-capability-model { gap: 48px; }
+  .aa-capability-pyramid { gap: 9px; }
+  .aa-capability-pyramid__level--1 { height: 150px; padding-top: 40px; }
+  .aa-capability-pyramid__level--2 { height: 120px; }
+  .aa-capability-pyramid__level--3 { height: 145px; }
+  .aa-capability-group { padding: 20px; border-radius: 16px; }
+  .aa-capability-group > div { gap: 10px; }
+  .aa-capability-group span { max-width: 100%; padding: 8px 14px; white-space: normal; }
   .aa-career__heading { grid-template-columns: 1fr; gap: 40px; }
   .aa-career__body { padding-block: 60px; }
   .aa-career__list { margin-top: 32px; }
