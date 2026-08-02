@@ -16,11 +16,6 @@ const approachCards = [
     title: '模型能力与用户意愿之间',
     text: 'AI产品的难点不是模型强不强，而是用户不信、用不着。我关注的是如何设计人机协作流程，让模型的能力真正被用起来。',
   },
-  {
-    index: '03',
-    title: '能力验证',
-    text: '我的想法倾向于先做出来再讨论。会写前端、能调整API，一个能点开的演示比十页PRD更有说服力。',
-  },
 ]
 
 const career = [
@@ -123,9 +118,9 @@ export default function AelixaAbout() {
           <figure className="aa-approach__visual" data-reveal>
             <img src="/media/portfolio/page-39.jpg" alt="Strategy and product design work" />
             <figcaption>
-              <span>Organic traffic</span>
-              <strong>+240%</strong>
-              <p>Compounding growth from a strategy built once and improved every month.</p>
+              <span>方法 03</span>
+              <strong>能力验证</strong>
+              <p>我的想法倾向于先做出来再讨论。会写前端、能调整 API，一个能点开的演示比十页 PRD 更有说服力。</p>
             </figcaption>
           </figure>
         </div>
