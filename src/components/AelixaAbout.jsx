@@ -49,12 +49,6 @@ const career = [
   },
 ]
 
-const deepFocus = [
-  ['01', 'You talk to the person doing the work', 'Direct collaboration keeps the thinking clear and the details consistent.'],
-  ['02', 'Every detail serves the whole', 'The visual system, interaction, and story are designed as one connected experience.'],
-  ['03', 'Craft that holds up over time', 'The final work is made to stay useful, recognizable, and easy to evolve.'],
-]
-
 export default function AelixaAbout() {
   return (
     <div className="aelixa-about">
@@ -175,30 +169,6 @@ export default function AelixaAbout() {
         </div>
       </section>
 
-      <section className="aa-focus" aria-labelledby="aa-focus-title">
-        <div className="container">
-          <div className="aa-focus__heading" data-reveal>
-            <p className="aa-kicker">DEEP FOCUS</p>
-            <h2 id="aa-focus-title">Building Rich Imagery<br />For Over Two Decades</h2>
-            <p>I specialize in creating high-end visual identities that resonate with audiences and build long-term brand equity.</p>
-          </div>
-
-          <figure className="aa-focus__visual" data-reveal>
-            <img src="/media/portfolio/hero-portfolio-wide.jpg" alt="Selected visual identity work" />
-            <figcaption>Selected direction · Brand system · Digital experience</figcaption>
-          </figure>
-
-          <div className="aa-focus__list">
-            {deepFocus.map(([number, title, text]) => (
-              <article className="aa-focus-card" key={number} data-reveal>
-                <span>{number}</span>
-                <h3>{title}</h3>
-                <p>{text}</p>
-              </article>
-            ))}
-          </div>
-        </div>
-      </section>
     </div>
   )
 }

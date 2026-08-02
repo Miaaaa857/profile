@@ -398,19 +398,6 @@ i { font-style: normal; }
 .aa-career-card__detail > div { margin-top: 24px; display: flex; flex-wrap: wrap; gap: 12px; }
 .aa-career-card__detail span { padding: 2px 12px; border-radius: 44px; background: #fff; color: #242424; font-size: 14px; line-height: 1.5; font-weight: 600; }
 
-.aa-focus { padding: clamp(135px, 13vw, 220px) 0 clamp(100px, 10vw, 170px); }
-.aa-focus__heading { max-width: 1050px; margin-inline: auto; text-align: center; }
-.aa-focus__heading h2 { margin-top: 26px; font-size: clamp(58px, 6.8vw, 112px); line-height: .94; letter-spacing: -.07em; font-weight: 500; }
-.aa-focus__heading > p:last-child { max-width: 610px; margin: 34px auto 0; color: #66645e; font-size: 15px; line-height: 1.8; }
-.aa-focus__visual { margin: clamp(78px, 8vw, 130px) 0 0; }
-.aa-focus__visual img { aspect-ratio: 2 / 1; object-fit: cover; border-radius: 24px; }
-.aa-focus__visual figcaption { margin-top: 14px; color: #77746f; font-size: 10px; letter-spacing: .12em; text-transform: uppercase; }
-.aa-focus__list { margin-top: clamp(70px, 7vw, 110px); display: grid; grid-template-columns: repeat(3, 1fr); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
-.aa-focus-card { min-height: 315px; padding: 30px clamp(24px, 3vw, 48px) 34px; display: flex; flex-direction: column; }
-.aa-focus-card + .aa-focus-card { border-left: 1px solid var(--line); }
-.aa-focus-card > span { color: #77746f; font-size: 11px; }
-.aa-focus-card h3 { max-width: 330px; margin-top: auto; font-size: clamp(24px, 2vw, 34px); line-height: 1.08; letter-spacing: -.04em; font-weight: 500; }
-.aa-focus-card p { max-width: 360px; margin-top: 17px; color: #77746f; font-size: 13px; line-height: 1.65; }
 
 @media (max-width: 980px) {
   :root { --section: 110px; --radius-media-lg: 18px; --radius-media-md: 14px; --radius-media-sm: 12px; --radius-media-xs: 10px; }
@@ -465,9 +452,6 @@ i { font-style: normal; }
   .aa-career__body { padding-block: 100px; }
   .aa-career-card { grid-template-columns: minmax(120px, .25fr) 1fr; column-gap: 32px; }
   .aa-career-card__detail { grid-column: 2; }
-  .aa-focus__list { grid-template-columns: 1fr; }
-  .aa-focus-card { min-height: 245px; }
-  .aa-focus-card + .aa-focus-card { border-top: 1px solid var(--line); border-left: 0; }
 }
 
 @media (max-width: 640px) {
@@ -575,8 +559,6 @@ i { font-style: normal; }
   .aa-career-card__company, .aa-career-card__detail > p { font-size: 16px; }
   .aa-career-card__detail { margin-top: 16px; }
   .aa-career-card__detail > div { margin-top: 24px; }
-  .aa-focus__visual img { aspect-ratio: 4 / 5; }
-  .aa-focus-card { min-height: 260px; padding-inline: 22px; }
 }
 
 @media (prefers-reduced-motion: reduce) {
