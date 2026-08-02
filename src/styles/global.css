@@ -256,9 +256,10 @@ i { font-style: normal; }
 
 .footer { background: transparent; color: var(--ink); }
 .footer-cta-shell { padding: clamp(70px, 6vw, 100px) 0 clamp(72px, 6vw, 100px); }
-.footer-cta { position: relative; display: grid; grid-template-columns: 1fr auto; align-items: end; }
-.footer-cta .eyebrow { grid-column: 1 / -1; margin-bottom: 28px; }
+.footer-cta { position: relative; display: flex; flex-direction: column; align-items: center; text-align: center; }
+.footer-cta .eyebrow { margin-bottom: 28px; }
 .footer-cta h2 { font-size: clamp(72px, 8.4vw, 140px); line-height: .92; letter-spacing: -.07em; font-weight: 500; }
+.footer-cta .round-button { align-self: center; margin: 44px 0 0; }
 .round-button { position: relative; min-height: 58px; margin-bottom: 12px; padding: 0 19px 0 68px; display: inline-flex; align-items: center; justify-content: center; overflow: hidden; border: 1px solid #4f4e49; border-radius: 999px; background: #f7f7f5; color: var(--ink); font-size: 13px; cursor: pointer; transition: color .45s var(--ease), background .45s var(--ease), border-color .45s var(--ease); }
 .round-button > span { position: relative; z-index: 1; white-space: nowrap; }
 .round-button i { position: absolute; z-index: 0; left: 6px; width: 44px; height: 44px; padding-left: 14px; display: flex; align-items: center; box-sizing: border-box; overflow: hidden; border-radius: 999px; background: #242320; color: #fff; font-style: normal; transition: width .6s var(--ease); }
@@ -442,7 +443,7 @@ i { font-style: normal; }
   .skill-preview__description { font-size: 13px; }
   .faq { grid-template-columns: 1fr; gap: 58px; }
   .footer-cta-shell { padding: 76px 0; }
-  .footer-cta { grid-template-columns: 1fr; gap: 44px; }
+  .footer-cta { gap: 0; }
   .round-button { justify-self: start; margin-bottom: 0; }
   .contact-modal__stage { width: 100vw; height: 100svh; }
   .footer-grid { grid-template-columns: 1fr 1fr; }
@@ -525,7 +526,7 @@ i { font-style: normal; }
   .faq-item button strong { font-size: 15px; }
   .faq-answer p { margin: 0 44px 0 21px; font-size: 12px; }
   .footer-cta-shell { padding: 64px 0; }
-  .footer-cta { gap: 34px; }
+  .footer-cta { gap: 0; }
   .footer-cta h2 { font-size: 17vw; line-height: .95; }
   .round-button { margin-top: 0; }
   .contact-modal { padding: 0; }
