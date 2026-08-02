@@ -317,7 +317,7 @@ i { font-style: normal; }
 
 .aa-hero { min-height: 840px; padding: clamp(108px, 13.5vh, 150px) 0 clamp(108px, 14vh, 150px); display: flex; align-items: center; }
 .aa-hero__inner { position: relative; }
-.aa-hero__grid { width: min(100%, 1360px); margin-inline: auto; display: grid; grid-template-columns: minmax(260px, 1fr) clamp(320px, 26vw, 400px) minmax(260px, 1fr); grid-template-rows: auto auto; column-gap: clamp(30px, 2.2vw, 46px); row-gap: 24px; align-items: start; }
+.aa-hero__grid { width: min(100%, 1360px); margin-inline: auto; display: grid; grid-template-columns: minmax(260px, 1fr) clamp(320px, 26vw, 400px) minmax(260px, 1fr); grid-template-rows: auto auto; column-gap: clamp(30px, 2.2vw, 46px); row-gap: 24px; align-items: start; perspective: 1400px; }
 .aa-hero__title { display: contents; }
 .aa-hero__title span { grid-row: 1; align-self: center; font-size: clamp(58px, 4.4vw, 84px); line-height: .95; letter-spacing: -.065em; font-weight: 600; }
 .aa-hero__title span:first-child { grid-column: 1; justify-self: end; }
@@ -330,7 +330,8 @@ i { font-style: normal; }
 .aa-hero__statement { grid-column: 3; grid-row: 2; justify-self: end; }
 .aa-hero__statement > p { color: #3f3e3a; font-size: 16px; line-height: 1.5; }
 .aa-hero__title span:first-child { transition-delay: .04s; }
-.aa-hero__portrait img { --reveal-scale: .96; transition-duration: 1.05s; transition-delay: .11s; }
+.aa-hero__portrait img[data-reveal] { opacity: 0; transform: translate3d(var(--reveal-x, 0px), calc(var(--reveal-y, 0px) + 50px), 0) rotateY(180deg) scale(.5); transform-origin: center; transform-style: preserve-3d; backface-visibility: hidden; transition: opacity .3s ease .11s, transform 1.8s cubic-bezier(.16, 1, .3, 1) .11s; }
+.aa-hero__portrait img[data-reveal].is-visible { opacity: 1; transform: translate3d(var(--reveal-x, 0px), var(--reveal-y, 0px), 0) rotateY(0deg) scale(1); }
 .aa-hero__title span:last-child { transition-delay: .18s; }
 .aa-hero__meta { transition-delay: .27s; }
 .aa-hero__portrait figcaption { transition-delay: .34s; }
@@ -567,5 +568,6 @@ i { font-style: normal; }
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { scroll-behavior: auto !important; animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; }
   [data-reveal] { opacity: 1; transform: none; }
+  .aa-hero__portrait img[data-reveal] { opacity: 1; transform: none; }
   .persona-avatar img, .persona-avatar:hover img { transform: scale(1); }
 }
