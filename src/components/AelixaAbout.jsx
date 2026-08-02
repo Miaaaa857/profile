@@ -25,32 +25,32 @@ const approachCards = [
 
 const career = [
   {
-    year: '2020',
-    role: 'Performance Marketing Specialist',
-    company: 'E-commerce Brand · Full-time',
-    text: 'Started managing Google and Meta campaigns for a mid-sized e-commerce brand. Learned fast — cut wasted spend by 30% in the first quarter and rebuilt the entire campaign architecture from scratch.',
-    tags: ['Google Ads', 'Google Ads', 'Google Ads'],
+    year: '2022–2025',
+    role: '视觉设计师',
+    company: '广州能动间信息科技有限公司 · 全职',
+    text: '服务腾讯、OPPO、一加、新华保险等品牌的设计需求，从规范布局到交互落地。开始用数据衡量设计效果，不只是交付界面。',
+    tags: ['UI设计', '增长设计', '大厂协作'],
   },
   {
-    year: '2021',
-    role: 'Senior Growth Marketer',
-    company: 'B2B SaaS Startup · Full-time',
-    text: 'Took sole ownership of SEO, content, and paid channels at a VC-backed SaaS startup. Built the organic program from zero — no prior rankings, no existing content — to 40,000 monthly visitors in 14 months.',
-    tags: ['SEO', 'Content Strategy', 'SaaS'],
+    year: '2024',
+    role: '转向 AI 产品',
+    company: '自主学习与项目实践 · 转型阶段',
+    text: '在持续承担设计工作的同时，开始系统学习 AI 产品方法，围绕 LLM、提示词、API 和前端原型做能力验证。通过可交互演示验证需求，逐步从界面交付转向产品定义与闭环设计。',
+    tags: ['LLM', 'AI产品', '原型验证', '前端与API'],
   },
   {
-    year: '2022',
-    role: 'Independent Marketing Consultant',
-    company: 'Multiple Clients · Contract',
-    text: 'Ran full-channel marketing for three brands simultaneously — a D2C health brand, a fintech startup, and a regional retailer. Managed everything from strategy to weekly execution across paid, organic, and email.',
-    tags: ['Multi-channel', 'D2C', 'Fintech', 'Email'],
+    year: '2025–2026',
+    role: 'UI设计师',
+    company: '上海传游网来科技有限公司 · 全职',
+    text: '独立主导 PulseBeat（电商，入驻率提升 22%）、QINRIVE（B端官网，决策效率提升 35%）等项目，从需求到落地全程参与。主导 FateLinked（AIGC 智能体社交平台），将 7 日留存做到 38%。第一次深度接触 AI 产品，发现“模型能力”与“用户愿意用”之间的巨大鸿沟。',
+    tags: ['AIGC', '留存', 'AI产品'],
   },
   {
-    year: '2023',
-    role: 'Founded Meridian',
-    company: 'Meridian Digital Strategy · Founder',
-    text: 'Left contract work to build a proper practice. The idea was simple — fewer clients, deeper work, and results that actually move the business. No account managers, no handoffs, no vanity metrics.',
-    tags: ['Meridian · Founded', 'Strategy-first'],
+    year: '2026',
+    role: 'AI产品经理',
+    company: '成都地几何科技有限公司 · 外包',
+    text: '参与 AI 产品从需求分析、方案设计到原型验证的完整流程，聚焦 LLM 能力边界、用户流程与可用性。结合前端与 API 快速搭建可交互演示，用真实操作验证产品判断并推动方案落地。',
+    tags: ['AI产品经理', 'LLM应用', 'Demo验证'],
   },
 ]
 
@@ -141,17 +141,17 @@ export default function AelixaAbout() {
       <section className="aa-career" aria-labelledby="aa-career-title">
         <div className="aa-career__marquee" aria-hidden="true">
           <div className="aa-career__marquee-track">
-            <span>Years of experience —</span><span>Years of experience —</span><span>Years of experience —</span><span>Years of experience —</span>
+            <span>从设计到 AI 产品 —</span><span>从设计到 AI 产品 —</span><span>从设计到 AI 产品 —</span><span>从设计到 AI 产品 —</span>
           </div>
         </div>
         <div className="aa-career__body">
           <div className="container">
             <div className="aa-career__heading" data-reveal>
               <div>
-                <p className="aa-kicker aa-kicker--light">CAREER MILESTONES</p>
-                <h2 id="aa-career-title">A Journey of<br />Strategic Growth</h2>
+                <p className="aa-kicker aa-kicker--light">职业里程碑</p>
+                <h2 id="aa-career-title">从视觉设计<br />走向 AI 产品</h2>
               </div>
-              <p>A timeline of professional experience, showcasing the diverse industries and challenges tackled over the years.</p>
+              <p>一条从视觉设计、数据增长到 AI 产品的职业路径，记录我如何把设计能力转化为产品判断与落地能力。</p>
             </div>
 
             <div className="aa-career__list">
