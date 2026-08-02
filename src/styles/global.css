@@ -380,21 +380,23 @@ i { font-style: normal; }
 .aa-career__marquee-track { width: max-content; display: flex; gap: 50px; animation: aa-career-marquee 23s linear infinite; }
 .aa-career__marquee-track span { font-size: clamp(44px, 5.3vw, 86px); line-height: .9; letter-spacing: -.055em; white-space: nowrap; }
 @keyframes aa-career-marquee { to { transform: translateX(calc(-50% - 25px)); } }
-.aa-career__body { padding: clamp(120px, 11vw, 180px) 0 clamp(120px, 12vw, 195px); background: #171715; color: #f6f4ee; }
+.aa-career__body { padding: 140px 0; background: #242424; color: #f6f4ee; }
 .aa-career__heading { display: grid; grid-template-columns: 1fr minmax(280px, 390px); align-items: end; gap: 80px; }
 .aa-career__heading h2 { margin-top: 24px; font-size: clamp(56px, 6vw, 100px); line-height: .95; letter-spacing: -.07em; font-weight: 500; }
 .aa-career__heading > p { color: rgba(255, 255, 255, .48); font-size: 14px; line-height: 1.8; }
-.aa-career__list { margin-top: clamp(88px, 9vw, 145px); }
-.aa-career-card { min-height: 285px; padding: clamp(42px, 4.5vw, 72px) 0; display: grid; grid-template-columns: .35fr .9fr 1fr; gap: clamp(35px, 5vw, 82px); border-top: 1px solid rgba(255, 255, 255, .25); background: #171715; position: sticky; top: 92px; }
-.aa-career-card:nth-child(2) { top: 110px; }
-.aa-career-card:nth-child(3) { top: 128px; }
-.aa-career-card:nth-child(4) { top: 146px; border-bottom: 1px solid rgba(255, 255, 255, .25); }
-.aa-career-card__year { color: #e8c84a; font-size: 15px; }
-.aa-career-card__main h3 { max-width: 520px; font-size: clamp(30px, 3.1vw, 52px); line-height: 1.04; letter-spacing: -.045em; font-weight: 500; }
-.aa-career-card__company { margin-top: 18px; color: rgba(255, 255, 255, .45); font-size: 12px; letter-spacing: .07em; text-transform: uppercase; }
-.aa-career-card__detail > p { max-width: 530px; color: rgba(255, 255, 255, .58); font-size: 14px; line-height: 1.75; }
-.aa-career-card__detail > div { margin-top: 38px; display: flex; flex-wrap: wrap; gap: 8px; }
-.aa-career-card__detail span { padding: 8px 12px; border: 1px solid rgba(255, 255, 255, .25); border-radius: 999px; color: rgba(255, 255, 255, .72); font-size: 10px; letter-spacing: .06em; text-transform: uppercase; }
+.aa-career__list { margin-top: 44px; }
+.aa-career-card { padding: 44px 0; display: grid; grid-template-columns: minmax(180px, 1fr) minmax(0, 686px); column-gap: 80px; align-items: start; border-top: 1px solid #b4b5b5; background: #242424; position: sticky; top: 100px; }
+.aa-career-card:nth-child(2) { top: 120px; }
+.aa-career-card:nth-child(3) { top: 140px; }
+.aa-career-card:nth-child(4) { top: 0; border-bottom: 1px solid #b4b5b5; }
+.aa-career-card__year { color: #f1ba35; font-size: 24px; line-height: 1.5; }
+.aa-career-card__main { grid-column: 2; width: 100%; max-width: 511px; }
+.aa-career-card__main h3 { font-size: 48px; line-height: 1.4; letter-spacing: -.035em; font-weight: 600; }
+.aa-career-card__company { margin-top: 16px; color: #b4b5b5; font-size: 20px; line-height: 1.6; font-weight: 500; text-transform: uppercase; }
+.aa-career-card__detail { grid-column: 2; margin-top: 44px; }
+.aa-career-card__detail > p { color: #b4b5b5; font-size: 20px; line-height: 1.6; font-weight: 500; }
+.aa-career-card__detail > div { margin-top: 24px; display: flex; flex-wrap: wrap; gap: 12px; }
+.aa-career-card__detail span { padding: 2px 12px; border-radius: 44px; background: #fff; color: #242424; font-size: 14px; line-height: 1.5; font-weight: 600; }
 
 .aa-focus { padding: clamp(135px, 13vw, 220px) 0 clamp(100px, 10vw, 170px); }
 .aa-focus__heading { max-width: 1050px; margin-inline: auto; text-align: center; }
@@ -460,7 +462,8 @@ i { font-style: normal; }
   .aa-approach__grid { grid-template-columns: 1fr; }
   .aa-approach__cards { margin-top: 60px; padding-top: 0; }
   .aa-approach__visual { min-height: 680px; }
-  .aa-career-card { grid-template-columns: .25fr 1fr; }
+  .aa-career__body { padding-block: 100px; }
+  .aa-career-card { grid-template-columns: minmax(120px, .25fr) 1fr; column-gap: 32px; }
   .aa-career-card__detail { grid-column: 2; }
   .aa-focus__list { grid-template-columns: 1fr; }
   .aa-focus-card { min-height: 245px; }
@@ -564,8 +567,13 @@ i { font-style: normal; }
   .aa-approach-card { min-height: 265px; }
   .aa-approach__visual { min-height: 560px; border-radius: 16px; }
   .aa-career__heading { grid-template-columns: 1fr; gap: 40px; }
-  .aa-career-card, .aa-career-card:nth-child(2), .aa-career-card:nth-child(3), .aa-career-card:nth-child(4) { top: 76px; grid-template-columns: 1fr; gap: 25px; }
-  .aa-career-card__detail { grid-column: auto; }
+  .aa-career__body { padding-block: 60px; }
+  .aa-career__list { margin-top: 32px; }
+  .aa-career-card, .aa-career-card:nth-child(2), .aa-career-card:nth-child(3), .aa-career-card:nth-child(4) { top: 76px; grid-template-columns: 1fr; gap: 16px; padding-block: 32px; }
+  .aa-career-card__main, .aa-career-card__detail { grid-column: auto; }
+  .aa-career-card__main h3 { font-size: 28px; }
+  .aa-career-card__company, .aa-career-card__detail > p { font-size: 16px; }
+  .aa-career-card__detail { margin-top: 16px; }
   .aa-career-card__detail > div { margin-top: 24px; }
   .aa-focus__visual img { aspect-ratio: 4 / 5; }
   .aa-focus-card { min-height: 260px; padding-inline: 22px; }
