@@ -92,14 +92,13 @@ export default function AelixaAbout() {
             <div className="aa-results__lead" data-reveal>
               <div className="aa-section-title">
                 <p className="aa-kicker aa-kicker--light">PROVEN IMPACT</p>
-                <h2 id="aa-results-title">Measured By<br />Real Results</h2>
+                <h2 id="aa-results-title">真实成绩，<br />不是漂亮话</h2>
               </div>
-              <p>From scaling startups to optimizing established brands, these numbers reflect my commitment to excellence and growth.</p>
             </div>
             <div className="aa-results__copy" data-reveal>
-              <p>I started Meridian after years of watching brands invest in work that looked busy but moved nothing. The problem was rarely effort — it was clarity.</p>
-              <p>Before Meridian, I worked across paid media, SEO, and conversion strategy for startups and established teams. That experience taught me to understand the business first, then choose the channels.</p>
-              <p>Today I work directly with a small number of ambitious brands, bringing strategy and execution together. Not separate services. One direction.</p>
+              <p>我不是科班产品经理，也不是算法出身。我的路径是：设计→增长→AI产品。做了4年一线的UI和体验设计，服务于腾讯、OPPO、一加等产品——但我最好的作品不是某个界面，是把一个产品的7日留存实现了38%。</p>
+              <p>做生长设计那几年，我养成了看数据说话的习惯：改一个文案而不是变成，调整一个流程而不是漏斗。慢慢发现产品的问题很少是“好不好看”，而是“用户信不信、用不用、留不留”。这个判断把我推向了产品，也推向了AI。</p>
+              <p>现在我专注一件事：把LLM的能力，翻译成用户真正会用的产品。模型能实现的，和用户愿意用的，中间差着整个产品——我做的就是补这个差。</p>
             </div>
           </div>
         </div>
