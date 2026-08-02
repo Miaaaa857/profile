@@ -1,8 +1,8 @@
 const metrics = [
-  { value: '5', suffix: '+', label: 'Partner Brands', note: 'We’ve partnered with ambitious teams across product, technology, and culture.' },
-  { value: '120', suffix: '+', label: 'Brands worked with', note: 'Trusted by startups, scale-ups, and established global teams.' },
-  { value: '3.8', suffix: '×', label: 'Average ROAS', note: 'A consistent return created through clear thinking and focused execution.' },
-  { value: '98', suffix: '%', label: 'Client retention rate', note: 'Long-term partnerships built on trust, clarity, and measurable progress.' },
+  { value: '38', suffix: '%', label: 'AI 产品留存', note: '围绕核心行为重构首日流程，把 AIGC 社交产品 FateLinked 的 7 日留存做到 38%。' },
+  { value: '+22', suffix: '%', label: '电商增长', note: '从漏斗切入而非改首页，让电商平台 PulseBeat 的分销商入驻率提升 22%。' },
+  { value: '10', suffix: '+', label: '合作品牌', note: '4 年一线设计，服务过腾讯、OPPO、一加、新华保险等 10 余个知名品牌。' },
+  { value: '4', suffix: '', label: '主导项目', note: '从需求到落地，独立主导 4 个从 0 到 1 的产品项目。' },
 ]
 
 const approachCards = [
