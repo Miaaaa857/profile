@@ -8,9 +8,7 @@ import ContactModal from './ContactModal'
 export default function PageLayout({ children, className = '' }) {
   const [contactOpen, setContactOpen] = useState(false)
   useReveal()
-
   const openContact = () => setContactOpen(true)
-
   return (
     <main className={`inner-page ${className}`.trim()}>
       <Navbar data={content} onContact={openContact} />
