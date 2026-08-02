@@ -8,18 +8,18 @@ const metrics = [
 const capabilityGroups = [
   {
     title: 'AI 产品化',
-    subtitle: '能让模型变成产品',
-    items: ['理解 LLM 能力边界，判断什么该交给模型、什么不该', 'Prompt 设计与迭代，持续调优输出质量', '设计人机协作流程，处理 AI 的不确定性（幻觉、等待、纠错）', '用产品设计遮住模型短板，放大模型长板'],
+    level: '顶层',
+    items: ['判断 LLM 能力边界', 'Prompt 设计与迭代', '设计人机协作流程', '用产品遮短板、放长板'],
   },
   {
     title: '产品判断',
-    subtitle: '能想清楚做什么',
-    items: ['从用户流失倒推，找到真正该解决的问题', '需求优先级判断，懂得砍功能而非堆功能', '竞品拆解与场景挖掘', '用数据验证判断：埋点、漏斗分析、A/B 测试'],
+    level: '中层',
+    items: ['从流失倒推真问题', '会砍需求，不堆功能', '竞品拆解与场景挖掘', '数据验证：埋点、漏斗、A/B'],
   },
   {
     title: '设计与实现',
-    subtitle: '能把东西做出来',
-    items: ['精通设计工具（Figma、PS、AI、C4D 等），快速产出高保真原型', '会写前端（HTML/CSS/JS），能亲手把想法做成可跑的 demo', '4 年一线设计经验，服务过腾讯、OPPO、一加等产品', '懂交互与视觉，知道用户在界面哪一步会卡住、放弃'],
+    level: '底层',
+    items: ['精通主流设计工具', '会写前端，能做 demo', '4 年一线设计经验', '懂交互，知道用户在哪卡住'],
   },
 ]
 
@@ -80,7 +80,7 @@ export default function AelixaAbout() {
             {capabilityGroups.map((group, index) => (
               <div className={`aa-capability-pyramid__level aa-capability-pyramid__level--${index + 1}`} key={group.title}>
                 <strong>{group.title}</strong>
-                <span>{group.subtitle}</span>
+                <span>{group.level}</span>
               </div>
             ))}
           </div>
@@ -88,7 +88,7 @@ export default function AelixaAbout() {
           <div className="aa-capability-details">
             {capabilityGroups.map((group) => (
               <article className="aa-capability-group" key={group.title} data-reveal>
-                <h2>{group.title}<small>（{group.subtitle}）</small></h2>
+                <h2>{group.level} · {group.title}</h2>
                 <div>
                   {group.items.map((item) => <span key={item}>{item}</span>)}
                 </div>
