@@ -365,17 +365,20 @@ i { font-style: normal; }
 .aa-approach__grid { display: grid; grid-template-columns: 1fr 1fr; align-items: stretch; gap: clamp(60px, 8vw, 124px); }
 .aa-approach__content { display: flex; flex-direction: column; }
 .aa-approach__intro { max-width: 530px; margin-top: 40px; color: #605e58; font-size: clamp(15px, 1.15vw, 18px); line-height: 1.8; }
-.aa-approach__cards { margin-top: auto; padding-top: 74px; display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
-.aa-approach-card { min-height: 300px; padding: 24px; display: flex; flex-direction: column; border: 1px solid var(--line); border-radius: 18px; background: #f7f7f5; }
-.aa-approach-card > span { width: 34px; height: 34px; display: grid; place-items: center; border: 1px solid var(--line); border-radius: 50%; color: #77746e; font-size: 10px; }
-.aa-approach-card h3 { margin-top: auto; font-size: clamp(19px, 1.45vw, 25px); line-height: 1.15; font-weight: 500; }
-.aa-approach-card p { margin-top: 14px; color: #77746e; font-size: 12px; line-height: 1.65; }
+.aa-approach__cards { margin-top: auto; padding: 24px; display: grid; grid-template-columns: 1fr; gap: 16px; border: 1px solid var(--line); border-radius: 16px; background: #fff; }
+.aa-approach-card { min-height: 0; padding: 16px; display: grid; grid-template-columns: 28px 1fr; grid-template-rows: auto auto; column-gap: 12px; align-items: center; border: 1px solid var(--line); border-radius: 8px; background: #f3f3f1; }
+.aa-approach-card:first-child { background: #242424; color: #fffdf8; }
+.aa-approach-card > span { grid-column: 1; grid-row: 1; width: 28px; height: 28px; display: grid; place-items: center; border: 1px solid currentColor; border-radius: 50%; color: var(--accent); font-size: 9px; }
+.aa-approach-card h3 { grid-column: 2; grid-row: 1; margin: 0; font-size: 20px; line-height: 1.35; font-weight: 500; }
+.aa-approach-card p { grid-column: 1 / -1; grid-row: 2; margin-top: 16px; color: #77746e; font-size: 14px; line-height: 1.6; }
+.aa-approach-card:first-child p { color: rgba(255, 255, 255, .68); }
 .aa-approach__visual { position: relative; min-height: 790px; margin: 0; overflow: hidden; border-radius: 24px; background: #d8d8d4; }
 .aa-approach__visual > img { width: 100%; height: 100%; object-fit: cover; object-position: 43% center; }
 .aa-approach__visual figcaption { position: absolute; left: 16px; right: 16px; bottom: 16px; max-width: 365px; padding: 18px; border-radius: 15px; background: rgba(248, 248, 245, .94); color: var(--ink); backdrop-filter: blur(12px); }
-.aa-approach__visual figcaption span { color: #75736d; font-size: 11px; letter-spacing: .08em; text-transform: uppercase; }
-.aa-approach__visual figcaption strong { display: block; margin-top: 26px; font-size: 56px; letter-spacing: -.06em; font-weight: 500; }
-.aa-approach__visual figcaption p { margin-top: 8px; color: #696761; font-size: 12px; line-height: 1.55; }
+.aa-approach-overlay-title { display: flex; align-items: center; gap: 8px; }
+.aa-approach-overlay-title span { width: 28px; height: 28px; display: grid; place-items: center; border: 1px solid var(--line); border-radius: 50%; color: var(--accent); font-size: 9px; }
+.aa-approach-overlay-title strong { font-size: 20px; line-height: 1.35; letter-spacing: 0; font-weight: 600; }
+.aa-approach__visual figcaption p { margin-top: 16px; color: #696761; font-size: 14px; line-height: 1.6; }
 
 .aa-career { overflow: clip; }
 .aa-career__marquee { padding: 22px 0 25px; overflow: hidden; background: var(--accent); }
@@ -449,7 +452,7 @@ i { font-style: normal; }
   .aa-results__story { gap: 24px; }
   .aa-results__lead .aa-section-title h2 { font-size: 56px; }
   .aa-approach__grid { grid-template-columns: 1fr; }
-  .aa-approach__cards { margin-top: 60px; padding-top: 0; }
+  .aa-approach__cards { margin-top: 60px; }
   .aa-approach__visual { min-height: 680px; }
   .aa-career__body { padding-block: 100px; }
   .aa-career-card { grid-template-columns: minmax(120px, .25fr) 1fr; column-gap: 32px; }
@@ -552,7 +555,7 @@ i { font-style: normal; }
   .aa-results__lead .aa-section-title h2 { font-size: 48px; }
   .aa-results__lead > p, .aa-results__copy { font-size: 20px; }
   .aa-approach__cards { grid-template-columns: 1fr; }
-  .aa-approach-card { min-height: 265px; }
+  .aa-approach-card { min-height: 0; }
   .aa-approach__visual { min-height: 560px; border-radius: 16px; }
   .aa-career__heading { grid-template-columns: 1fr; gap: 40px; }
   .aa-career__body { padding-block: 60px; }

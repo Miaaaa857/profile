@@ -118,8 +118,10 @@ export default function AelixaAbout() {
           <figure className="aa-approach__visual" data-reveal>
             <img src="/media/portfolio/page-39.jpg" alt="Strategy and product design work" />
             <figcaption>
-              <span>方法 03</span>
-              <strong>能力验证</strong>
+              <div className="aa-approach-overlay-title">
+                <span>03</span>
+                <strong>能力验证</strong>
+              </div>
               <p>我的想法倾向于先做出来再讨论。会写前端、能调整 API，一个能点开的演示比十页 PRD 更有说服力。</p>
             </figcaption>
           </figure>
