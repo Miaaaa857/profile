@@ -132,7 +132,8 @@ export default function AelixaAbout() {
       <section className="aa-career" aria-labelledby="aa-career-title">
         <div className="aa-career__marquee" aria-hidden="true">
           <div className="aa-career__marquee-track">
-            <span>从设计到 AI 产品 —</span><span>从设计到 AI 产品 —</span><span>从设计到 AI 产品 —</span><span>从设计到 AI 产品 —</span>
+            <span>从设计到 AI 产品 —</span><span>从设计到 AI 产品 —</span><span>从设计到 AI 产品 —</span><span>从设计到 AI 产品 —</span><span>从设计到 AI 产品 —</span><span>从设计到 AI 产品 —</span>
+            <span>从设计到 AI 产品 —</span><span>从设计到 AI 产品 —</span><span>从设计到 AI 产品 —</span><span>从设计到 AI 产品 —</span><span>从设计到 AI 产品 —</span><span>从设计到 AI 产品 —</span>
           </div>
         </div>
         <div className="aa-career__body">
