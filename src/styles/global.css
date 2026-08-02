@@ -391,7 +391,7 @@ i { font-style: normal; }
 .aa-career-card { padding: 44px 0; display: grid; grid-template-columns: minmax(180px, 1fr) minmax(0, 686px); column-gap: 80px; align-items: start; border-top: 1px solid #b4b5b5; background: #242424; position: sticky; top: 100px; }
 .aa-career-card:nth-child(2) { top: 120px; }
 .aa-career-card:nth-child(3) { top: 140px; }
-.aa-career-card:nth-child(4) { top: 0; border-bottom: 1px solid #b4b5b5; }
+.aa-career-card:last-child { top: 0; border-bottom: 1px solid #b4b5b5; }
 .aa-career-card__year { color: var(--accent); font-size: 24px; line-height: 1.5; }
 .aa-career-card__main { grid-column: 2; width: 100%; max-width: 511px; }
 .aa-career-card__main h3 { font-size: 48px; line-height: 1.4; letter-spacing: -.035em; font-weight: 600; }
