@@ -8,13 +8,18 @@ const metrics = [
 const approachCards = [
   {
     index: '01',
-    title: 'Revenue-linked reporting',
-    text: 'Every decision connects back to a useful outcome. No vanity metrics and no decoration without purpose.',
+    title: '从用户流失倒推',
+    text: '我看产品的第一视角是“用户在哪一步放弃”。这是设计背景给我的直觉——不是猜测，是看漏斗、看埋点，找到真正该动的那一步。',
   },
   {
     index: '02',
-    title: 'Compounding channel strategy',
-    text: 'Research, product thinking, visual design, and delivery work as one connected system.',
+    title: '模型能力与用户意愿之间',
+    text: 'AI产品的难点不是模型强不强，而是用户不信、用不着。我关注的是如何设计人机协作流程，让模型的能力真正被用起来。',
+  },
+  {
+    index: '03',
+    title: '能力验证',
+    text: '我的想法倾向于先做出来再讨论。会写前端、能调整API，一个能点开的演示比十页PRD更有说服力。',
   },
 ]
 
@@ -108,10 +113,9 @@ export default function AelixaAbout() {
         <div className="container aa-approach__grid">
           <div className="aa-approach__content">
             <div className="aa-section-title" data-reveal>
-              <p className="aa-kicker">MY APPROACH</p>
-              <h2 id="aa-approach-title">Strategist-Led,<br />Built On Data</h2>
+              <p className="aa-kicker">我的方法</p>
+              <h2 id="aa-approach-title">设计出身，<br />数据驱动</h2>
             </div>
-            <p className="aa-approach__intro" data-reveal>I bridge the gap between creative vision and business objectives, ensuring every detail serves a specific purpose in the journey.</p>
             <div className="aa-approach__cards">
               {approachCards.map((card) => (
                 <article className="aa-approach-card" key={card.index} data-reveal>

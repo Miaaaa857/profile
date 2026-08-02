@@ -367,6 +367,7 @@ i { font-style: normal; }
 .aa-approach__intro { max-width: 530px; margin-top: 40px; color: #605e58; font-size: clamp(15px, 1.15vw, 18px); line-height: 1.8; }
 .aa-approach__cards { margin-top: auto; padding-top: 74px; display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
 .aa-approach-card { min-height: 300px; padding: 24px; display: flex; flex-direction: column; border: 1px solid var(--line); border-radius: 18px; background: #f7f7f5; }
+.aa-approach-card:nth-child(3) { grid-column: 1 / -1; min-height: 240px; }
 .aa-approach-card > span { width: 34px; height: 34px; display: grid; place-items: center; border: 1px solid var(--line); border-radius: 50%; color: #77746e; font-size: 10px; }
 .aa-approach-card h3 { margin-top: auto; font-size: clamp(19px, 1.45vw, 25px); line-height: 1.15; font-weight: 500; }
 .aa-approach-card p { margin-top: 14px; color: #77746e; font-size: 12px; line-height: 1.65; }
@@ -552,6 +553,7 @@ i { font-style: normal; }
   .aa-results__lead .aa-section-title h2 { font-size: 48px; }
   .aa-results__lead > p, .aa-results__copy { font-size: 20px; }
   .aa-approach__cards { grid-template-columns: 1fr; }
+  .aa-approach-card:nth-child(3) { grid-column: auto; }
   .aa-approach-card { min-height: 265px; }
   .aa-approach__visual { min-height: 560px; border-radius: 16px; }
   .aa-career__heading { grid-template-columns: 1fr; gap: 40px; }
