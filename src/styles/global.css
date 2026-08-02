@@ -352,7 +352,7 @@ i { font-style: normal; }
 .aa-metrics { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 16px; }
 .aa-metric { height: 404px; padding: 32px; display: flex; flex-direction: column; border-radius: 28px; background: #fdfbf8; color: #242424; }
 .aa-metric strong { display: flex; align-items: flex-start; font-size: 64px; line-height: 1; letter-spacing: -.055em; font-weight: 600; }
-.aa-metric strong em { color: #f1ba35; font-style: normal; }
+.aa-metric strong em { color: var(--accent); font-style: normal; }
 .aa-metric h2 { margin-top: auto; font-size: 24px; line-height: 1.5; font-weight: 500; }
 .aa-metric p { max-width: 285px; margin-top: 12px; color: #646463; font-size: 14px; line-height: 1.55; }
 .aa-results__story { margin-top: 80px; padding: 0 4px 76px; display: flex; justify-content: space-between; align-items: flex-start; gap: 72px; }
@@ -378,7 +378,7 @@ i { font-style: normal; }
 .aa-approach__visual figcaption p { margin-top: 8px; color: #696761; font-size: 12px; line-height: 1.55; }
 
 .aa-career { overflow: clip; }
-.aa-career__marquee { padding: 22px 0 25px; overflow: hidden; background: #e8c84a; }
+.aa-career__marquee { padding: 22px 0 25px; overflow: hidden; background: var(--accent); }
 .aa-career__marquee-track { width: max-content; display: flex; gap: 50px; animation: aa-career-marquee 23s linear infinite; }
 .aa-career__marquee-track span { font-size: clamp(44px, 5.3vw, 86px); line-height: .9; letter-spacing: -.055em; white-space: nowrap; }
 @keyframes aa-career-marquee { to { transform: translateX(calc(-50% - 25px)); } }
@@ -391,7 +391,7 @@ i { font-style: normal; }
 .aa-career-card:nth-child(2) { top: 120px; }
 .aa-career-card:nth-child(3) { top: 140px; }
 .aa-career-card:nth-child(4) { top: 0; border-bottom: 1px solid #b4b5b5; }
-.aa-career-card__year { color: #f1ba35; font-size: 24px; line-height: 1.5; }
+.aa-career-card__year { color: var(--accent); font-size: 24px; line-height: 1.5; }
 .aa-career-card__main { grid-column: 2; width: 100%; max-width: 511px; }
 .aa-career-card__main h3 { font-size: 48px; line-height: 1.4; letter-spacing: -.035em; font-weight: 600; }
 .aa-career-card__company { margin-top: 16px; color: #b4b5b5; font-size: 20px; line-height: 1.6; font-weight: 500; text-transform: uppercase; }
