@@ -360,7 +360,7 @@ i { font-style: normal; }
 .aa-metric strong em { color: var(--accent); font-style: normal; }
 .aa-metric h2 { margin-top: auto; font-size: 24px; line-height: 1.5; font-weight: 500; }
 .aa-metric p { max-width: 285px; margin-top: 12px; color: #646463; font-size: 14px; line-height: 1.55; }
-.aa-results__story { margin-top: 80px; padding: 0 4px 76px; display: flex; justify-content: space-between; align-items: flex-start; gap: 72px; }
+.aa-results__story { width: min(100%, var(--max)); margin: 80px auto 0; padding: 0 var(--gutter) 76px; display: flex; justify-content: space-between; align-items: flex-start; gap: 72px; }
 .aa-results__lead { width: 100%; max-width: 450px; }
 .aa-results__lead .aa-section-title h2 { margin-top: 16px; font-size: 64px; line-height: 1.2; letter-spacing: -1px; font-weight: 500; }
 .aa-results__lead > p { margin-top: 24px; color: rgba(255, 255, 255, .62); font-size: 20px; line-height: 1.6; letter-spacing: -.02em; }
