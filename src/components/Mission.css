@@ -22,8 +22,9 @@
 .mission-carousel { margin-top: clamp(54px, 5vw, 78px); }
 .mission-track { display: flex; gap: 24px; overflow-x: auto; padding: 0 var(--page-pad) 8px; scroll-padding-inline: var(--page-pad); scroll-snap-type: x mandatory; scrollbar-width: none; }
 .mission-track::-webkit-scrollbar { display: none; }
+.mission-track--loop-end { scroll-snap-type: none; }
 .mission-track--loop-end::before { content: ''; flex: 0 0 clamp(180px, 18vw, 420px); }
-.mission-card { position: relative; flex: 0 0 min(980px, calc(100vw - 96px)); aspect-ratio: 1.38 / 1; padding-top: clamp(54px, 5vw, 78px); scroll-snap-align: center; background: transparent; color: var(--ink); }
+.mission-card { position: relative; flex: 0 0 min(930px, calc(100vw - 96px)); aspect-ratio: 1.38 / 1; padding-top: clamp(54px, 5vw, 78px); scroll-snap-align: center; background: transparent; color: var(--ink); }
 .mission-card::before { content: attr(data-index); position: absolute; top: 0; left: 0; color: #b8b8b8; font-size: clamp(40px, 3.7vw, 58px); line-height: 1; font-weight: 600; letter-spacing: -.04em; }
 .mission-track--initial .mission-card:first-child { scroll-snap-align: start; }
 .mission-card > img { position: absolute; inset: clamp(54px, 5vw, 78px) 0 0; width: 100%; height: calc(100% - clamp(54px, 5vw, 78px)); border-radius: 18px; object-fit: cover; transition: transform .9s var(--ease); }
