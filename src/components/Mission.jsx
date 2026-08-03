@@ -23,6 +23,8 @@ const missionCases = [
   },
 ]
 
+const carouselCases = [...missionCases, missionCases[0]]
+
 const missionValues = [
   {
     icon: '◎',
@@ -64,8 +66,8 @@ export default function Mission() {
 
       <div className="mission-carousel">
         <div className="mission-track" ref={trackRef}>
-          {missionCases.map((item) => (
-            <article className="mission-card" key={item.eyebrow}>
+          {carouselCases.map((item, index) => (
+            <article className="mission-card" key={`${item.eyebrow}-${index}`}>
               <img src={item.image} alt="" />
               <div className="mission-card__overlay" />
               <div className="mission-card__content">
