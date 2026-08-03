@@ -3,7 +3,6 @@ import { useEffect } from 'react'
 import Home from './pages/Home'
 import AboutPage from './pages/AboutPage'
 import ProjectsPage from './pages/ProjectsPage'
-import ContactPage from './pages/ContactPage'
 import ProjectDetail from './pages/ProjectDetail'
 import TargetCursor from './components/TargetCursor'
 
@@ -24,7 +23,6 @@ export default function App() {
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<AboutPage />} />
         <Route path="/projects" element={<ProjectsPage />} />
-        <Route path="/contact" element={<ContactPage />} />
         <Route path="/projects/:slug" element={<ProjectDetail />} />
       </Routes>
     </>

@@ -71,7 +71,6 @@ export const content = {
     { label: '首页', href: '/' },
     { label: '关于', href: '/about' },
     { label: '项目', href: '/projects' },
-    { label: '联系', href: '/contact' },
   ],
   hero: {
     eyebrow: '设计出身的 AI 产品经理',
