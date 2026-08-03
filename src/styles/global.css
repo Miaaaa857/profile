@@ -215,6 +215,17 @@ i { font-style: normal; }
 
 .project-grid { display: grid; grid-template-columns: 1fr 1fr; column-gap: clamp(28px, 6vw, 110px); row-gap: 64px; align-items: start; }
 .project-card:nth-child(even) { margin-top: 88px; }
+.home-work-grid { display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); column-gap: clamp(18px, 2vw, 28px); row-gap: clamp(52px, 6vw, 86px); align-items: start; }
+.home-work-card { grid-column: span 7; min-width: 0; color: var(--ink); }
+.home-work-card:nth-child(4n + 2), .home-work-card:nth-child(4n + 3) { grid-column: span 5; }
+.home-work-card__visual { position: relative; overflow: hidden; width: 100%; aspect-ratio: 1.31 / 1; border-radius: clamp(16px, 1.6vw, 24px); background: var(--surface); }
+.home-work-card__visual img { width: 100%; height: 100%; object-fit: cover; object-position: center top; transition: transform .8s var(--ease); }
+.home-work-card:hover .home-work-card__visual img { transform: scale(1.035); }
+.home-work-card__info { padding-top: 18px; }
+.home-work-card__info h3 { font-size: clamp(22px, 1.85vw, 32px); line-height: 1.2; letter-spacing: -.04em; font-weight: 600; transition: transform .6s var(--ease); }
+.home-work-card:hover .home-work-card__info h3 { transform: translateY(-3px); }
+.home-work-card__info p { margin-top: 8px; color: var(--muted); font-size: clamp(11px, .82vw, 13px); line-height: 1.55; }
+.projects--grid .all-projects { margin-top: clamp(90px, 9vw, 130px); }
 .project-stack { margin-top: clamp(-10px, -1vw, 0px); }
 .project-stack-card { padding: clamp(18px, 2.2vw, 34px); overflow: hidden; border: 0; border-radius: clamp(22px, 2vw, 32px); background: var(--project-bg, #242320); color: var(--project-fg, #fff); box-shadow: none; transition: background-color .6s var(--ease), color .6s var(--ease); }
 .project-stack-card .project-card { display: grid; grid-template-columns: minmax(0, 1.5fr) minmax(280px, .62fr); align-items: end; gap: clamp(30px, 5vw, 82px); }
@@ -531,6 +542,12 @@ i { font-style: normal; }
   .skill-preview.is-visible { max-height: 620px; margin-top: 26px; transform: none; transition-delay: 0s; }
   .project-grid { grid-template-columns: 1fr; row-gap: 75px; }
   .project-card:nth-child(even) { margin-top: 0; }
+  .home-work-grid { grid-template-columns: 1fr; row-gap: 52px; }
+  .home-work-card, .home-work-card:nth-child(4n + 2), .home-work-card:nth-child(4n + 3) { grid-column: auto; }
+  .home-work-card__visual { aspect-ratio: 4 / 3; border-radius: 16px; }
+  .home-work-card__info { padding-top: 16px; }
+  .home-work-card__info h3 { font-size: 24px; }
+  .home-work-card__info p { font-size: 12px; }
   .project-stack-card { padding: 14px; border-radius: 18px; }
   .project-stack-card .project-card { grid-template-columns: 1fr; gap: 0; }
   .project-stack-card .project-info { padding: 22px 8px 12px; }

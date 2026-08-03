@@ -21,7 +21,7 @@ export default function Home() {
       <About data={content.aboutPersona} stats={content.stats} />
       <LogoMarquee brands={content.brands} label={content.site.clientsLabel} ariaLabel={content.site.clientsAria} />
       <Skills items={content.skills} copy={content.site} />
-      <Projects items={content.projects} copy={content.site} />
+      <Projects items={content.projects} copy={content.site} variant="grid" />
       <FAQ items={content.faq} copy={content.site} />
       <Footer data={content} onContact={() => setContactOpen(true)} />
       <ContactModal open={contactOpen} onClose={() => setContactOpen(false)} data={content} />
