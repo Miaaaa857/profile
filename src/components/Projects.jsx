@@ -82,11 +82,11 @@ export default function Projects({ items, copy, variant = 'stack' }) {
                 <div className="home-work-card__visual">
                   <img src={item.image} alt={`${item.name} ${item.title}${copy.projectCoverSuffix}`} />
                 </div>
-                <div className="home-work-card__info">
-                  <h3>{item.name} — {item.title}</h3>
-                  <p>{item.year} · {item.category} · {item.metric}</p>
-                </div>
               </BorderGlow>
+              <div className="home-work-card__info">
+                <h3>{item.name} — {item.title}</h3>
+                <p>{item.year} · {item.category} · {item.metric}</p>
+              </div>
             </Link>
           ))}
         </div>
