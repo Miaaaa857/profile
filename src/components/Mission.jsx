@@ -1,4 +1,4 @@
-import { useEffect, useRef } from 'react'
+import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import './Mission.css'
 
@@ -27,55 +27,11 @@ const missionCases = [
 ]
 
 export default function Mission() {
-  const carouselRef = useRef(null)
-  const trackRef = useRef(null)
+  const [activeIndex, setActiveIndex] = useState(0)
 
-  useEffect(() => {
-    const carousel = carouselRef.current
-    const track = trackRef.current
-    if (!carousel || !track) return undefined
-
-    let frame = 0
-    let currentX = 0
-    let targetX = 0
-
-    const animate = () => {
-      currentX += (targetX - currentX) * 0.1
-      if (Math.abs(targetX - currentX) < 0.15) currentX = targetX
-      track.style.transform = `translate3d(${currentX}px, 0, 0)`
-      frame = Math.abs(targetX - currentX) >= 0.15 ? requestAnimationFrame(animate) : 0
-    }
-
-    const update = () => {
-      if (window.innerWidth <= 980) {
-        targetX = 0
-        currentX = 0
-        track.style.transform = ''
-        return
-      }
-
-      const rect = carousel.getBoundingClientRect()
-      const scrollRange = carousel.offsetHeight - window.innerHeight
-      const rawProgress = scrollRange > 0 ? Math.min(1, Math.max(0, -rect.top / scrollRange)) : 0
-      const horizontalProgress = Math.min(1, Math.max(0, (rawProgress - 0.2) / 0.6))
-      const cards = track.querySelectorAll('.mission-card')
-      const lastCard = cards[cards.length - 1]
-      const firstCard = cards[0]
-      const totalTravel = lastCard && firstCard ? lastCard.offsetLeft - firstCard.offsetLeft : 0
-      targetX = -totalTravel * horizontalProgress
-      if (!frame) frame = requestAnimationFrame(animate)
-    }
-
-    window.addEventListener('scroll', update, { passive: true })
-    window.addEventListener('resize', update)
-    update()
-
-    return () => {
-      window.removeEventListener('scroll', update)
-      window.removeEventListener('resize', update)
-      if (frame) cancelAnimationFrame(frame)
-    }
-  }, [])
+  const move = (direction) => {
+    setActiveIndex((current) => (current + direction + missionCases.length) % missionCases.length)
+  }
 
   return (
     <section className="mission" aria-labelledby="mission-title">
@@ -87,9 +43,9 @@ export default function Mission() {
         </div>
       </div>
 
-      <div className="mission-carousel" ref={carouselRef}>
-        <div className="mission-sticky">
-          <div className="mission-track" ref={trackRef}>
+      <div className="mission-carousel">
+        <div className="mission-slider container">
+          <div className="mission-track" data-active={activeIndex}>
           {missionCases.map((item, itemIndex) => (
             <article
               className="mission-card"
@@ -107,6 +63,10 @@ export default function Mission() {
             </article>
           ))}
           </div>
+        </div>
+        <div className="mission-controls container" aria-label="文章轮播控制">
+          <button type="button" onClick={() => move(-1)} aria-label="查看上一篇">←</button>
+          <button type="button" onClick={() => move(1)} aria-label="查看下一篇">→</button>
         </div>
       </div>
 
