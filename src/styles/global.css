@@ -255,8 +255,8 @@ i { font-style: normal; }
 .faq-title .eyebrow { margin-bottom: 28px; }
 .faq-title h2 { max-width: 650px; font-size: clamp(54px, 4.2vw, 72px); line-height: 1.08; }
 .faq-list { display: grid; gap: 12px; }
-.faq-item { overflow: hidden; border-radius: 44px; background: var(--surface); transition: border-radius .6s var(--ease), background .6s var(--ease), box-shadow .6s var(--ease); }
-.faq-item.is-open { border-radius: 30px; background: #fff; box-shadow: none; }
+.faq-item { overflow: hidden; border-radius: 44px; background: #f3f3f3; transition: border-radius .6s var(--ease), background .6s var(--ease), box-shadow .6s var(--ease); }
+.faq-item.is-open { border-radius: 30px; background: #f3f3f3; box-shadow: none; }
 .faq-item button { width: 100%; min-height: 84px; padding: 0 28px; display: grid; grid-template-columns: 1fr 32px; align-items: center; gap: 16px; border: 0; background: none; text-align: left; cursor: pointer; }
 .faq-item button:focus-visible { outline: 2px solid var(--accent); outline-offset: -3px; border-radius: inherit; }
 .faq-item button strong { font-size: clamp(17px, 1.25vw, 22px); line-height: 1.5; font-weight: 500; }
