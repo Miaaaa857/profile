@@ -54,7 +54,7 @@ export default function Mission() {
   return (
     <section className="mission" aria-labelledby="mission-title">
       <div className="container mission-heading" data-reveal>
-        <p className="mission-kicker"><span aria-hidden="true">⌁</span> MY THINKING</p>
+        <p className="mission-kicker">MY THINKING</p>
         <div className="mission-heading__grid">
           <h2 id="mission-title">我怎么看<br /><span>AI 产品</span></h2>
           <p>模型能做到的，和用户愿意用的，中间差着一整个产品。这里是我对这个“差距”的一些拆解。</p>
