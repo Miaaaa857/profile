@@ -7,6 +7,7 @@ import LogoMarquee from '../components/LogoMarquee'
 import About from '../components/About'
 import Skills from '../components/Skills'
 import Projects from '../components/Projects'
+import Mission from '../components/Mission'
 import FAQ from '../components/FAQ'
 import Footer from '../components/Footer'
 import ContactModal from '../components/ContactModal'
@@ -22,6 +23,7 @@ export default function Home() {
       <LogoMarquee brands={content.brands} label={content.site.clientsLabel} ariaLabel={content.site.clientsAria} />
       <Skills items={content.skills} copy={content.site} />
       <Projects items={content.projects} copy={content.site} variant="grid" />
+      <Mission />
       <FAQ items={content.faq} copy={content.site} />
       <Footer data={content} onContact={() => setContactOpen(true)} />
       <ContactModal open={contactOpen} onClose={() => setContactOpen(false)} data={content} />
