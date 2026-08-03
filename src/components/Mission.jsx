@@ -72,7 +72,12 @@ export default function Mission() {
           {carouselCases.map((item) => {
             const itemIndex = missionCases.indexOf(item)
             return (
-            <article className="mission-card" data-active={itemIndex === activeIndex} key={item.eyebrow}>
+            <article
+              className="mission-card"
+              data-active={itemIndex === activeIndex}
+              data-index={String(itemIndex + 1).padStart(2, '0')}
+              key={item.eyebrow}
+            >
               <img src={item.image} alt="" />
               <div className="mission-card__overlay" />
               <div className="mission-card__content">
