@@ -28,22 +28,18 @@
 .mission-card__content { position: relative; z-index: 1; height: 100%; padding: clamp(28px, 2.4vw, 42px); display: flex; flex-direction: column; align-items: flex-start; }
 .mission-card__content > p { color: #f2b91f; font-size: 14px; line-height: 1.4; }
 .mission-card__content h3 { max-width: 470px; margin-top: 22px; font-size: clamp(30px, 2.35vw, 42px); line-height: 1.18; letter-spacing: -.045em; font-weight: 500; }
+.mission-card__content .mission-card__summary { max-width: 560px; margin-top: 18px; color: rgba(255, 255, 255, .78); font-size: 16px; line-height: 1.55; }
 .mission-card__content a { min-height: 48px; margin-top: auto; padding: 0 22px; display: inline-flex; align-items: center; gap: 10px; border-radius: 999px; background: #f2b91f; color: #171612; font-size: 14px; font-weight: 600; }
 .mission-card__content a span { transition: transform .45s var(--ease); }
 .mission-card__content a:hover span { transform: translate(3px, 3px); }
 .mission-controls { margin-top: 22px; display: flex; justify-content: center; gap: 14px; }
 .mission-controls button { width: 46px; height: 46px; display: grid; place-items: center; border: 0; border-radius: 8px; background: #f3f3f3; color: var(--ink); font-size: 22px; cursor: pointer; transition: background .35s var(--ease), transform .35s var(--ease); }
 .mission-controls button:hover { background: #e9e9e9; transform: translateY(-2px); }
-.mission-values { margin-top: clamp(52px, 6vw, 90px); display: grid; grid-template-columns: repeat(3, 1fr); gap: clamp(40px, 6vw, 90px); }
-.mission-values h3 { display: flex; align-items: center; gap: 12px; font-size: clamp(22px, 1.65vw, 28px); line-height: 1.25; font-weight: 600; }
-.mission-values h3 span { width: 30px; font-size: 28px; line-height: 1; font-weight: 400; }
-.mission-values p { max-width: 430px; margin-top: 18px; color: #686660; font-size: 16px; line-height: 1.55; }
 
 @media (max-width: 980px) {
   .mission-heading__grid { grid-template-columns: 1fr; gap: 32px; }
   .mission-heading h2 { font-size: clamp(52px, 8vw, 72px); }
   .mission-card { flex-basis: min(72vw, 590px); }
-  .mission-values { grid-template-columns: 1fr 1fr; }
 }
 
 @media (max-width: 740px) {
@@ -56,6 +52,4 @@
   .mission-card { flex-basis: calc(100vw - 56px); height: 420px; border-radius: 16px; }
   .mission-card__content { padding: 24px; }
   .mission-card__content h3 { font-size: 30px; }
-  .mission-values { grid-template-columns: 1fr; gap: 42px; }
-  .mission-values p { margin-top: 14px; }
 }

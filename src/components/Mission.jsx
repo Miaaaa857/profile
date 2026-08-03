@@ -4,40 +4,25 @@ import './Mission.css'
 
 const missionCases = [
   {
-    eyebrow: 'HYPERSCALE SAAS',
-    title: 'Driving 150% Organic Growth via SEO',
+    eyebrow: 'AI 交互',
+    title: '拆解：豆包为什么用流式输出，而不是等全部生成完',
+    summary: '流式输出不只是快，它在管理用户的等待焦虑——一个交互决策背后的产品心理学。',
     image: '/media/portfolio/page-39.jpg',
     href: '/projects/qinrive',
   },
   {
-    eyebrow: 'LUMINARY AESTHETICS',
-    title: 'Redefining Luxury Through Social Strategy',
+    eyebrow: 'AI 产品设计',
+    title: '拆解：当 AI 会答错，产品该怎么设计',
+    summary: '幻觉无法根除，好的 AI 产品不是假装模型不会错，而是设计好“错了之后”的路径。',
     image: '/media/portfolio/page-06.jpg',
     href: '/projects/fatelinked',
   },
   {
-    eyebrow: 'NEXUS CONSULTING',
-    title: 'A Data-Driven Path to Market Dominance',
+    eyebrow: 'AI 场景',
+    title: '拆解：为什么大部分 AI 功能没人用',
+    summary: '不是技术不行，是产品把“模型能做”当成了“用户想要”——一个常见的伪需求陷阱。',
     image: '/media/portfolio/page-18.jpg',
     href: '/projects/pulsebeat',
-  },
-]
-
-const missionValues = [
-  {
-    icon: '◎',
-    title: 'Market Fluidity',
-    text: 'In an era of rapid digital evolution, we ensure your brand remains agile and responsive, adapting seamlessly to shifting consumer behaviors and emerging market trends.',
-  },
-  {
-    icon: '⇄',
-    title: 'Integrated Ecosystems',
-    text: 'We specialize in unifying disparate digital channels—from SEO to social—into a singular, cohesive growth engine designed to maximize efficiency and brand consistency.',
-  },
-  {
-    icon: '↗',
-    title: 'Data Clarity',
-    text: 'Beyond basic metrics, we distill complex market data into clear, actionable insights, empowering your business to make informed decisions that drive long-term profitability.',
   },
 ]
 
@@ -69,10 +54,10 @@ export default function Mission() {
   return (
     <section className="mission" aria-labelledby="mission-title">
       <div className="container mission-heading" data-reveal>
-        <p className="mission-kicker"><span aria-hidden="true">⌁</span> MY MISSION</p>
+        <p className="mission-kicker"><span aria-hidden="true">⌁</span> MY THINKING</p>
         <div className="mission-heading__grid">
-          <h2 id="mission-title">Transforming Vision<br /><span>into Digital Reality</span></h2>
-          <p>I push the boundaries of digital design through constant innovation and focused execution.</p>
+          <h2 id="mission-title">我怎么看<br /><span>AI 产品</span></h2>
+          <p>模型能做到的，和用户愿意用的，中间差着一整个产品。这里是我对这个“差距”的一些拆解。</p>
         </div>
       </div>
 
@@ -87,7 +72,8 @@ export default function Mission() {
               <div className="mission-card__content">
                 <p>{item.eyebrow}</p>
                 <h3>{item.title}</h3>
-                <Link to={item.href}>Explore More <span aria-hidden="true">↘</span></Link>
+                <p className="mission-card__summary">{item.summary}</p>
+                <Link to={item.href}>阅读全文 <span aria-hidden="true">↘</span></Link>
               </div>
             </article>
             )
@@ -99,14 +85,6 @@ export default function Mission() {
         </div>
       </div>
 
-      <div className="container mission-values">
-        {missionValues.map((item) => (
-          <article key={item.title} data-reveal>
-            <h3><span aria-hidden="true">{item.icon}</span>{item.title}</h3>
-            <p>{item.text}</p>
-          </article>
-        ))}
-      </div>
     </section>
   )
 }
