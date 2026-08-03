@@ -1,4 +1,4 @@
-import { useRef } from 'react'
+import { useLayoutEffect, useMemo, useRef, useState } from 'react'
 import { Link } from 'react-router-dom'
 import './Mission.css'
 
@@ -23,8 +23,6 @@ const missionCases = [
   },
 ]
 
-const carouselCases = [...missionCases, missionCases[0]]
-
 const missionValues = [
   {
     icon: '◎',
@@ -45,13 +43,27 @@ const missionValues = [
 
 export default function Mission() {
   const trackRef = useRef(null)
+  const [activeIndex, setActiveIndex] = useState(0)
 
-  const move = (direction) => {
+  const carouselCases = useMemo(() => {
+    if (activeIndex < 2) return missionCases
+    return [missionCases[1], missionCases[2], missionCases[0]]
+  }, [activeIndex])
+
+  useLayoutEffect(() => {
     const track = trackRef.current
     if (!track) return
-    const card = track.querySelector('.mission-card')
-    const distance = card ? card.getBoundingClientRect().width + 24 : track.clientWidth * 0.75
-    track.scrollBy({ left: distance * direction, behavior: 'smooth' })
+    const activeCard = track.querySelector('[data-active="true"]')
+    if (!activeCard) return
+
+    const left = activeIndex === 0
+      ? 0
+      : activeCard.offsetLeft - (track.clientWidth - activeCard.clientWidth) / 2
+    track.scrollTo({ left, behavior: 'smooth' })
+  }, [activeIndex, carouselCases])
+
+  const move = (direction) => {
+    setActiveIndex((current) => (current + direction + missionCases.length) % missionCases.length)
   }
 
   return (
@@ -65,9 +77,11 @@ export default function Mission() {
       </div>
 
       <div className="mission-carousel">
-        <div className="mission-track" ref={trackRef}>
-          {carouselCases.map((item, index) => (
-            <article className="mission-card" key={`${item.eyebrow}-${index}`}>
+        <div className={`mission-track${activeIndex === 0 ? ' mission-track--initial' : ''}`} ref={trackRef}>
+          {carouselCases.map((item) => {
+            const itemIndex = missionCases.indexOf(item)
+            return (
+            <article className="mission-card" data-active={itemIndex === activeIndex} key={item.eyebrow}>
               <img src={item.image} alt="" />
               <div className="mission-card__overlay" />
               <div className="mission-card__content">
@@ -76,7 +90,8 @@ export default function Mission() {
                 <Link to={item.href}>Explore More <span aria-hidden="true">↘</span></Link>
               </div>
             </article>
-          ))}
+            )
+          })}
         </div>
         <div className="mission-controls" aria-label="案例轮播控制">
           <button type="button" onClick={() => move(-1)} aria-label="查看上一个案例">←</button>

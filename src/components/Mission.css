@@ -21,7 +21,7 @@
 .mission-track { display: flex; gap: 24px; overflow-x: auto; padding: 0 var(--page-pad) 8px; scroll-padding-inline: var(--page-pad); scroll-snap-type: x mandatory; scrollbar-width: none; }
 .mission-track::-webkit-scrollbar { display: none; }
 .mission-card { position: relative; flex: 0 0 min(760px, 39vw); aspect-ratio: 1.7 / 1; overflow: hidden; border-radius: 22px; scroll-snap-align: center; background: #272522; color: #fff; }
-.mission-card:first-child { scroll-snap-align: start; }
+.mission-track--initial .mission-card:first-child { scroll-snap-align: start; }
 .mission-card > img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; transition: transform .9s var(--ease); }
 .mission-card:hover > img { transform: scale(1.04); }
 .mission-card__overlay { position: absolute; inset: 0; background: linear-gradient(110deg, rgba(20, 18, 16, .74), rgba(20, 18, 16, .18) 72%); }
