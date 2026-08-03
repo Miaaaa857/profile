@@ -1,4 +1,4 @@
-import { useLayoutEffect, useMemo, useRef, useState } from 'react'
+import { useEffect, useRef } from 'react'
 import { Link } from 'react-router-dom'
 import './Mission.css'
 
@@ -27,37 +27,55 @@ const missionCases = [
 ]
 
 export default function Mission() {
+  const carouselRef = useRef(null)
   const trackRef = useRef(null)
-  const [activeIndex, setActiveIndex] = useState(0)
 
-  const carouselCases = useMemo(() => {
-    if (activeIndex < 2) return missionCases
-    return [missionCases[1], missionCases[2], missionCases[0]]
-  }, [activeIndex])
-
-  useLayoutEffect(() => {
+  useEffect(() => {
+    const carousel = carouselRef.current
     const track = trackRef.current
-    if (!track) return
-    const activeCard = track.querySelector('[data-active="true"]')
-    if (!activeCard) return
+    if (!carousel || !track) return undefined
 
-    const trackGap = Number.parseFloat(getComputedStyle(track).columnGap) || 24
-    const trackRect = track.getBoundingClientRect()
-    const sectionRect = track.closest('.mission').getBoundingClientRect()
-    const desiredFirstVisible = activeCard.clientWidth * 0.75
-    const desiredActiveLeft = sectionRect.right - desiredFirstVisible - trackGap - activeCard.clientWidth
-    const finalActiveLeft = Math.max(trackRect.left, desiredActiveLeft)
-    const left = activeIndex === 0
-      ? 0
-      : activeIndex === missionCases.length - 1
-        ? activeCard.offsetLeft - finalActiveLeft
-        : activeCard.offsetLeft - (track.clientWidth - activeCard.clientWidth) / 2
-    track.scrollTo({ left, behavior: 'smooth' })
-  }, [activeIndex, carouselCases])
+    let frame = 0
+    let currentX = 0
+    let targetX = 0
 
-  const move = (direction) => {
-    setActiveIndex((current) => (current + direction + missionCases.length) % missionCases.length)
-  }
+    const animate = () => {
+      currentX += (targetX - currentX) * 0.1
+      if (Math.abs(targetX - currentX) < 0.15) currentX = targetX
+      track.style.transform = `translate3d(${currentX}px, 0, 0)`
+      frame = Math.abs(targetX - currentX) >= 0.15 ? requestAnimationFrame(animate) : 0
+    }
+
+    const update = () => {
+      if (window.innerWidth <= 980) {
+        targetX = 0
+        currentX = 0
+        track.style.transform = ''
+        return
+      }
+
+      const rect = carousel.getBoundingClientRect()
+      const scrollRange = carousel.offsetHeight - window.innerHeight
+      const rawProgress = scrollRange > 0 ? Math.min(1, Math.max(0, -rect.top / scrollRange)) : 0
+      const horizontalProgress = Math.min(1, Math.max(0, (rawProgress - 0.2) / 0.6))
+      const cards = track.querySelectorAll('.mission-card')
+      const lastCard = cards[cards.length - 1]
+      const firstCard = cards[0]
+      const totalTravel = lastCard && firstCard ? lastCard.offsetLeft - firstCard.offsetLeft : 0
+      targetX = -totalTravel * horizontalProgress
+      if (!frame) frame = requestAnimationFrame(animate)
+    }
+
+    window.addEventListener('scroll', update, { passive: true })
+    window.addEventListener('resize', update)
+    update()
+
+    return () => {
+      window.removeEventListener('scroll', update)
+      window.removeEventListener('resize', update)
+      if (frame) cancelAnimationFrame(frame)
+    }
+  }, [])
 
   return (
     <section className="mission" aria-labelledby="mission-title">
@@ -69,17 +87,12 @@ export default function Mission() {
         </div>
       </div>
 
-      <div className="mission-carousel">
-        <div
-          className={`mission-track${activeIndex === 0 ? ' mission-track--initial' : ''}${activeIndex === missionCases.length - 1 ? ' mission-track--loop-end' : ''}`}
-          ref={trackRef}
-        >
-          {carouselCases.map((item) => {
-            const itemIndex = missionCases.indexOf(item)
-            return (
+      <div className="mission-carousel" ref={carouselRef}>
+        <div className="mission-sticky">
+          <div className="mission-track" ref={trackRef}>
+          {missionCases.map((item, itemIndex) => (
             <article
               className="mission-card"
-              data-active={itemIndex === activeIndex}
               data-index={String(itemIndex + 1).padStart(2, '0')}
               key={item.eyebrow}
             >
@@ -92,12 +105,8 @@ export default function Mission() {
                 <Link to={item.href}>阅读全文 <span aria-hidden="true">↘</span></Link>
               </div>
             </article>
-            )
-          })}
-        </div>
-        <div className="mission-controls" aria-label="案例轮播控制">
-          <button type="button" onClick={() => move(-1)} aria-label="查看上一个案例">←</button>
-          <button type="button" onClick={() => move(1)} aria-label="查看下一个案例">→</button>
+          ))}
+          </div>
         </div>
       </div>
 
