@@ -41,9 +41,12 @@ export default function Mission() {
     const activeCard = track.querySelector('[data-active="true"]')
     if (!activeCard) return
 
+    const loopPeek = Math.min(170, Math.max(110, track.clientWidth * 0.1))
     const left = activeIndex === 0
       ? 0
-      : activeCard.offsetLeft - (track.clientWidth - activeCard.clientWidth) / 2
+      : activeIndex === missionCases.length - 1
+        ? activeCard.offsetLeft - (track.clientWidth - activeCard.clientWidth - loopPeek)
+        : activeCard.offsetLeft - (track.clientWidth - activeCard.clientWidth) / 2
     track.scrollTo({ left, behavior: 'smooth' })
   }, [activeIndex, carouselCases])
 
