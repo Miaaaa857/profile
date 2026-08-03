@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom'
+import BorderGlow from './BorderGlow'
 import ScrollStack, { ScrollStackItem } from './ScrollStack'
 
 function applyCoverColor(event) {
@@ -66,13 +67,26 @@ export default function Projects({ items, copy, variant = 'stack' }) {
         <div className="home-work-grid">
           {items.map((item, i) => (
             <Link className={`home-work-card home-work-card--${i + 1}`} to={`/projects/${item.slug}`} key={item.slug} data-reveal>
-              <div className="home-work-card__visual">
-                <img src={item.image} alt={`${item.name} ${item.title}${copy.projectCoverSuffix}`} />
-              </div>
-              <div className="home-work-card__info">
-                <h3>{item.name} — {item.title}</h3>
-                <p>{item.year} · {item.category} · {item.metric}</p>
-              </div>
+              <BorderGlow
+                className="home-work-card__glow"
+                edgeSensitivity={24}
+                glowColor="14 100 65"
+                backgroundColor="#fff"
+                borderRadius={24}
+                glowRadius={26}
+                glowIntensity={0.68}
+                coneSpread={23}
+                fillOpacity={0.12}
+                colors={['#ff4d24', '#ff9b69', '#20e7bd']}
+              >
+                <div className="home-work-card__visual">
+                  <img src={item.image} alt={`${item.name} ${item.title}${copy.projectCoverSuffix}`} />
+                </div>
+                <div className="home-work-card__info">
+                  <h3>{item.name} — {item.title}</h3>
+                  <p>{item.year} · {item.category} · {item.metric}</p>
+                </div>
+              </BorderGlow>
             </Link>
           ))}
         </div>
