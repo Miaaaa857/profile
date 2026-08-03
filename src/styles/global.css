@@ -262,7 +262,7 @@ i { font-style: normal; }
 .faq-item button i { justify-self: end; font-size: 23px; font-style: normal; font-weight: 400; transition: color .5s var(--ease), transform .5s var(--ease); }
 .faq-item.is-open button i { color: var(--ink); transform: none; }
 .faq-answer { display: grid; grid-template-rows: 0fr; transition: grid-template-rows .6s var(--ease); }
-.faq-answer p { overflow: hidden; max-width: 650px; margin: 0 76px 0 28px; color: var(--muted); font-size: 14px; line-height: 1.75; }
+.faq-answer p { overflow: hidden; max-width: 650px; margin: 0 76px 0 28px; color: var(--muted); font-size: 16px; line-height: 1.75; }
 .faq-item.is-open .faq-answer { grid-template-rows: 1fr; }
 .faq-item.is-open .faq-answer p { padding-bottom: 28px; }
 
