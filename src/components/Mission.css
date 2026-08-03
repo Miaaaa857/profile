@@ -19,7 +19,7 @@
 .mission-heading h2 { font-size: clamp(58px, 5.4vw, 90px); line-height: .98; letter-spacing: -.06em; font-weight: 500; }
 .mission-heading h2 span { color: #b8b8b8; }
 .mission-heading__grid > p { max-width: 390px; padding-bottom: 6px; color: #66645f; font-size: 16px; line-height: 1.65; }
-.mission-carousel { --mission-gap: 24px; --mission-card-width: min(1000px, calc(65.5vw - 1.31 * var(--page-pad))); margin-top: clamp(54px, 5vw, 78px); }
+.mission-carousel { --mission-gap: 24px; --mission-card-width: min(1000px, calc(65.5vw - 1.31 * var(--page-pad))); margin-top: clamp(27px, 2.5vw, 39px); }
 .mission-slider { overflow: visible; }
 .mission-track { width: max-content; display: flex; gap: var(--mission-gap); transform: translate3d(0, 0, 0); transition: transform .85s var(--ease); will-change: transform; }
 .mission-track[data-active='1'] { transform: translate3d(calc(0px - var(--mission-card-width) - var(--mission-gap)), 0, 0); }
@@ -53,7 +53,7 @@
   .mission-kicker { font-size: 12px; }
   .mission-heading h2 { font-size: 48px; line-height: 1.02; }
   .mission-heading__grid > p { font-size: 16px; }
-  .mission-carousel { margin-top: 44px; }
+  .mission-carousel { margin-top: 22px; }
   .mission-carousel { --mission-gap: 14px; --mission-card-width: calc(100vw - 48px); }
   .mission-slider, .mission-controls { padding-inline: 16px; }
   .mission-card { height: 560px; padding-top: 54px; }
