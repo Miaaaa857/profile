@@ -65,7 +65,10 @@ export default function Mission() {
       </div>
 
       <div className="mission-carousel">
-        <div className={`mission-track${activeIndex === 0 ? ' mission-track--initial' : ''}`} ref={trackRef}>
+        <div
+          className={`mission-track${activeIndex === 0 ? ' mission-track--initial' : ''}${activeIndex === missionCases.length - 1 ? ' mission-track--loop-end' : ''}`}
+          ref={trackRef}
+        >
           {carouselCases.map((item) => {
             const itemIndex = missionCases.indexOf(item)
             return (
