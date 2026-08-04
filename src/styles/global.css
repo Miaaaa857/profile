@@ -225,7 +225,7 @@ i { font-style: normal; }
 .home-work-card__info { padding-top: 18px; }
 .home-work-card__info h3 { font-size: clamp(22px, 1.85vw, 32px); line-height: 1.2; letter-spacing: -.04em; font-weight: 600; transition: transform .6s var(--ease); }
 .home-work-card:hover .home-work-card__info h3 { transform: translateY(-3px); }
-.home-work-card__info p { margin-top: 8px; color: var(--muted); font-size: clamp(11px, .82vw, 13px); line-height: 1.55; }
+.home-work-card__info p { margin-top: 8px; color: var(--muted); font-size: 16px; line-height: 1.55; }
 .projects--grid .all-projects { margin-top: clamp(90px, 9vw, 130px); }
 .project-stack { margin-top: clamp(-10px, -1vw, 0px); }
 .project-stack-card { padding: clamp(18px, 2.2vw, 34px); overflow: hidden; border: 0; border-radius: clamp(22px, 2vw, 32px); background: var(--project-bg, #242320); color: var(--project-fg, #fff); box-shadow: none; transition: background-color .6s var(--ease), color .6s var(--ease); }
