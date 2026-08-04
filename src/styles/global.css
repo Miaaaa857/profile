@@ -414,7 +414,7 @@ i { font-style: normal; }
 .aa-capability-pyramid__level--3 { width: 100%; height: 160px; clip-path: polygon(15.7% 0, 84.3% 0, 100% 100%, 0 100%); background: var(--accent); }
 .aa-capability-details { display: grid; gap: 28px; }
 .aa-capability-group { padding: 24px 28px 26px; border: 2px dashed var(--accent); border-radius: 20px; }
-.aa-capability-group h2 { font-size: clamp(25px, 2vw, 34px); line-height: 1.2; font-weight: 600; }
+.aa-capability-group h2 { font-size: 32px; line-height: 1.2; font-weight: 600; }
 .aa-capability-group > div { margin-top: 18px; display: flex; flex-wrap: wrap; gap: 14px 18px; }
 .aa-capability-group span { padding: 9px 22px; border-radius: 999px; background: #e1e2e0; color: #555650; font-size: clamp(14px, 1.12vw, 18px); line-height: 1.35; white-space: nowrap; }
 
