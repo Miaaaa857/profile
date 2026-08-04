@@ -1,5 +1,5 @@
 .mission {
-  margin: 16px;
+  margin: 0 16px 16px;
   padding: clamp(120px, 10vw, 170px) 0 clamp(90px, 8vw, 130px);
   overflow: hidden;
   border-radius: var(--radius-media-lg);
@@ -49,7 +49,7 @@
 }
 
 @media (max-width: 740px) {
-  .mission { margin: 8px; padding-block: 90px 72px; }
+  .mission { margin: 0 8px 8px; padding-block: 90px 72px; }
   .mission-kicker { font-size: 12px; }
   .mission-heading h2 { font-size: 48px; line-height: 1.02; }
   .mission-heading__grid > p { font-size: 16px; }
