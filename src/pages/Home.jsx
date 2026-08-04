@@ -16,7 +16,7 @@ export default function Home() {
   const [contactOpen, setContactOpen] = useState(false)
   useReveal()
   return (
-    <main>
+    <main className="home-page">
       <Navbar data={content} onContact={() => setContactOpen(true)} />
       <Hero data={content.hero} copy={content.site} />
       <About data={content.aboutPersona} stats={content.stats} />

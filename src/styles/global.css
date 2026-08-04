@@ -271,6 +271,7 @@ i { font-style: normal; }
 
 .footer { background: transparent; color: var(--ink); }
 .footer-cta-shell { padding: clamp(70px, 6vw, 100px) 0 clamp(72px, 6vw, 100px); }
+.home-page .footer-cta-shell { border-top: 1px solid rgb(230, 230, 230); }
 .footer-cta { position: relative; display: flex; flex-direction: column; align-items: center; text-align: center; }
 .footer-cta .eyebrow { margin-bottom: 28px; }
 .footer-cta h2 { font-size: clamp(72px, 8.4vw, 140px); line-height: .92; letter-spacing: -.07em; font-weight: 500; }
