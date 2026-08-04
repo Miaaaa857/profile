@@ -250,8 +250,8 @@ i { font-style: normal; }
 .all-projects::before, .all-projects::after { content: ''; position: absolute; left: 50%; width: 100vw; transform: translateX(-50%); border-top: 1px dashed #e6e6e6; pointer-events: none; }
 .all-projects::before { top: 0; }
 .all-projects::after { bottom: 0; }
-.all-projects strong { font-size: 13px; }
-.all-projects i { margin-left: clamp(2px, .5vw, 8px); font-style: normal; }
+.all-projects strong { color: var(--accent); font-size: 13px; }
+.all-projects i { margin-left: clamp(2px, .5vw, 8px); color: var(--accent); font-style: normal; }
 
 .faq { display: grid; grid-template-columns: 1fr 1.25fr; align-items: start; gap: clamp(36px, 5vw, 90px); padding-top: clamp(120px, 10vw, 160px); padding-bottom: clamp(80px, 7vw, 120px); }
 .faq-title .eyebrow { margin-bottom: 28px; }
