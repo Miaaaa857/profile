@@ -36,7 +36,7 @@
 .mission-card__content a { min-height: 48px; margin-top: auto; padding: 0 22px; display: inline-flex; align-items: center; gap: 10px; border-radius: 999px; background: #f2b91f; color: #171612; font-size: 14px; font-weight: 600; }
 .mission-card__content a span { transition: transform .45s var(--ease); }
 .mission-card__content a:hover span { transform: translate(3px, 3px); }
-.mission-controls { margin-top: 20px; display: flex; justify-content: flex-end; gap: 14px; }
+.mission-controls { margin-top: 20px; display: flex; justify-content: flex-start; gap: 14px; }
 .mission-controls button { width: 46px; height: 46px; display: grid; place-items: center; border: 1px solid #dededc; border-radius: 8px; background: #fff; color: var(--ink); font-size: 22px; cursor: pointer; transition: background .35s var(--ease), transform .35s var(--ease); }
 .mission-controls button:hover { background: #e7e7e5; transform: translateY(-2px); }
 @media (max-width: 980px) {

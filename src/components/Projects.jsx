@@ -2,6 +2,13 @@ import { Link } from 'react-router-dom'
 import BorderGlow from './BorderGlow'
 import ScrollStack, { ScrollStackItem } from './ScrollStack'
 
+const projectFieldPlaceholders = [
+  '核心策略（待补充）',
+  '关键流程（待补充）',
+  '设计系统（待补充）',
+  '结果指标（待补充）',
+]
+
 function applyCoverColor(event) {
   const image = event.currentTarget
   const card = image.closest('.project-stack-card')
@@ -56,13 +63,21 @@ function applyCoverColor(event) {
 export default function Projects({ items, copy, variant = 'stack' }) {
   return (
     <section className={`section projects container projects--${variant}`} id="projects">
-      <div className="projects-heading" data-reveal>
-        <div className="module-heading__main">
-          <div className="module-heading__label"><p className="eyebrow">{copy.projectsEyebrow}</p></div>
-          <h2>{copy.projectsTitle[0]}<br /><i className="display-emphasis">{copy.projectsTitle[1]}</i></h2>
+      {variant === 'stack' ? (
+        <header className="projects-hero" data-reveal>
+          <div className="projects-hero__label"><p className="eyebrow">精选项目</p></div>
+          <h1>不只是界面，<br /><i className="display-emphasis">是产品判断</i></h1>
+          <p>从社交、电商到 B 端后台，每个项目我都用数据验证判断——留存、转化、效率，不靠形容词。</p>
+        </header>
+      ) : (
+        <div className="projects-heading" data-reveal>
+          <div className="module-heading__main">
+            <div className="module-heading__label"><p className="eyebrow">{copy.projectsEyebrow}</p></div>
+            <h2>{copy.projectsTitle[0]}<br /><i className="display-emphasis">{copy.projectsTitle[1]}</i></h2>
+          </div>
+          <p>{copy.projectsIntro}</p>
         </div>
-        <p>{copy.projectsIntro}</p>
-      </div>
+      )}
       {variant === 'grid' ? (
         <div className="home-work-grid">
           {items.map((item, i) => (
@@ -89,6 +104,28 @@ export default function Projects({ items, copy, variant = 'stack' }) {
               </div>
             </Link>
           ))}
+          <article className="home-work-card home-work-card--placeholder" data-reveal>
+            <BorderGlow
+              className="home-work-card__glow"
+              edgeSensitivity={24}
+              glowColor="14 100 65"
+              backgroundColor="#fff"
+              borderRadius={24}
+              glowRadius={26}
+              glowIntensity={0.68}
+              coneSpread={23}
+              fillOpacity={0.12}
+              colors={['#ff4d24', '#ff9b69', '#20e7bd']}
+            >
+              <div className="home-work-card__visual home-work-card__visual--placeholder">
+                <span>PROJECT 05 · COMING SOON</span>
+              </div>
+            </BorderGlow>
+            <div className="home-work-card__info">
+              <h3>更多项目 — 敬请期待</h3>
+              <p>CASE STUDY · COMING SOON</p>
+            </div>
+          </article>
         </div>
       ) : (
         <ScrollStack
@@ -104,14 +141,21 @@ export default function Projects({ items, copy, variant = 'stack' }) {
           {items.map((item, i) => (
             <ScrollStackItem itemClassName={`project-stack-card project-stack-card--${i + 1}`} key={item.slug}>
               <Link className={`project-card project-card--${i + 1}`} to={`/projects/${item.slug}`}>
-                <div className={`project-visual tone-${item.tone}`}><img src={item.image} alt={`${item.name} ${item.title}${copy.projectCoverSuffix}`} onLoad={applyCoverColor} /><span className="project-open">↗</span></div>
-                <div className="project-info"><div><span>{item.category}</span><span>{item.year}</span></div><h3>{item.name}</h3><p>{item.title} · {item.metric}</p></div>
+                <div className="project-info">
+                  <div className="project-info__meta">{item.projectPage?.eyebrow || `${item.year} · ${item.category}`}</div>
+                  <h3>{item.projectPage?.headline || `${item.name} — ${item.title}`}</h3>
+                  <p className="project-info__summary">{item.projectPage?.description || item.summary}</p>
+                  <span className="project-info__cta">{item.projectPage?.cta || '查看项目'} <i>↘</i></span>
+                  <div className="project-info__fields">
+                    {(item.projectPage?.capabilities || projectFieldPlaceholders).map((field) => <span key={field}>{field}</span>)}
+                  </div>
+                </div>
+                <div className={`project-visual tone-${item.tone}`}><img src={item.image} alt={`${item.name} ${item.title}${copy.projectCoverSuffix}`} /><span className="project-open">↗</span></div>
               </Link>
             </ScrollStackItem>
           ))}
         </ScrollStack>
       )}
-      <Link className="all-projects" to="/projects/fatelinked"><span>{copy.allProjects}</span><strong>(04)</strong><i>↗</i></Link>
     </section>
   )
 }
