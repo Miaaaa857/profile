@@ -59,17 +59,17 @@ const capabilityGroups = [
   {
     title: 'AI 产品化',
     level: 'AI Productization',
-    items: ['判断 LLM 能力边界', 'Prompt 设计与迭代', '设计人机协作流程', '用产品遮短板、放长板'],
+    items: ['判断 LLM 能力边界，知道什么该交给模型', 'Prompt 设计与迭代，持续调优输出质量', '设计人机协作流程，处理 AI 的不确定性', '用产品设计遮住模型短板、放大长板'],
   },
   {
     title: '产品判断',
     level: 'Product Thinking',
-    items: ['从流失倒推真问题', '会砍需求，不堆功能', '竞品拆解与场景挖掘', '数据验证：埋点、漏斗、A/B'],
+    items: ['从用户流失倒推，找到真正该解决的问题', '懂得砍需求做减法，而不是堆功能', '竞品拆解与真实使用场景挖掘', '用数据验证判断：埋点、漏斗、A/B 测试'],
   },
   {
     title: '设计与实现',
     level: 'Design & Build',
-    items: ['精通主流设计工具', '会写前端，能做 demo', '4 年一线设计经验', '懂交互，知道用户在哪卡住'],
+    items: ['精通 Figma、PS、C4D 等主流设计工具', '会写前端，能亲手把想法做成 demo', '4 年一线设计，服务过腾讯、OPPO 等', '懂交互体验，知道用户在哪一步会卡住'],
   },
 ]
 
@@ -125,22 +125,26 @@ export default function AelixaAbout() {
       </section>
 
       <section className="aa-approach" aria-label="三层能力模型">
+        <header className="container aa-capability-heading" data-reveal>
+          <p className="aa-kicker">MY CAPABILITY</p>
+          <h2>我的能力，是长出来的</h2>
+        </header>
+
         <div className="container aa-capability-model">
-          <div className="aa-capability-pyramid" data-reveal>
-            {capabilityGroups.map((group, index) => (
-              <div className={`aa-capability-pyramid__level aa-capability-pyramid__level--${index + 1}`} key={group.title}>
-                <strong>{group.title}</strong>
-                <span>{group.level}</span>
-              </div>
-            ))}
-          </div>
+          <figure className="aa-capability-pyramid" data-reveal>
+            <img src="/media/capability-pyramid.png" alt="AI 产品化、产品判断与设计实现三层能力金字塔" />
+          </figure>
 
           <div className="aa-capability-details">
             {capabilityGroups.map((group) => (
               <article className="aa-capability-group" key={group.title} data-reveal>
                 <h2>{group.title}</h2>
-                <div>
-                  {group.items.map((item) => <span key={item}>{item}</span>)}
+                <div className="aa-capability-group__tags">
+                  {[group.items.slice(0, 2), group.items.slice(2, 4)].map((row) => (
+                    <div className="aa-capability-group__row" key={row[0]}>
+                      {row.map((item) => <span key={item}>{item}</span>)}
+                    </div>
+                  ))}
                 </div>
               </article>
             ))}
