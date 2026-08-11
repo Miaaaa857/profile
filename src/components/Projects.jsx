@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom'
 import BorderGlow from './BorderGlow'
+import LogoMarquee from './LogoMarquee'
 import ScrollStack, { ScrollStackItem } from './ScrollStack'
 
 const projectFieldPlaceholders = [
@@ -60,13 +61,13 @@ function applyCoverColor(event) {
   }
 }
 
-export default function Projects({ items, copy, variant = 'stack' }) {
+export default function Projects({ items, copy, brands = [], variant = 'stack' }) {
   return (
     <section className={`section projects container projects--${variant}`} id="projects">
       {variant === 'stack' ? (
         <header className="projects-hero" data-reveal>
           <div className="projects-hero__label"><p className="eyebrow">精选项目</p></div>
-          <h1>不只是界面，<br /><i className="display-emphasis">是产品判断</i></h1>
+          <h1>不只是界面<br /><i className="display-emphasis">是产品判断</i></h1>
           <p>从社交、电商到 B 端后台，每个项目我都用数据验证判断——留存、转化、效率，不靠形容词。</p>
         </header>
       ) : (
@@ -77,6 +78,15 @@ export default function Projects({ items, copy, variant = 'stack' }) {
           </div>
           <p>{copy.projectsIntro}</p>
         </div>
+      )}
+      {variant === 'stack' && brands.length > 0 && (
+        <LogoMarquee
+          brands={brands}
+          label={copy.clientsLabel}
+          ariaLabel={copy.clientsAria}
+          className="projects-logo-strip"
+          contained={false}
+        />
       )}
       {variant === 'grid' ? (
         <div className="home-work-grid">
