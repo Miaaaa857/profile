@@ -76,7 +76,7 @@ export const content = {
     eyebrow: '设计出身的 AI 产品经理',
     title: ['把模型能力，', '变成用户会用的产品。'],
     titleZh: '为成长型品牌，设计真正有影响力的数字体验。',
-    description: '3 年 UI 与增长设计经验，横跨社交、电商和 B 端。近两年我在两个真实的企业级 AI 产品里做产品设计——从矿产勘探的智能决策平台，到游戏买量的 AI 素材生成。我做的事很具体：把复杂的模型能力，变成用户真正敢用、会用的产品。',
+    description: '3年设计与增长经验。近两年，我在两个真实的企业级 AI 产品里做产品设计——把复杂的模型能力，变成用户真正会用的东西。',
     tags: ['+ 产品定义', '+ 数据驱动', '+ AI实践'],
     media: { type: 'video', src: '', poster: '/media/portfolio/hero-portrait.png' },
   },
