@@ -107,7 +107,7 @@ i { font-style: normal; }
 .hero { position: relative; min-height: calc(100svh - 32px); margin: 16px; overflow: hidden; display: flex; align-items: stretch; padding: 160px 0 60px; border-radius: var(--radius-media-lg); color: var(--white); }
 .hero-content { position: relative; z-index: 2; display: flex; flex-direction: column; }
 .hero-eyebrow { margin-bottom: 24px; }
-.hero-title { max-width: 1120px; font-size: clamp(68px, 7.2vw, 120px); line-height: .98; letter-spacing: -.06em; font-weight: 500; }
+.hero-title { max-width: 1120px; font-size: 96px; line-height: .98; letter-spacing: -.06em; font-weight: 500; }
 .hero-title > span { display: block; white-space: nowrap; }
 .hero-title .display-emphasis { letter-spacing: -.055em; }
 .hero-bottom { width: 100%; margin-top: auto; padding-top: 64px; display: grid; grid-template-columns: 1fr minmax(430px, 520px); align-items: end; gap: 80px; }
