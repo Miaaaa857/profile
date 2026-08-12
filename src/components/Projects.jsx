@@ -89,8 +89,9 @@ export default function Projects({ items, copy, brands = [], variant = 'stack' }
         />
       )}
       {variant === 'grid' ? (
-        <div className="home-work-grid">
-          {items.map((item, i) => (
+        <>
+          <div className="home-work-grid">
+            {items.map((item, i) => (
             <Link className={`home-work-card home-work-card--${i + 1}`} to={`/projects/${item.slug}`} key={item.slug} data-reveal>
               <BorderGlow
                 className="home-work-card__glow"
@@ -114,7 +115,7 @@ export default function Projects({ items, copy, brands = [], variant = 'stack' }
               </div>
             </Link>
           ))}
-          <article className="home-work-card home-work-card--placeholder" data-reveal>
+            <article className="home-work-card home-work-card--placeholder" data-reveal>
             <BorderGlow
               className="home-work-card__glow"
               edgeSensitivity={24}
@@ -135,8 +136,10 @@ export default function Projects({ items, copy, brands = [], variant = 'stack' }
               <h3>更多项目 — 敬请期待</h3>
               <p>CASE STUDY · COMING SOON</p>
             </div>
-          </article>
-        </div>
+            </article>
+          </div>
+          <Link className="all-projects" to="/projects"><span>查看全部项目</span><strong>(04)</strong><i>↗</i></Link>
+        </>
       ) : (
         <ScrollStack
           className="project-stack"

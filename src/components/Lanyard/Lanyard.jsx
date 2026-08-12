@@ -52,8 +52,8 @@ function Band({ isMobile, cardEmail }) {
     const baseMap = materials.base.map
     const baseImage = baseMap.image
     const canvas = document.createElement('canvas')
-    canvas.width = baseImage.width
-    canvas.height = baseImage.height
+    canvas.width = 2048
+    canvas.height = 2048
     const context = canvas.getContext('2d')
     if (!context) return baseMap
     context.drawImage(baseImage, 0, 0, canvas.width, canvas.height)
@@ -65,16 +65,11 @@ function Band({ isMobile, cardEmail }) {
     context.fillStyle = '#ff5232'; context.beginPath(); context.roundRect(84, 92, 128, 42, 21); context.fill()
     context.fillStyle = '#fff'; context.font = '700 19px Arial'; context.textAlign = 'center'; context.fillText('CONTACT', 148, 120)
     context.fillStyle = '#171715'; context.font = '700 76px "Microsoft YaHei", Arial'; context.textAlign = 'left'; context.fillText('联系沟通', 84, 246)
-    context.fillStyle = '#74716b'; context.font = '24px "Microsoft YaHei", Arial'; context.fillText('有想法？留下一句话', 84, 298)
-    context.fillStyle = '#fff'; context.strokeStyle = '#dedcd6'; context.beginPath(); context.roundRect(222, 378, 456, 456, 36); context.fill(); context.stroke()
-    if (qrTexture.image) { const maxQrSize = 410; const qrScale = Math.min(maxQrSize / qrTexture.image.width, maxQrSize / qrTexture.image.height); const qrWidth = qrTexture.image.width * qrScale, qrHeight = qrTexture.image.height * qrScale; context.drawImage(qrTexture.image, 450 - qrWidth / 2, 606 - qrHeight / 2, qrWidth, qrHeight) }
-    context.fillStyle = '#8a8780'; context.font = '20px "Microsoft YaHei", Arial'; context.textAlign = 'center'; context.fillText('扫码联系我', 450, 872)
-    context.fillStyle = '#171715'; context.beginPath(); context.roundRect(84, 942, 732, 94, 47); context.fill()
-    context.fillStyle = '#fff'; context.font = '23px "Microsoft YaHei", Arial'; context.textAlign = 'left'; context.fillText('你想聊些什么？', 126, 999)
-    context.fillStyle = '#ff5232'; context.beginPath(); context.arc(765, 989, 31, 0, Math.PI * 2); context.fill()
-    context.fillStyle = '#fff'; context.font = '28px Arial'; context.textAlign = 'center'; context.fillText('↗', 765, 999)
-    context.fillStyle = '#77736d'; context.font = '18px Arial'; context.textAlign = 'left'; context.fillText(cardEmail, 84, 1094)
-    context.fillStyle = '#ff5232'; context.font = '700 18px Arial'; context.textAlign = 'right'; context.fillText('MIA · AI PRODUCT', 816, 1094); context.restore()
+    context.fillStyle = '#35332f'; context.font = '32px "Microsoft YaHei", Arial'; context.fillText('有想法？留下一句话', 84, 306)
+    context.fillStyle = '#fff'; context.strokeStyle = '#dedcd6'; context.beginPath(); context.roundRect(160, 340, 580, 580, 40); context.fill(); context.stroke()
+    if (qrTexture.image) { const maxQrSize = 540; const qrScale = Math.min(maxQrSize / qrTexture.image.width, maxQrSize / qrTexture.image.height); const qrWidth = qrTexture.image.width * qrScale, qrHeight = qrTexture.image.height * qrScale; context.drawImage(qrTexture.image, 450 - qrWidth / 2, 630 - qrHeight / 2, qrWidth, qrHeight) }
+    context.fillStyle = '#35332f'; context.font = '30px "Microsoft YaHei", Arial'; context.textAlign = 'center'; context.fillText('扫码联系我', 450, 980)
+    context.restore()
     const backX = BACK_UV_RECT.x * canvas.width, backY = BACK_UV_RECT.y * canvas.height, backWidth = BACK_UV_RECT.w * canvas.width, backHeight = BACK_UV_RECT.h * canvas.height
     context.save(); context.translate(backX, backY); context.scale(backWidth / 900, backHeight / 1200)
     context.fillStyle = '#f5f4f0'; context.fillRect(0, 0, 900, 1200)
