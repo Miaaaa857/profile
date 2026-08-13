@@ -36,14 +36,18 @@ export default function Navbar({ data, onContact }) {
     const labels = labelRefs.current.filter(Boolean)
     if (!overlay || !bubbles.length) return
 
-    gsap.killTweensOf([...bubbles, ...labels])
+    const isMobile = window.matchMedia('(max-width: 980px)').matches
+    gsap.killTweensOf([overlay, ...bubbles, ...labels])
     if (open) {
       hasOpenedRef.current = true
-      gsap.set(overlay, { display: 'flex', autoAlpha: 1 })
+      gsap.set(overlay, { display: 'flex', autoAlpha: 1, yPercent: isMobile ? -108 : 0 })
       gsap.set(bubbles, { scale: 0, transformOrigin: '50% 50%' })
       gsap.set(labels, { y: 20, autoAlpha: 0 })
+      if (isMobile) {
+        gsap.to(overlay, { yPercent: 0, duration: 0.88, ease: 'power4.out' })
+      }
       bubbles.forEach((bubble, index) => {
-        const timeline = gsap.timeline({ delay: index * 0.12 + gsap.utils.random(-0.05, 0.05) })
+        const timeline = gsap.timeline({ delay: (isMobile ? 0.56 : 0) + index * 0.12 + gsap.utils.random(-0.04, 0.04) })
         timeline.to(bubble, { scale: 1, duration: 0.5, ease: 'back.out(1.5)' })
         timeline.to(labels[index], { y: 0, autoAlpha: 1, duration: 0.42, ease: 'power3.out' }, '-=0.43')
       })
@@ -56,7 +60,16 @@ export default function Navbar({ data, onContact }) {
         stagger: 0.025,
         ease: 'power3.in',
         onComplete: () => {
-          gsap.set(overlay, { display: 'none' })
+          if (isMobile) {
+            gsap.to(overlay, {
+              yPercent: -108,
+              duration: 0.58,
+              ease: 'power3.inOut',
+              onComplete: () => gsap.set(overlay, { display: 'none' }),
+            })
+          } else {
+            gsap.set(overlay, { display: 'none' })
+          }
         },
       })
       document.body.classList.remove('bubble-menu-open')
