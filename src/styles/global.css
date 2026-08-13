@@ -434,7 +434,7 @@ i { font-style: normal; }
 .aa-capability-model { display: grid; grid-template-columns: minmax(560px, .95fr) minmax(0, 1.15fr); align-items: center; gap: clamp(48px, 5vw, 80px); }
 .aa-capability-pyramid { width: 100%; margin: 0; }
 .aa-capability-pyramid img { width: 130%; max-width: none; height: auto; margin-left: -15%; display: block; }
-.aa-capability-details { width: max-content; display: grid; grid-template-columns: max-content; gap: 28px; }
+.aa-capability-details { width: max-content; display: grid; grid-template-columns: max-content; gap: 56px; }
 .aa-capability-group { width: auto; min-width: 0; max-width: none; padding: 24px 28px 26px; border: 2px dashed var(--accent); border-radius: 20px; }
 .aa-capability-group:nth-child(2) { transform: translateX(20px); }
 .aa-capability-group:nth-child(3) { transform: translateX(40px); }
@@ -642,6 +642,7 @@ i { font-style: normal; }
   .aa-capability-heading { margin-bottom: 56px; }
   .aa-capability-heading h2 { margin-top: 16px; font-size: clamp(40px, 12vw, 58px); }
   .aa-capability-model { gap: 48px; }
+  .aa-capability-details { gap: 28px; }
   .aa-capability-group { padding: 20px; border-radius: 16px; }
   .aa-capability-group > div { gap: 10px; }
   .aa-capability-group span { max-width: 100%; padding: 8px 6px; white-space: nowrap; }
