@@ -16,7 +16,7 @@ export default function Navbar({ data, onContact }) {
   const menuItems = [
     ...data.navigation.map((item) => ({ ...item, ariaLabel: item.label })),
     { label: data.site.navCta, href: '#contact', ariaLabel: data.site.navCta, isContact: true },
-    { label: data.home.heroSecondary, href: data.home.resumeHref, ariaLabel: data.home.heroSecondary, isDownload: true },
+    { label: data.site?.heroSecondary || '下载简历', href: data.site?.resumeHref || '/Mia-UI-Designer-Resume.pdf', ariaLabel: data.site?.heroSecondary || '下载简历', isDownload: true },
   ]
 
   useEffect(() => {
