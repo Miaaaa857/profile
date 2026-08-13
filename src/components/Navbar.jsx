@@ -103,7 +103,7 @@ export default function Navbar({ data, onContact }) {
         </nav>
         <button className="button button--dark nav-cta" type="button" onClick={onContact}><span className="button__label">{data.site.navCta}</span><span className="button__arrow">→</span></button>
         <button className="menu-toggle bubble-toggle" onClick={() => setOpen((value) => !value)} aria-label={open ? data.site.menuClose : data.site.menuOpen} aria-expanded={open}>
-          <img src="/media/menu_line.svg" alt="" aria-hidden="true" />
+          <img src={open ? '/media/close_line.svg' : '/media/menu_line.svg'} alt="" aria-hidden="true" />
         </button>
       </header>
 

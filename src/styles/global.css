@@ -102,14 +102,14 @@ i { font-style: normal; }
 .nav-cta { justify-self: end; min-height: 44px; padding: 0 16px 0 54px; font-size: 16px; }
 .nav-cta .button__arrow { left: 4px; width: 34px; height: 34px; padding-left: 10px; }
 .nav-cta:hover .button__arrow { width: calc(100% - 8px); }
-.menu-toggle { width: 44px; height: 44px; padding: 0; display: none; place-items: center; border: 0; background: none; cursor: pointer; }
-.menu-toggle img { width: 28px; height: 28px; display: block; transition: filter .35s var(--ease), transform .35s var(--ease); }
+.menu-toggle { position: relative; width: 44px; height: 44px; padding: 0; display: none; place-items: center; border: 0; background: none; cursor: pointer; }
+.menu-toggle img { position: absolute; top: 50%; left: 50%; width: 28px; height: 28px; display: block; object-fit: contain; transform: translate(-50%, -50%); transition: filter .35s var(--ease); }
 .navbar:not(.navbar--scrolled) .menu-toggle img { filter: brightness(0) invert(1); }
 .projects-page .navbar:not(.navbar--scrolled) .menu-toggle img { filter: none; }
-.menu-toggle[aria-expanded='true'] img { transform: rotate(90deg); }
+.menu-toggle[aria-expanded='true'] img { transform: translate(-50%, -50%); }
 
 /* Bubble navigation */
-.bubble-menu-open { overflow: hidden; }
+.bubble-menu-open { overflow-x: clip; overflow-y: scroll; }
 .bubble-menu-overlay { position: fixed; inset: 0; z-index: 49; display: none; align-items: center; justify-content: center; padding: 112px var(--gutter) 40px; background: rgba(17, 17, 15, .72); backdrop-filter: blur(16px); }
 .bubble-menu-list { width: min(100%, 1500px); margin: 0; padding: 0; display: flex; flex-wrap: wrap; justify-content: center; gap: 8px 0; list-style: none; }
 .bubble-menu-list li { flex: 0 0 33.333%; display: flex; justify-content: center; }
@@ -125,10 +125,10 @@ i { font-style: normal; }
   .nav-links, .nav-cta { display: none; }
   .menu-toggle.bubble-toggle { display: grid; justify-self: end; border-radius: 50%; background: #fff; box-shadow: 0 4px 16px rgba(0, 0, 0, .12); position: relative; z-index: 2; }
   .navbar:not(.navbar--scrolled) .menu-toggle img, .projects-page .navbar:not(.navbar--scrolled) .menu-toggle img { filter: none; }
-  .bubble-menu-overlay { align-items: flex-start; padding: 108px 20px 38px; overflow: hidden; border-bottom: 9px solid var(--accent); border-radius: 0 0 28px 28px; background: rgba(20, 20, 18, .96); box-shadow: 0 24px 50px rgba(0, 0, 0, .42); backdrop-filter: blur(22px); will-change: transform; }
+  .bubble-menu-overlay { align-items: flex-start; padding: 108px 20px 38px; overflow: hidden; border-bottom: 9px solid var(--accent); border-radius: 0 0 28px 28px; background: #f7f7f5; box-shadow: 0 24px 50px rgba(0, 0, 0, .22); backdrop-filter: blur(22px); will-change: transform; }
   .bubble-menu-list { max-height: calc(100svh - 136px); overflow-y: auto; gap: 14px; }
   .bubble-menu-list li, .bubble-menu-list li:last-child { flex-basis: 100%; margin-left: 0; }
-  .bubble-menu-link { min-height: 78px; padding: 16px 24px; font-size: clamp(24px, 8vw, 38px); transform: none; }
+  .bubble-menu-link { min-height: 78px; padding: 16px 24px; background: #11110f; color: #fff; font-size: 36px; transform: none; }
   .bubble-menu-link:hover { transform: scale(1.03); }
   .bubble-menu-link:active { transform: scale(.96); }
 }
