@@ -10,6 +10,8 @@ const projectFieldPlaceholders = [
   '结果指标（待补充）',
 ]
 
+const projectOrder = ['adgen', 'geomindra', 'fatelinked', 'pulsebeat', 'qinrive', 'jiucheng']
+
 function applyCoverColor(event) {
   const image = event.currentTarget
   const card = image.closest('.project-stack-card')
@@ -62,6 +64,9 @@ function applyCoverColor(event) {
 }
 
 export default function Projects({ items, copy, brands = [], variant = 'stack' }) {
+  const orderedItems = [...items].sort((a, b) => projectOrder.indexOf(a.slug) - projectOrder.indexOf(b.slug))
+  const visibleItems = variant === 'grid' ? orderedItems.slice(0, 5) : orderedItems
+
   return (
     <section className={`section projects container projects--${variant}`} id="projects">
       {variant === 'stack' ? (
@@ -91,7 +96,7 @@ export default function Projects({ items, copy, brands = [], variant = 'stack' }
       {variant === 'grid' ? (
         <>
           <div className="home-work-grid">
-            {items.map((item, i) => (
+            {visibleItems.map((item, i) => (
             <Link className={`home-work-card home-work-card--${i + 1}`} to={`/projects/${item.slug}`} key={item.slug} data-reveal>
               <BorderGlow
                 className="home-work-card__glow"
@@ -115,30 +120,8 @@ export default function Projects({ items, copy, brands = [], variant = 'stack' }
               </div>
             </Link>
           ))}
-            <article className="home-work-card home-work-card--placeholder" data-reveal>
-            <BorderGlow
-              className="home-work-card__glow"
-              edgeSensitivity={24}
-              glowColor="14 100 65"
-              backgroundColor="#fff"
-              borderRadius={24}
-              glowRadius={26}
-              glowIntensity={0.68}
-              coneSpread={23}
-              fillOpacity={0.12}
-              colors={['#ff4d24', '#ff9b69', '#20e7bd']}
-            >
-              <div className="home-work-card__visual home-work-card__visual--placeholder">
-                <span>PROJECT 05 · COMING SOON</span>
-              </div>
-            </BorderGlow>
-            <div className="home-work-card__info">
-              <h3>更多项目 — 敬请期待</h3>
-              <p>CASE STUDY · COMING SOON</p>
-            </div>
-            </article>
           </div>
-          <Link className="all-projects" to="/projects"><span>查看全部项目</span><strong>(04)</strong><i>↗</i></Link>
+          <Link className="all-projects" to="/projects"><span>查看全部项目</span><strong>({String(orderedItems.length).padStart(2, '0')})</strong><i>↗</i></Link>
         </>
       ) : (
         <ScrollStack
@@ -151,7 +134,7 @@ export default function Projects({ items, copy, brands = [], variant = 'stack' }
           baseScale={0.9}
           useWindowScroll
         >
-          {items.map((item, i) => (
+          {visibleItems.map((item, i) => (
             <ScrollStackItem itemClassName={`project-stack-card project-stack-card--${i + 1}`} key={item.slug}>
               <Link className={`project-card project-card--${i + 1}`} to={`/projects/${item.slug}`}>
                 <div className="project-info">

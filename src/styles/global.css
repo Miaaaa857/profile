@@ -261,6 +261,8 @@ i { font-style: normal; }
 .home-work-card:nth-child(2) { grid-column: 2; grid-row: 1; }
 .home-work-card:nth-child(3) { grid-column: 1 / -1; grid-row: 2; width: calc((100% - var(--home-work-column-gap)) / 2); justify-self: center; }
 .home-work-card:nth-child(4) { grid-column: 1; grid-row: 3; }
+.home-work-card:nth-child(5) { grid-column: 2; grid-row: 3; }
+.home-work-card:nth-child(6) { grid-column: 1 / -1; grid-row: 4; width: calc((100% - var(--home-work-column-gap)) / 2); justify-self: center; }
 .home-work-card--placeholder { grid-column: 2; grid-row: 3; }
 .home-work-card__glow { width: 100%; border-color: transparent; box-shadow: none; }
 .home-work-card__visual { position: relative; overflow: hidden; width: 100%; aspect-ratio: 1.31 / 1; border-radius: clamp(16px, 1.6vw, 24px); background: var(--surface); }
@@ -274,7 +276,7 @@ i { font-style: normal; }
 .home-work-card__info p { margin-top: 8px; color: var(--muted); font-size: 16px; line-height: 1.55; }
 .project-stack { margin-top: clamp(-10px, -1vw, 0px); }
 .project-stack-card { min-height: 640px; padding: clamp(34px, 3.2vw, 56px); overflow: hidden; border: 0; border-radius: clamp(28px, 2.5vw, 38px); background: #1a1a1a; color: #fff; box-shadow: none; }
-.project-stack-card .project-card { min-height: 100%; display: grid; grid-template-columns: minmax(0, 1.08fr) minmax(360px, .92fr); align-items: stretch; gap: clamp(52px, 7vw, 112px); }
+.project-stack-card .project-card { min-height: 100%; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); align-items: stretch; gap: clamp(52px, 7vw, 112px); }
 .project-stack-card .project-info { min-width: 0; padding: clamp(10px, 1vw, 18px) 0 0; display: flex; flex-direction: column; align-self: stretch; }
 .project-stack-card .project-info__meta { display: flex; justify-content: flex-start; gap: 8px; color: rgba(255,255,255,.92); font-size: 14px; font-weight: 600; letter-spacing: 0; }
 .project-stack-card .project-info__meta span + span::before { content: '· '; }
@@ -377,6 +379,8 @@ i { font-style: normal; }
 .project-placeholder h2 { margin-top: 30px; font-size: clamp(40px, 5vw, 80px); line-height: 1.05; font-weight: 500; letter-spacing: -.05em; }
 .project-placeholder > div:last-child > p:first-child { color: var(--muted); line-height: 1.8; }
 .metric-large { margin: 60px 0; font-size: clamp(30px, 3vw, 52px); letter-spacing: -.04em; }
+.project-pdf-gallery { width: min(calc(100% - 32px), 1440px); margin: 0 auto 16px; padding: clamp(8px, 1vw, 16px); display: grid; gap: clamp(8px, 1vw, 16px); overflow: hidden; border-radius: var(--radius-media-md); background: #111; }
+.project-pdf-gallery img { width: 100%; height: auto; display: block; border-radius: clamp(6px, .7vw, 10px); }
 .not-found { min-height: 70vh; display: grid; place-content: center; text-align: center; }
 .not-found p { color: var(--accent); }
 .not-found h1 { font-size: 70px; }
@@ -608,7 +612,7 @@ i { font-style: normal; }
   .project-grid { grid-template-columns: 1fr; row-gap: 75px; }
   .project-card:nth-child(even) { margin-top: 0; }
   .home-work-grid { grid-template-columns: 1fr; row-gap: 52px; }
-  .home-work-card, .home-work-card:nth-child(1), .home-work-card:nth-child(2), .home-work-card:nth-child(3), .home-work-card:nth-child(4), .home-work-card--placeholder { grid-column: auto; grid-row: auto; width: auto; justify-self: stretch; }
+  .home-work-card, .home-work-card:nth-child(1), .home-work-card:nth-child(2), .home-work-card:nth-child(3), .home-work-card:nth-child(4), .home-work-card:nth-child(5), .home-work-card:nth-child(6), .home-work-card--placeholder { grid-column: auto; grid-row: auto; width: auto; justify-self: stretch; }
   .home-work-card__visual { aspect-ratio: 4 / 3; border-radius: 16px; }
   .home-work-card__info { padding-top: 16px; }
   .home-work-card__info h3 { font-size: 24px; }
@@ -648,6 +652,8 @@ i { font-style: normal; }
   .project-hero h1 { font-size: 20vw; }
   .project-hero > div, .project-placeholder { width: 100%; grid-template-columns: 1fr; gap: 35px; }
   .project-cover { aspect-ratio: 1; }
+  .project-pdf-gallery { width: calc(100% - 16px); margin-bottom: 8px; padding: 6px; gap: 6px; border-radius: 14px; }
+  .project-pdf-gallery img { border-radius: 8px; }
   .aa-hero { min-height: auto; margin: 8px; padding: 116px 0 90px; }
   .aa-hero__grid { grid-template-columns: 1fr; grid-template-rows: auto; gap: 26px; }
   .aa-hero__title { grid-column: 1; grid-row: 1; display: flex; align-items: center; justify-content: space-between; }
