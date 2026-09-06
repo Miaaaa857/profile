@@ -1,26 +1,20 @@
-import Ferrofluid from './Ferrofluid/Ferrofluid'
-
-const ferrofluidColors = ['#ff4b2b', '#ff7a3c', '#ffffff']
+import Prism from './Prism/Prism'
 
 export default function Hero({ data, copy }) {
   return (
     <section className="hero" id="home">
       <div className="hero-media" aria-hidden="true">
-        <Ferrofluid
-          colors={ferrofluidColors}
-          backgroundColor="#0d0d0c"
-          speed={0.3}
-          scale={1}
-          turbulence={1}
-          fluidity={0.1}
-          rimWidth={0.2}
-          sharpness={3}
-          shimmer={1}
-          glow={1.4}
-          flowDirection="down"
-          mouseInteraction
-          mouseStrength={1}
-          mouseRadius={0.3}
+        <Prism
+          animationType="rotate"
+          timeScale={0.3}
+          height={3.5}
+          baseWidth={5.5}
+          scale={3.6}
+          hueShift={0.2584}
+          colorFrequency={1}
+          noise={0.1}
+          glow={1}
+          suspendWhenOffscreen
         />
         <div className="hero-media__mesh" />
         <span className="hero-media__note">{copy.showreel}</span>

@@ -145,7 +145,7 @@ i { font-style: normal; }
 .hero-intro .button-row { margin-top: 28px; }
 .button-row { display: flex; align-items: center; gap: 30px; }
 .hero-media { position: absolute; inset: 0; z-index: 1; overflow: hidden; border-radius: inherit; background: var(--ink); }
-.hero-media .ferrofluid-container { position: absolute; inset: 0; }
+.hero-media .prism-container { position: absolute; inset: 0; }
 .hero-media__mesh { position: absolute; inset: 0; pointer-events: none; background: linear-gradient(90deg, rgba(8,8,8,.58) 0%, rgba(8,8,8,.3) 52%, rgba(8,8,8,.16) 100%), linear-gradient(0deg, rgba(8,8,8,.48), transparent 50%); }
 .hero-media__note { position: absolute; right: 24px; bottom: 24px; color: rgba(255,255,255,.6); font-size: 9px; letter-spacing: .14em; }
 .scroll-cue { display: none; }
