@@ -138,6 +138,7 @@ i { font-style: normal; }
 .hero-eyebrow { margin-bottom: 24px; }
 .hero-title { max-width: 1120px; font-size: 96px; line-height: .98; letter-spacing: -.06em; font-weight: 500; }
 .hero-title > span { display: block; white-space: nowrap; }
+.hero-title > span + span { margin-top: 16px; }
 .hero-title .display-emphasis { letter-spacing: -.055em; }
 .hero-bottom { width: 100%; margin-top: auto; padding-top: 64px; display: grid; grid-template-columns: 1fr minmax(430px, 520px); align-items: end; gap: 80px; }
 .hero-tags { display: flex; flex-wrap: wrap; gap: clamp(22px, 4vw, 64px); font-size: 16px; letter-spacing: .04em; }
@@ -182,7 +183,7 @@ i { font-style: normal; }
 .persona-hero { text-align: center; }
 .persona-kicker { color: #6e6d68; }
 .persona-hero h2 { margin-top: clamp(22px, 2vw, 34px); font-size: clamp(42px, 8.2vw, 126px); line-height: .9; letter-spacing: -.07em; font-weight: 600; white-space: nowrap; }
-.persona-profile { width: min(100%, 820px); margin: clamp(72px, 7vw, 108px) auto 0; display: grid; grid-template-columns: 180px minmax(0, 1fr); gap: clamp(42px, 6vw, 76px); align-items: start; }
+.persona-profile { width: min(100%, 848px); margin: clamp(72px, 7vw, 108px) auto 0; display: grid; grid-template-columns: 180px minmax(0, 1fr); gap: clamp(42px, 6vw, 76px); align-items: start; }
 .persona-avatar { --portrait-x: 0px; --portrait-y: 0px; width: 180px; aspect-ratio: 1; margin: 6px 0 0; overflow: hidden; border: 3px solid var(--white); border-radius: 50%; background: #b8b9b8; box-shadow: 0 11px 0 var(--accent); }
 .persona-avatar img { width: 100%; height: 100%; object-fit: cover; object-position: center; transform: translate3d(var(--portrait-x), var(--portrait-y), 0) scale(1); transition: transform .6s var(--ease); }
 .persona-avatar:hover img { transform: translate3d(var(--portrait-x), var(--portrait-y), 0) scale(1.04); }
@@ -190,7 +191,7 @@ i { font-style: normal; }
 .persona-details h3 { white-space: nowrap; }
 .persona-details h3 span, .persona-details h3 strong { display: inline; }
 .persona-details h3 strong { color: var(--accent); font-weight: 600; }
-.persona-bio { max-width: 650px; margin-top: 28px; color: #5f5e59; font-size: clamp(15px, 1.15vw, 18px); line-height: 1.75; }
+.persona-bio { width: min(100%, 592px); margin-top: 28px; color: #5f5e59; font-size: clamp(15px, 1.15vw, 18px); line-height: 1.75; }
 .persona-metrics { margin-top: clamp(38px, 4vw, 56px); display: grid; grid-template-columns: repeat(3, max-content); justify-content: space-between; column-gap: clamp(22px, 4vw, 58px); }
 .persona-metric > strong { color: var(--accent); font-size: clamp(44px, 4vw, 62px); line-height: 1; letter-spacing: -.055em; font-weight: 600; font-variant-numeric: tabular-nums; }
 .persona-metric > strong span { font-size: .62em; }
@@ -230,6 +231,10 @@ i { font-style: normal; }
 .skills .section-heading h2 { max-width: 850px; font-size: clamp(48px, 4vw, 68px); line-height: 1.05; letter-spacing: -.05em; }
 .skills .section-heading > p { color: rgba(255, 255, 255, .55); }
 .skills .section-heading { position: relative; border-bottom: 0; }
+@media (min-width: 981px) {
+  .skills .section-heading { grid-template-columns: minmax(0, 1.7fr) minmax(290px, .55fr); }
+  .skills .section-heading > p { width: min(100%, 290px); }
+}
 .skills .section-heading::after { content: ''; position: absolute; left: var(--gutter); right: var(--gutter); bottom: 0; height: 1px; background: rgba(255, 255, 255, .3); }
 .skills-showcase { position: relative; min-height: 610px; padding-top: clamp(16px, 2vw, 32px); padding-bottom: clamp(200px, 15vw, 280px); }
 .skills-list { width: calc(100% - clamp(350px, 32vw, 500px)); display: grid; align-content: start; }

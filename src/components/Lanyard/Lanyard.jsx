@@ -65,7 +65,7 @@ function Band({ isMobile, cardEmail }) {
     context.fillStyle = '#ff5232'; context.beginPath(); context.roundRect(84, 92, 128, 42, 21); context.fill()
     context.fillStyle = '#fff'; context.font = '700 19px Arial'; context.textAlign = 'center'; context.fillText('CONTACT', 148, 120)
     context.fillStyle = '#171715'; context.font = '700 76px "Microsoft YaHei", Arial'; context.textAlign = 'left'; context.fillText('联系沟通', 84, 246)
-    context.fillStyle = '#35332f'; context.font = '32px "Microsoft YaHei", Arial'; context.fillText('有想法？留下一句话', 84, 306)
+    context.fillStyle = '#35332f'; context.font = '32px "Microsoft YaHei", Arial'; context.fillText('有什么想法吗？留下一句话', 84, 306)
     context.fillStyle = '#fff'; context.strokeStyle = '#dedcd6'; context.beginPath(); context.roundRect(160, 340, 580, 580, 40); context.fill(); context.stroke()
     if (qrTexture.image) { const maxQrSize = 540; const qrScale = Math.min(maxQrSize / qrTexture.image.width, maxQrSize / qrTexture.image.height); const qrWidth = qrTexture.image.width * qrScale, qrHeight = qrTexture.image.height * qrScale; context.drawImage(qrTexture.image, 450 - qrWidth / 2, 630 - qrHeight / 2, qrWidth, qrHeight) }
     context.fillStyle = '#35332f'; context.font = '30px "Microsoft YaHei", Arial'; context.textAlign = 'center'; context.fillText('扫码联系我', 450, 980)
