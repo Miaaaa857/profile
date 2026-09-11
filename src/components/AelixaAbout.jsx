@@ -1,8 +1,8 @@
 import { useEffect, useRef, useState } from 'react'
 
 const metrics = [
-  { value: '38', suffix: '%', label: 'AI 产品留存', note: '围绕核心行为重构首日流程，把 AIGC 社交产品 FateLinked 的 7 日留存做到 38%。' },
-  { value: '+22', suffix: '%', label: '电商增长', note: '从漏斗切入而非改首页，让电商平台 PulseBeat 的分销商入驻率提升 22%。' },
+  { value: '38', suffix: '%', label: 'AI产品留存', note: '围绕核心行为重构首日流程，把 AIGC 社交产品 FateLinked的7日留存做到38%。' },
+  { value: '+22', suffix: '%', label: '电商增长', note: '从漏斗切入而非改首页，让电商平台 PulseBeat 的分销商入驻率提升22%。' },
   { value: '10', suffix: '+', label: '合作品牌', note: '4 年一线设计，服务过腾讯、OPPO、一加、新华保险等 10 余个知名品牌。' },
   { value: '4', suffix: '', label: '主导项目', note: '从需求到落地，独立主导 4 个从 0 到 1 的产品项目。' },
 ]
@@ -59,17 +59,17 @@ const capabilityGroups = [
   {
     title: 'AI 产品化',
     level: 'AI Productization',
-    items: ['判断 LLM 能力边界，知道什么该交给模型', 'Prompt 设计与迭代，持续调优输出质量', '设计人机协作流程，处理 AI 的不确定性', '用产品设计遮住模型短板、放大长板'],
+    items: ['判断LLM能力边界，知道什么该交给模型', '设计并迭代提示词，持续调优输出质量', '设计人机协作流程，处理AI的不确定性', '用产品设计遮住模型短板、放大长板'],
   },
   {
     title: '产品判断',
     level: 'Product Thinking',
-    items: ['从用户流失倒推，找到真正该解决的问题', '懂得砍需求做减法，而不是堆功能', '竞品拆解与真实使用场景挖掘', '用数据验证判断：埋点、漏斗、A/B 测试'],
+    items: ['从用户流失倒推，找到真正该解决的问题', '敢砍需求做减法，而不是一味堆功能', '竞品拆解与真实使用场景挖掘', '用数据验证判断：埋点、漏斗、A/B 测试'],
   },
   {
     title: '设计与实现',
     level: 'Design & Build',
-    items: ['精通 Figma、PS、C4D 等主流设计工具', '会写前端，能亲手把想法做成 demo', '4 年一线设计，服务过腾讯、OPPO 等', '懂交互体验，知道用户在哪一步会卡住'],
+    items: ['精通Figma、PS、C4D等主流设计工具', '会写前端，能亲手把想法做成demo', '4年一线设计，服务过腾讯、一加等', '懂交互体验，知道用户在哪一步会卡住'],
   },
 ]
 
@@ -78,20 +78,20 @@ const career = [
     year: '2022–2025',
     role: '视觉设计师',
     company: '广州能动间信息科技有限公司 · 全职',
-    text: '服务腾讯、OPPO、一加等品牌，主导多个 0→1 项目。做出 FateLinked 7 日留存 38% 的成绩，也第一次深度接触 AI 产品。',
+    text: '服务腾讯、OPPO、一加等品牌，主导和参与过多个 0→1 项目。做出 FateLinked7日留存38%的成绩，也第一次深度接触AI产品。',
     tags: ['UI设计', '增长设计', 'AIGC'],
   },
   {
     year: '2025–2026',
     role: 'UI设计师',
     company: '上海传游网络科技有限公司 · 全职',
-    text: '主导 Adgen（游戏买量 AI 素材平台）的产品设计与交互，与算法团队协作，把 AI 素材生成能力落地成买量团队能一键出图、一键投放的产品。',
+    text: '主导Adgen（游戏买量AI素材平台）的产品设计与交互，与算法团队协作，把AI素材生成能力落地成买量团队能一键出图、一键投放的产品。',
     tags: ['AI产品设计', '生成式AI', '对话式交互'],
   },
   {
     year: '2026',
     role: 'AI产品经理',
-    company: '成都地几何科技有限公司 · 外包',
+    company: '成都地几何科技有限公司 · 项目制合作',
     text: '主导 GeoMindra（矿产勘探 AI 决策平台）的产品设计与交互，与算法团队协作，把复杂的地质 AI 能力落地成勘探专家敢用、会用的决策平台。',
     tags: ['AI产品设计', '企业级SaaS', '人机协作'],
   },
@@ -118,7 +118,7 @@ export default function AelixaAbout() {
             </figure>
 
             <div className="aa-hero__statement" data-reveal>
-              <p>我关心的不是模型多强，而是用户信不信、<br />用不用、留不留。想要明确、再主导。<br />产品是验证认知的工具。</p>
+              <p>我关心的不是模型多强，是用户信不信、<br />用不用、留不留。想清楚，再主导。<br />产品是验证认知的工具。</p>
             </div>
           </div>
         </div>
@@ -126,7 +126,7 @@ export default function AelixaAbout() {
 
       <section className="aa-approach" aria-label="三层能力模型">
         <header className="container aa-capability-heading" data-reveal>
-          <p className="aa-kicker">MY CAPABILITY</p>
+          <p className="eyebrow aa-kicker">MY CAPABILITY</p>
           <h2>我的能力，是长出来的</h2>
         </header>
 
@@ -157,14 +157,14 @@ export default function AelixaAbout() {
           <div className="aa-results__story">
             <div className="aa-results__lead" data-reveal>
               <div className="aa-section-title">
-                <p className="aa-kicker aa-kicker--light">PROVEN IMPACT</p>
+                <p className="eyebrow aa-kicker aa-kicker--light">PROVEN IMPACT</p>
                 <h2 id="aa-results-title">真实成绩，<br />不是漂亮话</h2>
               </div>
             </div>
             <div className="aa-results__copy" data-reveal>
-              <p>我不是科班产品经理，也不是算法出身。我的路径是：设计→增长→AI产品。做了4年一线的UI和体验设计，服务于腾讯、OPPO、一加等产品——但我最好的作品不是某个界面，是把一个产品的7日留存实现了38%。</p>
-              <p>做生长设计那几年，我养成了看数据说话的习惯：改一个文案而不是变成，调整一个流程而不是漏斗。慢慢发现产品的问题很少是“好不好看”，而是“用户信不信、用不用、留不留”。这个判断把我推向了产品，也推向了AI。</p>
-              <p>现在我专注一件事：把LLM的能力，翻译成用户真正会用的产品。模型能实现的，和用户愿意用的，中间差着整个产品——我做的就是补这个差。</p>
+              <p>我不是科班产品经理，也不是算法出身。我的路径是设计、增长，再到 AI 产品。做了4年一线的 UI 和体验设计，服务过腾讯、OPPO、一加。但我最拿得出手的，不是某个界面，是把一个产品的7日留存做到了38%。</p>
+              <p>现在我专注一件事：让LLM的能力真正被用起来。需求怎么取舍、人和模型怎么分工、出错怎么兜底，把这些一件件做扎实，模型的「强」才接得住。</p>
+              <p>做增长设计那几年，我养成了看数据说话的习惯：改一版文案、调一处流程，都盯着数据认不认。慢慢发现产品的坎很少在「好不好看」，而在有没有人真的留下来接着用。看清这点之后，我从做设计，转到了做产品和AI。</p>
             </div>
           </div>
 
@@ -192,8 +192,8 @@ export default function AelixaAbout() {
           <div className="container">
             <div className="aa-career__heading" data-reveal>
               <div>
-                <p className="aa-kicker aa-kicker--light">职业里程碑</p>
-                <h2 id="aa-career-title">从视觉设计<br />走向 AI 产品</h2>
+                <p className="eyebrow aa-kicker aa-kicker--light">CAREER MILESTONES</p>
+                <h2 id="aa-career-title">从设计到AI产品</h2>
               </div>
               <p>一条从视觉设计、数据增长到 AI 产品的职业路径，记录我如何把设计能力转化为产品判断与落地能力。</p>
             </div>

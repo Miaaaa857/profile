@@ -68,20 +68,24 @@ export default function Projects({ items, copy, brands = [], variant = 'stack' }
   const visibleItems = variant === 'grid' ? orderedItems.slice(0, 5) : orderedItems
 
   return (
-    <section className={`section projects container projects--${variant}`} id="projects">
+    <section className={`section projects projects--${variant}`} id="projects">
       {variant === 'stack' ? (
         <header className="projects-hero" data-reveal>
-          <div className="projects-hero__label"><p className="eyebrow">精选项目</p></div>
-          <h1>不只是界面<br /><i className="display-emphasis">是产品判断</i></h1>
-          <p>从社交、电商到 B 端后台，每个项目我都用数据验证判断——留存、转化、效率，不靠形容词。</p>
+          <div className="container projects-hero__inner">
+            <div className="projects-hero__label"><p className="eyebrow">精选项目</p></div>
+            <h1>不只是界面<br /><i className="display-emphasis">是产品判断</i></h1>
+            <p>从社交、电商到 B 端后台，每个项目我都用数据验证判断——留存、转化、效率，不靠形容词。</p>
+          </div>
         </header>
       ) : (
-        <div className="projects-heading" data-reveal>
-          <div className="module-heading__main">
-            <div className="module-heading__label"><p className="eyebrow">{copy.projectsEyebrow}</p></div>
-            <h2>{copy.projectsTitle[0]}<br /><i className="display-emphasis">{copy.projectsTitle[1]}</i></h2>
+        <div className="container">
+          <div className="projects-heading" data-reveal>
+            <div className="module-heading__main">
+              <div className="module-heading__label"><p className="eyebrow">{copy.projectsEyebrow}</p></div>
+              <h2>{copy.projectsTitle[0]}<br /><i className="display-emphasis">{copy.projectsTitle[1]}</i></h2>
+            </div>
+            <p>{copy.projectsIntro}</p>
           </div>
-          <p>{copy.projectsIntro}</p>
         </div>
       )}
       {variant === 'stack' && brands.length > 0 && (
@@ -90,11 +94,10 @@ export default function Projects({ items, copy, brands = [], variant = 'stack' }
           label={copy.clientsLabel}
           ariaLabel={copy.clientsAria}
           className="projects-logo-strip"
-          contained={false}
         />
       )}
       {variant === 'grid' ? (
-        <>
+        <div className="container projects-grid-inner">
           <div className="home-work-grid">
             {visibleItems.map((item, i) => (
             <Link className={`home-work-card home-work-card--${i + 1}`} to={`/projects/${item.slug}`} key={item.slug} data-reveal>
@@ -122,35 +125,37 @@ export default function Projects({ items, copy, brands = [], variant = 'stack' }
           ))}
           </div>
           <Link className="all-projects" to="/projects"><span>查看全部项目</span><strong>({String(orderedItems.length).padStart(2, '0')})</strong><i>↗</i></Link>
-        </>
+        </div>
       ) : (
-        <ScrollStack
-          className="project-stack"
-          itemDistance={120}
-          itemScale={0.025}
-          itemStackDistance={28}
-          stackPosition="14%"
-          scaleEndPosition="7%"
-          baseScale={0.9}
-          useWindowScroll
-        >
-          {visibleItems.map((item, i) => (
-            <ScrollStackItem itemClassName={`project-stack-card project-stack-card--${i + 1}`} key={item.slug}>
-              <Link className={`project-card project-card--${i + 1}`} to={`/projects/${item.slug}`}>
-                <div className="project-info">
-                  <div className="project-info__meta">{item.projectPage?.eyebrow || `${item.year} · ${item.category}`}</div>
-                  <h3>{item.projectPage?.headline || `${item.name} — ${item.title}`}</h3>
-                  <p className="project-info__summary">{item.projectPage?.description || item.summary}</p>
-                  <span className="project-info__cta">{item.projectPage?.cta || '查看项目'} <i>↘</i></span>
-                  <div className="project-info__fields">
-                    {(item.projectPage?.capabilities || projectFieldPlaceholders).map((field) => <span key={field}>{field}</span>)}
+        <div className="container projects-stack-inner">
+          <ScrollStack
+            className="project-stack"
+            itemDistance={120}
+            itemScale={0}
+            itemStackDistance={28}
+            stackPosition="14%"
+            scaleEndPosition="7%"
+            baseScale={1}
+            useWindowScroll
+          >
+            {visibleItems.map((item, i) => (
+              <ScrollStackItem itemClassName={`project-stack-card project-stack-card--${i + 1}`} key={item.slug}>
+                <Link className={`project-card project-card--${i + 1}`} to={`/projects/${item.slug}`}>
+                  <div className="project-info">
+                    <div className="project-info__meta">{item.projectPage?.eyebrow || `${item.year} · ${item.category}`}</div>
+                    <h3>{item.projectPage?.headline || `${item.name} — ${item.title}`}</h3>
+                    <p className="project-info__summary">{item.projectPage?.description || item.summary}</p>
+                    <span className="project-info__cta">{item.projectPage?.cta || '查看项目'} <i>↘</i></span>
+                    <div className="project-info__fields">
+                      {(item.projectPage?.capabilities || projectFieldPlaceholders).map((field) => <span key={field}>{field}</span>)}
+                    </div>
                   </div>
-                </div>
-                <div className={`project-visual tone-${item.tone}`}><img src={item.image} alt={`${item.name} ${item.title}${copy.projectCoverSuffix}`} /><span className="project-open">↗</span></div>
-              </Link>
-            </ScrollStackItem>
-          ))}
-        </ScrollStack>
+                  <div className={`project-visual tone-${item.tone}`}><img src={item.image} alt={`${item.name} ${item.title}${copy.projectCoverSuffix}`} /><span className="project-open">↗</span></div>
+                </Link>
+              </ScrollStackItem>
+            ))}
+          </ScrollStack>
+        </div>
       )}
     </section>
   )

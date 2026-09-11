@@ -56,7 +56,6 @@ export default function Skills({ items, copy }) {
             <img src={activeItem.image} alt={`${activeItem.title}作品预览`} />
             <p className="skill-preview__meta"><span>＋</span>{activeItem.title}</p>
             <p className="skill-preview__description">{activeItem.description}</p>
-            <span className="skill-preview__tool">{activeItem.tool}</span>
           </div>
         </aside>
       </div>

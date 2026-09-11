@@ -1,22 +1,19 @@
 .mission {
-  margin: 0 16px 16px;
+  width: 100%;
+  margin: 0;
   padding: clamp(120px, 10vw, 170px) 0 clamp(90px, 8vw, 130px);
   overflow: hidden;
-  border-radius: var(--radius-media-lg);
+  border-radius: 0;
   background: #f3f3f3;
   color: var(--ink);
 }
 
 .mission-kicker {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  font-size: 14px;
-  font-weight: 600;
+  font-size: 11px;
 }
 
 .mission-heading__grid { margin-top: 28px; display: grid; grid-template-columns: minmax(0, 1.5fr) minmax(300px, .7fr); align-items: end; gap: clamp(60px, 9vw, 150px); }
-.mission-heading h2 { font-size: clamp(58px, 5.4vw, 90px); line-height: .98; letter-spacing: -.06em; font-weight: 500; }
+.mission-heading h2 { font-size: var(--section-title-size); line-height: .98; letter-spacing: -.06em; font-weight: 500; }
 .mission-heading h2 span { color: #b8b8b8; }
 .mission-heading__grid > p { max-width: 390px; padding-bottom: 6px; color: #66645f; font-size: 16px; line-height: 1.65; }
 .mission-carousel { --mission-gap: 24px; --mission-card-width: min(1000px, calc(65.5vw - 1.31 * var(--page-pad))); margin-top: clamp(27px, 2.5vw, 39px); }
@@ -41,7 +38,7 @@
 .mission-controls button:hover { background: #e7e7e5; transform: translateY(-2px); }
 @media (max-width: 980px) {
   .mission-heading__grid { grid-template-columns: 1fr; gap: 32px; }
-  .mission-heading h2 { font-size: clamp(52px, 8vw, 72px); }
+  .mission-heading h2 { font-size: var(--section-title-size); }
   .mission-carousel { --mission-card-width: min(760px, calc(100vw - 88px)); }
   .mission-card { height: 620px; padding-top: 62px; }
   .mission-card > img, .mission-card__overlay { inset-block-start: 62px; height: calc(100% - 62px); }
@@ -49,13 +46,12 @@
 }
 
 @media (max-width: 740px) {
-  .mission { margin: 0 8px 8px; padding-block: 90px 72px; }
+  .mission { margin: 0; padding-block: 90px 72px; }
   .mission-kicker { font-size: 12px; }
-  .mission-heading h2 { font-size: 48px; line-height: 1.02; }
+  .mission-heading h2 { font-size: var(--section-title-size); line-height: 1.02; }
   .mission-heading__grid > p { font-size: 16px; }
   .mission-carousel { margin-top: 22px; }
   .mission-carousel { --mission-gap: 14px; --mission-card-width: calc(100vw - 48px); }
-  .mission-slider, .mission-controls { padding-inline: 16px; }
   .mission-card { height: 560px; padding-top: 54px; }
   .mission-card > img, .mission-card__overlay { inset-block-start: 54px; height: calc(100% - 54px); border-radius: 16px; }
   .mission-card__content { left: 16px; right: 16px; bottom: 16px; width: auto; min-height: 360px; padding: 22px; }
