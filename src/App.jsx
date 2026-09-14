@@ -8,10 +8,18 @@ import InsightDetail from './pages/InsightDetail'
 import TargetCursor from './components/TargetCursor'
 
 function ScrollToTop() {
-  const { pathname } = useLocation()
+  const { pathname, hash } = useLocation()
   useLayoutEffect(() => {
+    if (hash) {
+      const frame = window.requestAnimationFrame(() => {
+        const target = document.getElementById(decodeURIComponent(hash.slice(1)))
+        target?.scrollIntoView({ behavior: 'smooth', block: 'start' })
+      })
+      return () => window.cancelAnimationFrame(frame)
+    }
+
     window.scrollTo({ top: 0, left: 0, behavior: 'instant' })
-  }, [pathname])
+  }, [pathname, hash])
   return null
 }
 

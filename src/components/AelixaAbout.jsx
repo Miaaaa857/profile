@@ -75,11 +75,11 @@ const capabilityGroups = [
 
 const career = [
   {
-    year: '2022–2025',
-    role: '视觉设计师',
-    company: '广州能动间信息科技有限公司 · 全职',
-    text: '服务腾讯、OPPO、一加等品牌，主导和参与过多个 0→1 项目。做出 FateLinked7日留存38%的成绩，也第一次深度接触AI产品。',
-    tags: ['UI设计', '增长设计', 'AIGC'],
+    year: '2026',
+    role: 'AI产品经理',
+    company: '成都地几何科技有限公司 · 项目制合作',
+    text: '主导 GeoMindra（矿产勘探 AI 决策平台）的产品设计与交互，与算法团队协作，把复杂的地质 AI 能力落地成勘探专家敢用、会用的决策平台。',
+    tags: ['AI产品设计', '企业级SaaS', '人机协作'],
   },
   {
     year: '2025–2026',
@@ -89,11 +89,11 @@ const career = [
     tags: ['AI产品设计', '生成式AI', '对话式交互'],
   },
   {
-    year: '2026',
-    role: 'AI产品经理',
-    company: '成都地几何科技有限公司 · 项目制合作',
-    text: '主导 GeoMindra（矿产勘探 AI 决策平台）的产品设计与交互，与算法团队协作，把复杂的地质 AI 能力落地成勘探专家敢用、会用的决策平台。',
-    tags: ['AI产品设计', '企业级SaaS', '人机协作'],
+    year: '2022–2025',
+    role: '视觉设计师',
+    company: '广州能动间信息科技有限公司 · 全职',
+    text: '服务腾讯、OPPO、一加等品牌，主导和参与过多个 0→1 项目。做出 FateLinked7日留存38%的成绩，也第一次深度接触AI产品。',
+    tags: ['UI设计', '增长设计', 'AIGC'],
   },
 ]
 
@@ -109,7 +109,7 @@ export default function AelixaAbout() {
             </h1>
 
             <div className="aa-hero__meta" data-reveal>
-              <p>张明霞·设计出身的AI产品经理<br />联系：<a href="mailto:1124724338@qq.com">1124724338@qq.com</a></p>
+              <p>张明霞·设计出身的AI产品经理<br />联系：<a href="mailto:mmmmiazhang@gmail.com">mmmmiazhang@gmail.com</a></p>
             </div>
 
             <figure className="aa-hero__portrait">

@@ -64,7 +64,7 @@ export const content = {
     role: 'UI 设计师',
     slogan: '创非独辟蹊径，温故鼎新亦成',
     city: '广州',
-    email: '1124724338@qq.com',
+    email: 'mmmmiazhang@gmail.com',
     years: '3+',
   },
   navigation: [
@@ -113,9 +113,9 @@ export const content = {
     buttonLabel: '了解更多',
   },
   stats: [
-    { value: 38, suffix: '%', label: 'AI 产品 7 日留存' },
-    { value: 22, prefix: '+', suffix: '%', label: '电商分销商入驻率' },
-    { value: 2, suffix: '', label: '从 0 到 1 主导项目' },
+    { value: 38, suffix: '%', label: 'AI产品7日留存' },
+    { value: 35, prefix: '+', suffix: '%', label: '客户决策效率' },
+    { value: 42, prefix: '-', suffix: '%', label: '重复人力成本' },
   ],
   skills: [
     { number: '01', title: '需求研究 / 竞品拆解', tool: 'FIGMA', description: '拆解复杂业务，理清用户在哪一步卡住，把「看起来要做」的和「真该做」的分开。', image: '/media/capability-01.jpg' },
@@ -140,8 +140,8 @@ export const content = {
   ],
   honors: ['方正字体设计入围奖', '《中国视觉艺术年鉴 2018—2019》银奖'],
   socials: [
-    { label: 'Pinterest', value: '@AKKUMAN_', href: 'https://www.pinterest.com/' },
-    { label: 'Iconfont', value: '暴躁小明明明', href: 'https://www.iconfont.cn/' },
-    { label: 'Email', value: '1124724338@qq.com', href: 'mailto:1124724338@qq.com' },
+    { label: 'WeChat', value: 'AKKUMAN_', href: 'https://weixin.qq.com/' },
+    { label: 'Phone', value: '13046190085', href: 'tel:13046190085' },
+    { label: 'Email', value: 'mmmmiazhang@gmail.com', href: 'mailto:mmmmiazhang@gmail.com' },
   ],
 }

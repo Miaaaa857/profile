@@ -38,7 +38,7 @@ export default function Mission() {
                 <div className="mission-card__overlay" />
                 <div className="mission-card__content">
                   <p>{item.eyebrow}</p>
-                  <h3>{item.title}</h3>
+                  <h3>{item.cardTitle ?? item.title}</h3>
                   <p className="mission-card__summary">{item.summary}</p>
                   <span className="mission-card__cta">阅读全文 <span aria-hidden="true">↘</span></span>
                 </div>
