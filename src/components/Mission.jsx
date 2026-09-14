@@ -29,14 +29,20 @@ export default function Mission() {
               data-index={String(itemIndex + 1).padStart(2, '0')}
               key={item.eyebrow}
             >
-              <img src={item.image} alt="" />
-              <div className="mission-card__overlay" />
-              <div className="mission-card__content">
-                <p>{item.eyebrow}</p>
-                <h3>{item.title}</h3>
-                <p className="mission-card__summary">{item.summary}</p>
-                <Link to={`/insights/${item.slug}`}>阅读全文 <span aria-hidden="true">↘</span></Link>
-              </div>
+              <Link
+                className="mission-card__link"
+                to={`/insights/${item.slug}`}
+                aria-label={`阅读全文：${item.title}`}
+              >
+                <img src={item.image} alt="" />
+                <div className="mission-card__overlay" />
+                <div className="mission-card__content">
+                  <p>{item.eyebrow}</p>
+                  <h3>{item.title}</h3>
+                  <p className="mission-card__summary">{item.summary}</p>
+                  <span className="mission-card__cta">阅读全文 <span aria-hidden="true">↘</span></span>
+                </div>
+              </Link>
             </article>
           ))}
           </div>

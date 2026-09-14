@@ -40,6 +40,23 @@ export default function InsightDetail() {
       )
     }
 
+    if (block.type === 'steps') {
+      return (
+        <section className="insight-steps" key={`steps-${index}`}>
+          <h2>{block.title}</h2>
+          <ol>
+            {block.items.map((item) => (
+              <li key={item.title}>
+                <strong>{item.title}</strong>
+                <span>{item.body}</span>
+              </li>
+            ))}
+          </ol>
+          {block.closing && <p className="insight-steps__closing">{block.closing}</p>}
+        </section>
+      )
+    }
+
     return (
       <section key={`${block.title}-${index}`}>
         <h2>{block.title}</h2>
@@ -49,7 +66,7 @@ export default function InsightDetail() {
   }
 
   return (
-    <main className="insight-detail" id="home">
+    <main className={`insight-detail insight-detail--${article.slug}`} id="home">
       <Navbar data={content} onContact={() => setContactOpen(true)} />
       <article>
         <header className="insight-hero">

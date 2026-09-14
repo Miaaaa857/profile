@@ -1,5 +1,5 @@
 import { Route, Routes, useLocation } from 'react-router-dom'
-import { useEffect } from 'react'
+import { useLayoutEffect } from 'react'
 import Home from './pages/Home'
 import AboutPage from './pages/AboutPage'
 import ProjectsPage from './pages/ProjectsPage'
@@ -9,8 +9,8 @@ import TargetCursor from './components/TargetCursor'
 
 function ScrollToTop() {
   const { pathname } = useLocation()
-  useEffect(() => {
-    window.scrollTo(0, 0)
+  useLayoutEffect(() => {
+    window.scrollTo({ top: 0, left: 0, behavior: 'instant' })
   }, [pathname])
   return null
 }
