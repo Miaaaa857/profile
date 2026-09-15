@@ -17,7 +17,6 @@ export default function Hero({ data, copy }) {
           suspendWhenOffscreen
         />
         <div className="hero-media__mesh" />
-        <span className="hero-media__note">{copy.showreel}</span>
       </div>
       <div className="container hero-content">
         <p className="eyebrow hero-eyebrow" data-reveal>{data.eyebrow}</p>
