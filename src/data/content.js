@@ -108,7 +108,7 @@ export const content = {
     portraitVideo: '/media/portfolio/mia-portrait-video.mp4',
     name: '张明霞',
     role: 'AI 产品经理 / 体验设计师',
-    bio: '设计出身的 AI 产品经理，4 年一线体验设计经验，服务过腾讯、OPPO、一加等产品。近两年我在两个真实的 AI 产品里做产品设计——AI 决策平台和 AI 素材生成，把复杂的模型能力，变成用户真正敢用、会用的东西。',
+    bio: '设计出身的AI产品经理，4年一线体验设计经验，服务过腾讯、OPPO、一加等产品。近两年我在两个真实的AI产品里做产品设计——AI决策平台和AI素材生成，把复杂的模型能力，变成用户真正敢用、会用的东西。',
     buttonLabel: '了解更多',
   },
   stats: [

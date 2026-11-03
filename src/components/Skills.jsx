@@ -16,6 +16,19 @@ export default function Skills({ items, copy }) {
         <p>{copy.skillsIntro}</p>
       </div>
       <div className="container skills-showcase">
+        <div className="skills-mobile-list">
+          {items.map((item) => (
+            <article className="skill-mobile-card" key={`mobile-${item.number}`} data-reveal>
+              <div className="skill-mobile-card__heading">
+                <h3>{item.title}</h3>
+                <sup>[{item.number}]</sup>
+              </div>
+              <img src={item.image} alt={`${item.title}作品预览`} />
+              <p className="skill-mobile-card__meta"><span>＋</span>{item.title}</p>
+              <p className="skill-mobile-card__description">{item.description}</p>
+            </article>
+          ))}
+        </div>
         <div className="skills-list">
           {items.map((item, i) => (
             <button

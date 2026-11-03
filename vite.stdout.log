@@ -1,20 +1,35 @@
-[2m21:00:26[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m Re-optimizing dependencies because lockfile has changed
 
-  [32m[1mVITE[22m v8.2.0[39m  [2mready in [0m[1m2475[22m[2m[0m ms[22m
+  VITE v8.2.0  ready in 1214 ms
 
-  [32m➜[39m  [1mLocal[22m:   [36mhttp://127.0.0.1:[1m5173[22m/[39m
-[2m21:00:27[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [optimizer] bundling dependencies...
-[2m21:02:17[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/styles/global.css[22m
-[2m21:02:20[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/components/Mission.css[22m
-[2m21:05:34[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/styles/global.css[22m
-[2m21:08:50[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/styles/global.css[22m
-[2m21:21:09[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/pages/ProjectsPage.jsx, /src/pages/ProjectDetail.jsx, /src/pages/Home.jsx, /src/components/PageLayout.jsx[22m
-[2m21:26:54[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/pages/Home.jsx[22m
-[2m21:26:58[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/styles/global.css[22m
-[2m21:29:37[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/styles/global.css[22m
-[2m21:31:48[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/styles/global.css[22m
-[2m21:32:18[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/styles/global.css[22m
-[2m21:34:03[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/styles/global.css[22m
-[2m21:43:05[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/styles/global.css[22m
-[2m21:45:54[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/styles/global.css[22m
-[2m21:49:21[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/styles/global.css[22m
+  ➜  Local:   http://localhost:5173/
+  ➜  Network: use --host to expose
+  ➜  press h + enter to show help
+11:46:59 [vite] (client) hmr update /src/pages/Home.jsx, /src/pages/InsightDetail.jsx, /src/pages/ProjectsPage.jsx, /src/pages/ProjectDetail.jsx, /src/components/PageLayout.jsx
+11:49:46 [vite] (client) hmr update /src/styles/global.css
+11:53:43 [vite] (client) hmr update /src/styles/global.css
+11:57:34 [vite] (client) hmr update /src/styles/global.css
+12:00:27 [vite] (client) hmr update /src/styles/global.css
+12:02:08 [vite] (client) hmr update /src/styles/global.css
+12:04:24 [vite] (client) hmr update /src/pages/Home.jsx, /src/pages/InsightDetail.jsx, /src/pages/ProjectsPage.jsx, /src/pages/ProjectDetail.jsx, /src/components/PageLayout.jsx
+12:04:25 [vite] (client) hmr update /src/components/Hero.jsx
+12:04:26 [vite] (client) hmr update /src/styles/global.css
+12:05:53 [vite] (client) hmr update /src/pages/Home.jsx, /src/pages/InsightDetail.jsx, /src/pages/ProjectsPage.jsx, /src/pages/ProjectDetail.jsx, /src/components/PageLayout.jsx
+12:05:54 [vite] (client) hmr update /src/components/Hero.jsx
+12:05:55 [vite] (client) hmr update /src/styles/global.css
+12:07:28 [vite] (client) hmr update /src/styles/global.css
+12:09:08 [vite] (client) hmr update /src/styles/global.css
+12:11:19 [vite] (client) hmr update /src/styles/global.css
+12:12:40 [vite] (client) hmr update /src/styles/global.css
+12:14:43 [vite] (client) hmr update /src/styles/global.css
+12:30:21 [vite] (client) hmr update /src/styles/global.css
+14:20:37 [vite] (client) hmr update /src/styles/global.css
+14:22:16 [vite] (client) hmr update /src/styles/global.css
+15:45:53 [vite] (client) hmr update /src/styles/global.css
+15:47:51 [vite] (client) hmr update /src/styles/global.css
+15:51:42 [vite] (client) hmr update /src/components/Skills.jsx
+15:51:43 [vite] (client) hmr update /src/styles/global.css
+15:54:19 [vite] (client) hmr update /src/styles/global.css
+15:57:03 [vite] (client) hmr update /src/components/Skills.jsx
+15:57:04 [vite] (client) hmr update /src/styles/global.css
+16:27:04 [vite] (client) hmr update /src/styles/global.css
+16:42:38 [vite] (client) hmr update /src/styles/global.css
