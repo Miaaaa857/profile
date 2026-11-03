@@ -40,3 +40,8 @@ next-env.d.ts
 /.wrangler/
 /outputs/
 /work/
+
+# local preview and legacy workspace copies
+/tmp/
+/profiile/
+/vite*.log

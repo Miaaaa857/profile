@@ -10,7 +10,7 @@ const projectFieldPlaceholders = [
   '结果指标（待补充）',
 ]
 
-const projectOrder = ['adgen', 'geomindra', 'fatelinked', 'pulsebeat', 'qinrive', 'jiucheng']
+const projectOrder = ['adgen', 'geomindra', 'fatelinked', 'insurance-ai', 'tcm-learning', 'pulsebeat', 'qinrive', 'jiucheng']
 
 function applyCoverColor(event) {
   const image = event.currentTarget
@@ -113,9 +113,13 @@ export default function Projects({ items, copy, brands = [], variant = 'stack' }
                 fillOpacity={0.12}
                 colors={['#ff4d24', '#ff9b69', '#20e7bd']}
               >
-                <div className="home-work-card__visual">
-                  <img src={item.image} alt={`${item.name} ${item.title}${copy.projectCoverSuffix}`} />
-                </div>
+                {item.image ? (
+                  <div className="home-work-card__visual">
+                    <img src={item.image} alt={`${item.name} ${item.title}${copy.projectCoverSuffix}`} />
+                  </div>
+                ) : (
+                  <div className="home-work-card__visual home-work-card__visual--placeholder" role="img" aria-label={`${item.name} ${item.title}${copy.projectCoverSuffix}`} />
+                )}
               </BorderGlow>
               <div className="home-work-card__info">
                 <h3>{item.name} — {item.title}</h3>
@@ -150,7 +154,10 @@ export default function Projects({ items, copy, brands = [], variant = 'stack' }
                       {(item.projectPage?.capabilities || projectFieldPlaceholders).map((field) => <span key={field}>{field}</span>)}
                     </div>
                   </div>
-                  <div className={`project-visual tone-${item.tone}`}><img src={item.image} alt={`${item.name} ${item.title}${copy.projectCoverSuffix}`} /><span className="project-open">↗</span></div>
+                  <div className={`project-visual tone-${item.tone}${item.image ? '' : ' project-visual--placeholder'}`}>
+                    {item.image && <img src={item.image} alt={`${item.name} ${item.title}${copy.projectCoverSuffix}`} />}
+                    <span className="project-open">↗</span>
+                  </div>
                 </Link>
               </ScrollStackItem>
             ))}

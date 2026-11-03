@@ -1,5 +1,4 @@
 import { useEffect, useRef, useState } from 'react'
-import { Link } from 'react-router-dom'
 
 function RollingNumber({ value, prefix = '', suffix = '' }) {
   const target = Number(value) || 0
@@ -108,10 +107,10 @@ export default function About({ data, stats }) {
               ))}
             </div>
 
-            <Link className="persona-more" to="/about">
+            <a className="persona-more" href="#skills">
               <span className="persona-more__arrow" aria-hidden="true">→</span>
               <span className="persona-more__label">{data.buttonLabel}</span>
-            </Link>
+            </a>
           </div>
         </div>
       </div>
